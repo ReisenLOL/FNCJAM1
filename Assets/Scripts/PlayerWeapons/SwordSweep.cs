@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class SwordSweep : Weapon
 {
-    private float offset;
+    public float offset;
     void Start()
     {
+        transform.parent = firedFrom.transform;
         transform.Translate(transform.right * offset);
     }
     void Update()

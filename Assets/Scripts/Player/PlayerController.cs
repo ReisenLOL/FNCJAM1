@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    public GameObject projectile;
     private Camera playerCam;
     private bool isFacingRight = true;
     private SpriteRenderer playerSpriteRenderer;
