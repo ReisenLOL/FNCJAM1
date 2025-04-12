@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6193859870851268969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4080e8c93a1f7824b82466ae5395310e, type: 3}
+  m_Name: 'Air Horn Sound Effect : freesound_community'
+  m_EditorClassIdentifier: 
+  Priority: 0
+  Title: Air Horn Sound Effect
+  Credit: freesound_community
+  Website: https://pixabay.com/sound-effects/search/airhorn/
+--- !u!114 &-195722683027773704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4080e8c93a1f7824b82466ae5395310e, type: 3}
+  m_Name: 'Angry Cat-41822 : chiguire (Freesound)'
+  m_EditorClassIdentifier: 
+  Priority: -86
+  Title: Angry Cat-41822
+  Credit: chiguire (Freesound)
+  Website: https://pixabay.com/sound-effects/angry-cat-41822/
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a5004c2e082dc46ab1e7cd05f819df, type: 3}
+  m_Name: Cirno's Renovation Service
+  m_EditorClassIdentifier: 
+  gameName: Cirno's Renovation Service
+  gameCreator: Fumorin
+  credits:
+  - {fileID: -6193859870851268969}
+  - {fileID: 462068575496133893, guid: f97acb248a9cc0a4e96c16c020c4486d, type: 2}
+  - {fileID: -6605495973625967450, guid: f97acb248a9cc0a4e96c16c020c4486d, type: 2}
+  - {fileID: 7940902906424499459, guid: f97acb248a9cc0a4e96c16c020c4486d, type: 2}
+  - {fileID: -195722683027773704}
+  - {fileID: 7835785314051100182}
+--- !u!114 &7835785314051100182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4080e8c93a1f7824b82466ae5395310e, type: 3}
+  m_Name: 'Touhou Project : Team Shanghai Alice, ZUN'
+  m_EditorClassIdentifier: 
+  Priority: 500
+  Title: Touhou Project
+  Credit: Team Shanghai Alice, ZUN
+  Website: https://www16.big.or.jp/~zun/
