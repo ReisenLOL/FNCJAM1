@@ -1,0 +1,77 @@
+using Bremsengine;
+using System.Collections.Generic;
+using UnityEngine;
+using Core.Extensions;
+
+#region Alive Enemies & Auto Aim
+public partial class EnemyUnit
+{
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void InitializeEnemyList()
+    {
+        AliveEnemies = new();
+        GeneralManager.SetStageLoadAction("Reset Alive Enemies", ResetAliveEnemies);
+    }
+    private static void ResetAliveEnemies()
+    {
+        AliveEnemies.Clear();
+    }
+    public static HashSet<EnemyUnit> AliveEnemies;
+    public void RecalculateAliveEnemy()
+    {
+        if (CurrentHealth > 0f && !AliveEnemies.Contains(this))
+        {
+            AliveEnemies.Add(this);
+            return;
+        }
+        if (CurrentHealth <= 0f)
+        {
+            AliveEnemies.Remove(this);
+        }
+    }
+    public static bool AutoAimTowardEnemy(Vector2 origin, Vector2 direction, float maxAngle, out EnemyUnit selection)
+    {
+        Vector2 iterationDirection;
+        float highestDot = -999f;
+        selection = null;
+        float iterationDot;
+        foreach (var item in AliveEnemies)
+        {
+            iterationDirection = item.CurrentPosition - origin;
+            if (iterationDirection.Angle(direction).Absolute() > maxAngle)
+            {
+                continue;
+            }
+            iterationDot = Vector2.Dot(iterationDirection.normalized, direction);
+            if (iterationDot >= highestDot)
+            {
+                highestDot = iterationDot;
+                selection = item;
+            }
+        }
+        return selection != null;
+    }
+}
+#endregion
+public partial class EnemyUnit : BaseUnit
+{
+    public override float DamageScale(float inputDamage)
+    {
+        return inputDamage;
+    }
+
+    protected override void OnKillEffects()
+    {
+        GeneralManager.FunnyExplosion(CurrentPosition, 1f);
+    }
+
+    protected override void WhenAwake()
+    {
+
+    }
+
+    protected override void WhenStart()
+    {
+
+    }
+}
