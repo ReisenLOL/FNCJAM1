@@ -41,7 +41,7 @@ public partial class BaseUnit : IFaction
 {
     public BremseFaction Faction => FactionInterface.Faction;
     protected IFaction FactionInterface => (IFaction)this;
-    BremseFaction IFaction.Faction { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    BremseFaction IFaction.Faction { get; set; }
 }
 #endregion
 public abstract partial class BaseUnit : MonoBehaviour
