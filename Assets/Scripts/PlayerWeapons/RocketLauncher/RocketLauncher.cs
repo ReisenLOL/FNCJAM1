@@ -5,8 +5,6 @@ using UnityEngine;
 public class RocketLauncher : Weapon
 {
     private float dissipationTime;
-    public int pierceAmount;
-    public int amountPierced;
     [SerializeField] LayerMask unitCollectionLayer;
     [SerializeField] float explosionRadius = 5f;
     void Update()
@@ -28,11 +26,6 @@ public class RocketLauncher : Weapon
         if (TryHitOther(packet, collision))
         {
             EnemyUnit originalHitUnit = collision.GetOrAddComponent<EnemyUnit>();
-            amountPierced++;
-            if (amountPierced > pierceAmount)
-            {
-                Destroy(gameObject);
-            }
             if (EnemyUnit.TryFindInCircleCast(transform.position, explosionRadius, unitCollectionLayer, out HashSet<EnemyUnit> explodedUnits))
             {
                 foreach (var item in explodedUnits)
@@ -42,6 +35,7 @@ public class RocketLauncher : Weapon
                     item.PerformHit(packet);
                 }
             }
+            Destroy(gameObject);
         }
     }
 }
