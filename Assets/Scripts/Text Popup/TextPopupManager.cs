@@ -22,4 +22,11 @@ public class TextPopupManager : MonoBehaviour
     {
         instance.popupTextPrefab.Spawn(position, text);
     }
+
+    public static void HealthPopupText(Vector2 position, int damage, Color color)
+    {
+        if (damage == 0) return;
+        instance.popupTextPrefab.Spawn(position, damage);
+        instance.popupTextPrefab.SetColor(color);
+    }
 }

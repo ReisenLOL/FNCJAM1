@@ -31,6 +31,14 @@ public partial class BaseUnit : IHitListener
     }
     private void ChangeHealth(float value)
     {
+        if (value > 0)
+        {
+            TextPopupManager.HealthPopupText(transform.position, (int)value, Color.green); //popup text for health change
+        } else
+        {
+            TextPopupManager.HealthPopupText(transform.position, (int)value, Color.red); //popup text for health change
+        }
+
         CurrentHealth += value;
         CurrentHealth = CurrentHealth.Max(0f);
         if (CurrentHealth <= 0)
