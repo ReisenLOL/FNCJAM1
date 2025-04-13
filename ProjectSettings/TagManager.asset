@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
+  - PowerItem
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Collectable
   - 
   - 
   - 

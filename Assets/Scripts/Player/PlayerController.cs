@@ -1,4 +1,5 @@
 using Core.Extensions;
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEditor;
 using UnityEngine;
@@ -8,7 +9,13 @@ public class PlayerController : MonoBehaviour
 {
     //wtf did fumorin do here
     public float health;
+    public float maxHealth;
+    public RectTransform healthBar;
+    public RectTransform healthBarBG;
     public float speed;
+    public float collectionRadius;
+    public float collectionSpeed;
+    public LayerMask collectionLayer;
     private Rigidbody2D rb;
     public Rigidbody2D RB => rb;
     private Vector2 moveInput;
@@ -22,6 +29,7 @@ public class PlayerController : MonoBehaviour
     float maxOrthographicSize => minOrthographicSize * MaxCameraZoomOut;
     [Range(1f, 5f)]
     [SerializeField] float MaxCameraZoomOut = 5f;
+    private Collider2D[] collectableList;
     private void Awake()
     {
         minOrthographicSize = playerCam.Lens.OrthographicSize;
@@ -79,6 +87,20 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+        collectableList = DetectCollectables();
+        if (collectableList != null)
+        {
+            for (int i = 0; i < collectableList.Length; i++)
+            {
+                Collectable moveCollectable = collectableList[i].GetComponent<Collectable>();
+                if (moveCollectable.isMovingToPlayer == false)
+                {
+                    moveCollectable.moveToPlayer = transform.position - collectableList[i].transform.position;
+                    moveCollectable.collectionSpeed = collectionSpeed;
+                    moveCollectable.isMovingToPlayer = true;
+                }
+            }
+        }
     }
     public void TakeDamage(float damage)
     {
@@ -87,5 +109,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("MASSIVE SKILL ISSUE");
         }
+        healthBar.localScale = new Vector3(health / maxHealth, healthBar.localScale.y);
+    }
+    private Collider2D[] DetectCollectables()
+    {
+        return Physics2D.OverlapCircleAll(transform.position, collectionRadius, collectionLayer);
     }
 }
