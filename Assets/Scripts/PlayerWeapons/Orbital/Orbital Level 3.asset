@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCount: 3
   damage: 45
-  attackRate: 0.6
+  attackRate: 0.25
   range: 12
+  dissipationDelay: 2

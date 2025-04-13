@@ -1,3 +1,4 @@
+using Bremsengine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -25,6 +26,7 @@ public class RocketLauncher : Weapon
         HitPacket packet = new(transform.position, damage);
         if (TryHitOther(packet, collision))
         {
+            GeneralManager.FunnyExplosion(transform.position, explosionRadius * 0.25f);
             EnemyUnit originalHitUnit = collision.GetOrAddComponent<EnemyUnit>();
             if (EnemyUnit.TryFindInCircleCast(transform.position, explosionRadius, unitCollectionLayer, out HashSet<EnemyUnit> explodedUnits))
             {
@@ -32,6 +34,7 @@ public class RocketLauncher : Weapon
                 {
                     if (item == originalHitUnit)
                         continue;
+                    packet.HitPosition = item.CurrentPosition;
                     item.PerformHit(packet);
                 }
             }

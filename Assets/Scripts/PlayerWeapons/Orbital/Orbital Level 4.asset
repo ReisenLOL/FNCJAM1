@@ -16,3 +16,4 @@ MonoBehaviour:
   damage: 70
   attackRate: 0.5
   range: 12
+  dissipationDelay: 2

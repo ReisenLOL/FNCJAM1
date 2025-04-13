@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
-  m_Name: Rifle Level 2
+  m_Name: Rocket Level 3
   m_EditorClassIdentifier: 
   attackCount: 1
-  damage: 80
-  attackRate: 0.9
-  range: 25
+  damage: 100
+  attackRate: 0.8
+  range: 30
   dissipationDelay: 8
