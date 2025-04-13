@@ -36,7 +36,7 @@ public class WeaponSelect : MonoBehaviour
                 if (weaponFound != null)
                 {
                     Debug.Log(weaponFound);
-                    weaponFound.gameObject.GetComponent<WeaponAttack>().level++;
+                    weaponFound.gameObject.GetComponent<WeaponAttack>().LevelUp();
                 }
                 else
                 {

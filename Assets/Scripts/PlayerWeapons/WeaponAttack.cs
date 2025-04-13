@@ -27,4 +27,9 @@ public class WeaponAttack : MonoBehaviour
             weaponStats.maxRange = range;
         }
     }
+    public void LevelUp()
+    {
+        level++;
+        attackTime *= 0.5f;
+    }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: IDK
+  m_Name: OrbitalSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1
+  level: 0
+  maxLevel: 0
+  attackRate: 4
   attackTime: 0
-  attack: {fileID: 1045816506483605353, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
+  attack: {fileID: 2956309031198345827, guid: 05c5ddc8674598d4baf13740438ba512, type: 3}
   damageDealt: 25
   range: 100
