@@ -8,75 +8,71 @@ using UnityEngine.UI;
 
 public class WeaponSelect : MonoBehaviour
 {
-    public GameObject[] weapons;
-    List<string> listedWeapons = new();
-    private GameObject playerWeaponsFolder;
-    public int weaponListAmount;
-    public GameObject templateButton;
+    public List<WeaponAttack> KnownWeapons = new();
+    [SerializeField] GameObject playerWeaponsFolder;
+    public Button buttonPrefab;
+    Dictionary<string, WeaponAttack> spawnedWeapons;
+    [SerializeField] RectTransform selectionPanel;
     void Start()
     {
-        GetWeaponList();
+        spawnedWeapons = new();
+        RebuildWeaponList();
+        HideWeaponSelect();
     }
-    public void SelectWeapon(string weaponName)
+    public void ShowWeaponSelect()
     {
-        for (int i = 0; i < weapons.Length; i++)
-        {
-            if (weapons[i].name.Contains(weaponName))
-            {
-                Transform weaponFound = playerWeaponsFolder.transform.Find(weaponName);
-                if (weaponFound != null)
-                {
-                    Debug.Log(weaponFound + " weapon found ");
-                    weaponFound.gameObject.GetComponent<WeaponAttack>().LevelUp();
-                }
-                else
-                {
-                    Instantiate(weapons[i], playerWeaponsFolder.transform);
-                }
-                break;
-            }
-        }
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if(transform.GetChild(i).gameObject == templateButton) { continue; } //why remove template button grr
-            Destroy(transform.GetChild(i).gameObject);
-        }
-        transform.parent.gameObject.SetActive(false);
+        RebuildWeaponList(3);
+        selectionPanel.gameObject.SetActive(true);
     }
-    public void GetWeaponList()
+    public void HideWeaponSelect()
     {
-        for (int i = 0; i < weaponListAmount; i++)
+        selectionPanel.gameObject.SetActive(false);
+    }
+    public WeaponAttack FindWeaponReference(WeaponAttack weapon, out bool wasCreated)
+    {
+        if (spawnedWeapons.TryGetValue(weapon.WeaponName, out WeaponAttack foundWeapon))
         {
-            if(listedWeapons.Count > weapons.Length - 1) { return; }
-            playerWeaponsFolder = GameObject.Find("Weapons");
-            int randomIndex = Random.Range(0, weapons.Length);
-            if (listedWeapons.Count < weaponListAmount)
-            {
-                while (listedWeapons.Contains(weapons[randomIndex].name))
-                {
-                    randomIndex = Random.Range(0, weapons.Length);
-                }
-                ShowWeaponChoices(weapons, randomIndex);
-            }
+            wasCreated = false;
+            return foundWeapon;
+        }
+        else
+        {
+            WeaponAttack spawned = Instantiate(weapon, playerWeaponsFolder.transform);
+            spawned.SetOwner(BaseUnit.Player);
+            spawnedWeapons[weapon.WeaponName] = spawned;
+            wasCreated = true;
+            return weapon;
         }
     }
-
-    public void ShowWeaponChoices(GameObject[] weaponChoices, int randomIndex)
+    private void SelectWeapon(WeaponAttack w)
     {
-        string weaponName = weapons[randomIndex].name;
-        Debug.Log(weaponChoices[randomIndex].name);
-        GameObject newButton = Instantiate(templateButton, transform);
-        if (newButton == null) { Debug.LogWarning("new button is null!"); return; }
-        newButton.SetActive(true);
+        WeaponAttack weapon = FindWeaponReference(w, out bool wasCreated);
+        if (!wasCreated)
+        {
+            weapon.LevelUp();
+        }
+        HideWeaponSelect();
+    }
+    private void RebuildWeaponList(int choiceCount = 3)
+    {
+        for (int i = 0; i < selectionPanel.childCount; i++)
+        {
+            Destroy(selectionPanel.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < choiceCount; i++)
+        {
+            int randomIndex = Random.Range(0, KnownWeapons.Count);
+            ShowWeaponChoices(KnownWeapons, randomIndex);
+        }
+    }
+    public void ShowWeaponChoices(List<WeaponAttack> weaponChoices, int randomIndex)
+    {
+        WeaponAttack choice = KnownWeapons[randomIndex];
+        string weaponName = choice.WeaponName;
+        Button newButton = Instantiate(buttonPrefab, selectionPanel);
+        newButton.gameObject.SetActive(true);
         newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
-        newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(weaponName));
-        newButton.GetComponent<Button>().onClick.AddListener(() => ClearWeaponChoices());
+        newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice));
         newButton.name = weaponName;
-        listedWeapons.Add(weaponName);
-    }
-
-    public void ClearWeaponChoices()
-    {
-        listedWeapons.Clear();
     }
 }

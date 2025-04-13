@@ -25,9 +25,10 @@ public class SwordSweep : Weapon
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        HitPacket packet = new(transform.position, damage);
+        if (TryHitOther(packet, collision))
         {
-            collision.gameObject.GetComponent<UnitStats>().TakeDamage(damage); //oh it had no collider thats why it didnt take damage lol also ignore this i just like typing to myself
+
         }
     }
 }

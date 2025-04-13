@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1208405583744882210}
   - component: {fileID: 8199027488562775055}
   - component: {fileID: 5187138856504406741}
+  - component: {fileID: 8846915252871540021}
   m_Layer: 0
   m_Name: EnemyTest
   m_TagString: Enemy
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4fb2db149c045b4e811306fef383d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  <Owner>k__BackingField: {fileID: 8846915252871540021}
   powerObject: {fileID: 6212211480034386404, guid: b476273508dcf5e4f83702fd3a0660bd, type: 3}
 --- !u!114 &5187138856504406741
 MonoBehaviour:
@@ -190,6 +191,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebff8b5871cad34ca09ed193e09e6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Owner>k__BackingField: {fileID: 8846915252871540021}
   damage: 10
   speed: 4
   attackRate: 1
+  acceleration: 30
+--- !u!114 &8846915252871540021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262917533461444525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baff388b100c33b4d90627d4928d6388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  centerPositionOverride: {fileID: 6022167792110622834}

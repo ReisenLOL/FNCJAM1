@@ -29,7 +29,7 @@ namespace Projectile
             }
             if (other.GetComponent<IFaction>() is IFaction hitListener and not null)
             {
-                if (hitListener.Faction != BremseFaction.None && hitListener.IsFriendsWith(assignedProjectile.Faction))
+                if (hitListener.Faction != BremseFaction.None && hitListener.CompareFaction(assignedProjectile.Faction))
                 {
                     return Projectile.CollisionResult.Friends;
                 }

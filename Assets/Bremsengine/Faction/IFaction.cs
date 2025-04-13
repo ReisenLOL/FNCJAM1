@@ -21,8 +21,12 @@ namespace Bremsengine
             }
             return false;
         }
-        public bool IsFriendsWith(BremseFaction f)
+        public bool CompareFaction(BremseFaction f)
         {
+            if (f == BremseFaction.None)
+            {
+                return true;
+            }
             return IsOfFaction(f);
         }
         public void SetFaction(BremseFaction f) => Faction = f;

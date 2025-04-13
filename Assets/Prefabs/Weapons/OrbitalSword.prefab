@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  <WeaponName>k__BackingField: Orbital Sword
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 9e07454c449363343b3f84d806664685, type: 2}
@@ -51,8 +53,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12f41d6ebfd2e54408e384cf53e57143, type: 2}
   - {fileID: 11400000, guid: c87273fbdcdd250409f01f57d5dbed91, type: 2}
   - {fileID: 11400000, guid: 84ef056c4f686ff43b0949288b288492, type: 2}
-  attackRate: 4
-  attackTime: 0
-  attack: {fileID: 2956309031198345827, guid: 05c5ddc8674598d4baf13740438ba512, type: 3}
-  damageDealt: 25
-  range: 100
+  nextAttackTime: 0
+  attack: {fileID: 7715866026326152917, guid: 05c5ddc8674598d4baf13740438ba512, type: 3}

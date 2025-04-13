@@ -44,14 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  Owner: {fileID: 0}
+  <WeaponName>k__BackingField: Sword
+  level: 1
   WeaponLevels:
   - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}
   - {fileID: 11400000, guid: c1f9b09389871234391d3a541cebbbcd, type: 2}
   - {fileID: 11400000, guid: 49a0dd4819a5657439874a7552a097b2, type: 2}
   - {fileID: 11400000, guid: b30cb02bf10294248ae8d5f1cc8b5ea4, type: 2}
-  attackRate: 1
-  attackTime: 0
-  attack: {fileID: 1045816506483605353, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
-  damageDealt: 25
-  range: 100
+  nextAttackTime: 0
+  attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}

@@ -1,3 +1,4 @@
+using Core.Extensions;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -18,10 +19,19 @@ public class SpawnManager : MonoBehaviour
         spawnTime += Time.deltaTime;
         if (spawnTime >= spawnRate)
         {
-            spawnTime = 0;
-            GameObject newEnemy = Instantiate(enemyToSpawn, enemyFolder);
-            int randomIndex = Random.Range(0, spawnPoints.Length);
-            newEnemy.transform.position = spawnPoints[randomIndex].position;
+            Vector2 spawnPosition = Vector2.zero;
+            for (int i = 0; i < 5; i++)
+            {
+                spawnTime = 0;
+                int randomIndex = Random.Range(0, spawnPoints.Length); 
+                spawnPosition = spawnPoints[randomIndex].position;
+                if (spawnPosition.SquareDistanceToGreaterThan(BaseUnit.Player.CurrentPosition, 3f))
+                {
+                    break;
+                }
+            }
+            GameObject newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+            newEnemy.transform.SetParent(enemyFolder);
         }
     } //qhar?
 }

@@ -21,10 +21,10 @@ public class RifleShot : Weapon
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        HitPacket packet = new(transform.position, damage);
+        if (TryHitOther(packet, collision))
         {
             amountPierced++;
-            collision.gameObject.GetComponent<UnitStats>().TakeDamage(damage);
             if (amountPierced > pierceAmount)
             {
                 Destroy(gameObject);

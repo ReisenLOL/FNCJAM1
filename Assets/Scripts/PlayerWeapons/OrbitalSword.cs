@@ -26,9 +26,10 @@ public class OrbitalSword : Weapon
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        HitPacket packet = new(transform.position, damage);
+        if (TryHitOther(packet, collision))
         {
-            collision.gameObject.GetComponent<UnitStats>().TakeDamage(damage);
+
         }
     }
 }

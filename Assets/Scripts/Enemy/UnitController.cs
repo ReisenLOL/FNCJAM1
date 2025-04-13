@@ -1,36 +1,49 @@
+using Bremsengine;
+using Core.Extensions;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class UnitController : MonoBehaviour
 {
-    private GameObject player;
+    [field: SerializeField] public BaseUnit Owner { get; private set; }
     public float damage;
     public float speed;
     public float attackRate;
     private float attackTime;
     private Rigidbody2D rb;
-    private Vector3 lookDirection;
+    private Vector2 lookDirection;
+    [SerializeField] float acceleration = 30f;
     void Start()
     {
-        player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
+        TickManager.MainTickLightweight += WhenTick;
+    }
+    private void OnDestroy()
+    {
+        TickManager.MainTickLightweight -= WhenTick;
     }
     private void Update()
     {
-        attackTime += Time.deltaTime;
-        lookDirection = (player.transform.position - transform.position).normalized;
+        lookDirection = Vector2.zero;
+        if (BaseUnit.Player is not null and BaseUnit player && player.IsAlive)
+        {
+            lookDirection = (player.CurrentPosition - (Vector2)transform.position).normalized;
+        }
     }
-    private void FixedUpdate()
+    void WhenTick()
     {
-        rb.linearVelocity = lookDirection * speed;
-    }// i dunno man
+        rb.VelocityTowards(lookDirection.ScaleToMagnitude(speed), acceleration);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.TryGetComponent(out IHitListener hitListener))
         {
-            if (attackTime >= attackRate)
+            if (hitListener is not PlayerUnit)
+                return;
+            if (Time.time >= attackTime)
             {
-                attackTime = 0;
-                collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+                attackTime = Time.time + (1f / attackRate);
+                hitListener.PerformHit(new(collision.contacts[0].point, Owner.DamageScale(damage)));
             }
         }
     }

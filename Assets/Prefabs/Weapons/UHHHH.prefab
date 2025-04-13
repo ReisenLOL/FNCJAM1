@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1
-  attackTime: 0
-  attack: {fileID: 1045816506483605353, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
-  damageDealt: 25
-  range: 100
+  Owner: {fileID: 0}
+  <WeaponName>k__BackingField: UHHHHHHH
+  level: 0
+  WeaponLevels: []
+  nextAttackTime: 0
+  attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}

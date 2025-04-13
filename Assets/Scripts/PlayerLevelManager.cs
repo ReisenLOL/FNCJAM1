@@ -6,7 +6,7 @@ public class PlayerLevelManager : MonoBehaviour
     public int level;
     public int requiredPowerToNextLevel;
     public int currentPower;
-    public GameObject levelUpUI;
+    public WeaponSelect levelUpUI;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI powerText;
     private void Start()
@@ -27,8 +27,8 @@ public class PlayerLevelManager : MonoBehaviour
     {
         level++;
         requiredPowerToNextLevel += requiredPowerToNextLevel;
-        levelUpUI.SetActive(true);
-        levelUpUI.GetComponentInChildren<WeaponSelect>().GetWeaponList();
+        levelUpUI.gameObject.SetActive(true);
+        levelUpUI.ShowWeaponSelect();
         levelText.text = "Level: " + level;
         Debug.Log("Level up: " + level);
     }

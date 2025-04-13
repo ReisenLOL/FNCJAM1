@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307d317518e553d4e88fa23904ed6798, type: 3}
   m_Name: Cool Music Very Cool
   m_EditorClassIdentifier: 
-  TrackName: Headhunter, Leather Belt
+  TrackName: Cool Music
   musicClip: {fileID: 0}
   musicVolume: 1
   <dontReplaceSelf>k__BackingField: 1

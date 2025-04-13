@@ -2,21 +2,30 @@ using UnityEngine;
 
 public class UnitStats : MonoBehaviour
 {
-    public float health;
+    [field: SerializeField] public BaseUnit Owner { get; private set; }
     public GameObject powerObject;
-    private GameObject collectableFolder;
+    private static GameObject collectableFolder => CachedCollactableFolder == null ? FindAndCacheCollectableFolder() : CachedCollactableFolder;
+    static GameObject CachedCollactableFolder;
+    static GameObject FindAndCacheCollectableFolder()
+    {
+        GameObject found = GameObject.Find("CollectableFolder");
+        CachedCollactableFolder = found;
+        return found;
+    }
     private void Start()
     {
-        collectableFolder = GameObject.Find("CollectableFolder");
+        Owner.WhenHit += WhenHit;
     }
-    public void TakeDamage(float damage)
+    private void OnDestroy()
     {
-        health -= damage;
-        if (health <= 0)
+        Owner.WhenHit -= WhenHit;
+    }
+    public void WhenHit(HitPacket packet, BaseUnit unit)
+    {
+        if (!unit.IsAlive) // alive check is after health calculations.
         {
             GameObject droppedPower = Instantiate(powerObject, collectableFolder.transform);
-            droppedPower.transform.position = gameObject.transform.position;
-            Destroy(gameObject);
+            droppedPower.transform.position = unit.CurrentPosition;
         }
     }
 }

@@ -5,42 +5,70 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlayerController : MonoBehaviour
+#region Healthbar
+public partial class PlayerController
 {
-    //wtf did fumorin do here
-    public float health;
-    public float maxHealth;
     public RectTransform healthBar;
     public RectTransform healthBarBG;
-    public float speed;
+    void StartHitEvents()
+    {
+        Owner.BindHitEvent(UpdateHealthbar);
+    }
+    void EndHitEvents()
+    {
+        Owner.ReleaseHitEvent(UpdateHealthbar);
+    }
+    public void UpdateHealthbar(HitPacket packet, BaseUnit unit)
+    {
+        float health = unit.CurrentHealth;
+        float maxHealth = unit.MaxHealth;
+        if (health <= 0)
+        {
+            Debug.Log("MASSIVE SKILL ISSUE");
+        }
+        healthBar.localScale = new Vector3(health / maxHealth, healthBar.localScale.y);
+    }
+}
+#endregion
+#region Collection
+public partial class PlayerController
+{
     public float collectionRadius;
     public float collectionSpeed;
     public LayerMask collectionLayer;
-    private Rigidbody2D rb;
-    public Rigidbody2D RB => rb;
+    private Collider2D[] collectableList;
+    private Collider2D[] DetectCollectables()
+    {
+        return Physics2D.OverlapCircleAll(transform.position, collectionRadius, collectionLayer);
+    }
+    private void CollectionLoop()
+    {
+        collectableList = DetectCollectables();
+        if (collectableList != null)
+        {
+            for (int i = 0; i < collectableList.Length; i++)
+            {
+                Collectable moveCollectable = collectableList[i].GetComponent<Collectable>();
+                if (moveCollectable.isMovingToPlayer == false)
+                {
+                    moveCollectable.moveToPlayer = transform.position - collectableList[i].transform.position;
+                    moveCollectable.collectionSpeed = collectionSpeed;
+                    moveCollectable.isMovingToPlayer = true;
+                }
+            }
+        }
+    }
+}
+#endregion
+#region Movement
+public partial class PlayerController
+{
+    [field: SerializeField] public float MaxMoveSpeed { get; private set; } = 6f;
     private Vector2 moveInput;
     [SerializeField] float moveAcceleration = 60f;
     [SerializeField] float moveFriction = 40f;
-    [field: SerializeField] public float MaxMoveSpeed { get; private set; } = 6f;
-    [SerializeField] CinemachineCamera playerCam;
     private bool isFacingRight = true;
     [SerializeField] private Transform PlayerMovementFlipAnchor;
-    float minOrthographicSize;
-    float maxOrthographicSize => minOrthographicSize * MaxCameraZoomOut;
-    [Range(1f, 5f)]
-    [SerializeField] float MaxCameraZoomOut = 5f;
-    private Collider2D[] collectableList;
-    private void Awake()
-    {
-        minOrthographicSize = playerCam.Lens.OrthographicSize;
-        rb = GetComponent<Rigidbody2D>();
-    }
-    private void ModifyOrthographicSize(float multiplier)
-    {
-        float orthographicSize = playerCam.Lens.OrthographicSize;
-        orthographicSize += orthographicSize * (multiplier * 1f);
-        playerCam.Lens.OrthographicSize = orthographicSize.Clamp(minOrthographicSize, maxOrthographicSize);
-    }
     private bool TryMove(out Vector2 output)
     {
         output = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -76,6 +104,43 @@ public class PlayerController : MonoBehaviour
         }
         return false;
     }
+}
+#endregion
+#region Camera Zoom
+public partial class PlayerController
+{
+    [SerializeField] CinemachineCamera playerCam;
+    float minOrthographicSize;
+    float maxOrthographicSize => minOrthographicSize * MaxCameraZoomOut;
+    [Range(1f, 5f)]
+    [SerializeField] float MaxCameraZoomOut = 5f;
+    private void ModifyOrthographicSize(float multiplier)
+    {
+        float orthographicSize = playerCam.Lens.OrthographicSize;
+        orthographicSize += orthographicSize * (multiplier * 1f);
+        playerCam.Lens.OrthographicSize = orthographicSize.Clamp(minOrthographicSize, maxOrthographicSize);
+    }
+}
+#endregion
+public partial class PlayerController : MonoBehaviour
+{
+    [field: SerializeField] public BaseUnit Owner { get; private set; }
+    //wtf did fumorin do here
+    private Rigidbody2D rb;
+    public Rigidbody2D RB => rb;
+    private void Awake()
+    {
+        minOrthographicSize = playerCam.Lens.OrthographicSize;
+        rb = GetComponent<Rigidbody2D>();
+    }
+    private void Start()
+    {
+        StartHitEvents();
+    }
+    private void OnDestroy()
+    {
+        EndHitEvents();
+    }
     private void Update()
     {
         float scroll = Input.mouseScrollDelta.y;
@@ -87,33 +152,6 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        collectableList = DetectCollectables();
-        if (collectableList != null)
-        {
-            for (int i = 0; i < collectableList.Length; i++)
-            {
-                Collectable moveCollectable = collectableList[i].GetComponent<Collectable>();
-                if (moveCollectable.isMovingToPlayer == false)
-                {
-                    moveCollectable.moveToPlayer = transform.position - collectableList[i].transform.position;
-                    moveCollectable.collectionSpeed = collectionSpeed;
-                    moveCollectable.isMovingToPlayer = true;
-                }
-            }
-        }
-    }
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            Debug.Log("MASSIVE SKILL ISSUE");
-            health = 0;
-        }
-        healthBar.localScale = new Vector3(health / maxHealth, healthBar.localScale.y);
-    }
-    private Collider2D[] DetectCollectables()
-    {
-        return Physics2D.OverlapCircleAll(transform.position, collectionRadius, collectionLayer);
+        CollectionLoop();
     }
 }

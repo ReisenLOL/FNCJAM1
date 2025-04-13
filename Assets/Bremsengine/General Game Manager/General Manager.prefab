@@ -383,7 +383,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2304067790638222617}
   - component: {fileID: 8829255101487187414}
-  - component: {fileID: 6389249311227296803}
   m_Layer: 0
   m_Name: General Manager
   m_TagString: Untagged
@@ -427,20 +426,3 @@ MonoBehaviour:
   breakDownScore: 1
   visibleScoreDivisor: 0.01
   visibleScoreMultiplier: 100
---- !u!114 &6389249311227296803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8819992696731238189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03b61e1f741e7f444b8733985231ed81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FallbackCursor:
-    CursorTexture: {fileID: 2800000, guid: af7a134098e02bb4787ce5c0eb52b2d2, type: 3}
-    Hotspot: {x: 0, y: 0}
-    Mode: 1
-    priority: 50

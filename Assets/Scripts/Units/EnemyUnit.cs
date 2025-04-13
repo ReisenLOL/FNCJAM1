@@ -55,6 +55,7 @@ public partial class EnemyUnit
 #endregion
 public partial class EnemyUnit : BaseUnit
 {
+    [SerializeField] bool funnyexplosion = false;
     public override float DamageScale(float inputDamage)
     {
         return inputDamage;
@@ -62,7 +63,7 @@ public partial class EnemyUnit : BaseUnit
 
     protected override void OnKillEffects()
     {
-        GeneralManager.FunnyExplosion(CurrentPosition, 1f);
+        if (funnyexplosion) GeneralManager.FunnyExplosion(CurrentPosition, 1f);
     }
 
     protected override void WhenAwake()
