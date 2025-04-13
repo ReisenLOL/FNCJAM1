@@ -21,7 +21,7 @@ public class WeaponSelect : MonoBehaviour
     {
         for (int i = 0; i < weapons.Length; i++)
         {
-            if (weapons[i].name == weaponName)
+            if (weapons[i].name.Contains(weaponName))
             {
                 Transform weaponFound = playerWeaponsFolder.transform.Find(weaponName);
                 if (weaponFound != null)
@@ -63,15 +63,16 @@ public class WeaponSelect : MonoBehaviour
 
     public void ShowWeaponChoices(GameObject[] weaponChoices, int randomIndex)
     {
-        Debug.Log("giving new choices...");
+        string weaponName = weapons[randomIndex].name;
+        Debug.Log(weaponChoices[randomIndex].name);
         GameObject newButton = Instantiate(templateButton, transform);
         if (newButton == null) { Debug.LogWarning("new button is null!"); return; }
         newButton.SetActive(true);
-        newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponChoices[randomIndex].name;
-        newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(newButton.GetComponentInChildren<TextMeshProUGUI>().text));
+        newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
+        newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(weaponName));
         newButton.GetComponent<Button>().onClick.AddListener(() => ClearWeaponChoices());
-        newButton.name = weaponChoices[randomIndex].name;
-        listedWeapons.Add(weapons[randomIndex].name);
+        newButton.name = weaponName;
+        listedWeapons.Add(weaponName);
     }
 
     public void ClearWeaponChoices()
