@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: UHHHH
+  m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: UHHHHHHH
+  <WeaponName>k__BackingField: Rocket Launcher
   level: 0
   WeaponLevels: []
   nextAttackTime: 0
   attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
+  overrideSpawnPosition: {fileID: 0}

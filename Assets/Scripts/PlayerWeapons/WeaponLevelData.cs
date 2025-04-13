@@ -7,4 +7,5 @@ public class WeaponLevelData : ScriptableObject
     public float damage;
     public float attackRate;
     public float range;
+    public float dissipationDelay;
 }

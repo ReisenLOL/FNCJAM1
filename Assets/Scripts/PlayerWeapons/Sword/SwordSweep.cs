@@ -3,7 +3,6 @@ using UnityEngine;
 public class SwordSweep : Weapon
 {
     public float offset;
-    public float dissipationDelay;
     private float dissipationTime;
     void Start()
     {

@@ -151,7 +151,8 @@ MonoBehaviour:
   damage: 0
   maxRange: 0
   firedFrom: {fileID: 0}
-  directionOfTarget: {x: 0, y: 0}
+  targetPosition: {x: 0, y: 0}
+  weaponNumber: 0
   rotationSpeed: 240
-  dissipationDelay: 2
+  dissipationDelay: 4
   offset: 2

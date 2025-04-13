@@ -31,7 +31,7 @@ public class WeaponAttack : MonoBehaviour
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
         float range = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].range;
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
-        
+        float dissipationDelay = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].dissipationDelay;
         for (int i = 0; i < attackCount; i++)
         {
             Weapon spawnedAttack = Instantiate(attack, SpawnPosition, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
@@ -43,6 +43,11 @@ public class WeaponAttack : MonoBehaviour
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
             spawnedAttack.RotateToTarget(worldPos);
             spawnedAttack.maxRange = range;
+            spawnedAttack.weaponNumber = i;
+            if (dissipationDelay != 0)
+            {
+                spawnedAttack.dissipationDelay = dissipationDelay;
+            }
         }
     }
     public void LevelUp()

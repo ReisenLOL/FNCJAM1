@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RifleShot : Weapon
+public class RocketLauncher : Weapon
 {
     private float dissipationTime;
     public int pierceAmount;

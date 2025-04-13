@@ -3,13 +3,13 @@ using UnityEngine;
 public class OrbitalSword : Weapon
 {
     public float rotationSpeed;
-    public float dissipationDelay;
     private float dissipationTime;
     public float offset;
     private void Start()
     {
         transform.parent = firedFrom.transform;
         UpdatePosition();
+        transform.RotateAround(firedFrom.transform.position, Vector3.forward, 90 * weaponNumber);
     }
     void UpdatePosition()
     {

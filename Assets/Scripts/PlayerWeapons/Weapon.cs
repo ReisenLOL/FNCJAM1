@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
     public float maxRange;
     public GameObject firedFrom;
     public Vector2 targetPosition;
+    public int weaponNumber;
+    public float dissipationDelay;
     public void SetOwner(BaseUnit owner) => this.Owner = owner;
     public void RotateToTarget(Vector2 worldPosition)
     {
