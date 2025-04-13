@@ -7,6 +7,7 @@ public class SwordSweep : Weapon
     {
         transform.parent = firedFrom.transform;
         transform.Translate(transform.right * offset);
+
     }
     void Update()
     {
