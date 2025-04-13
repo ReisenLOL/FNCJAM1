@@ -6,25 +6,13 @@ using UnityEngine.UI;
 public class WeaponSelect : MonoBehaviour
 {
     public GameObject[] weapons;
-    List<GameObject> listedWeapons = new();
+    List<string> listedWeapons = new();
     private GameObject playerWeaponsFolder;
     public int weaponListAmount;
     public GameObject templateButton;
     void Start()
     {
-        for (int i = 0; i < weaponListAmount; i++)
-        {
-            playerWeaponsFolder = GameObject.Find("Weapons");
-            int n = Random.Range(0, weapons.Length);
-            List<GameObject> shuffledWeapons = new List<GameObject>(weapons);
-            Shuffle(shuffledWeapons);
-
-            listedWeapons.AddRange(shuffledWeapons.GetRange(0, n));
-            GameObject newButton = Instantiate(templateButton, transform);
-            newButton.SetActive(true);
-            newButton.GetComponentInChildren<TextMeshProUGUI>().text = weapons[n].name;
-            newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(newButton.GetComponentInChildren<TextMeshProUGUI>().text));
-        }
+        GetWeaponList();
     }
     public void SelectWeapon(string weaponName)
     {
@@ -42,19 +30,33 @@ public class WeaponSelect : MonoBehaviour
                 {
                     Instantiate(weapons[i], playerWeaponsFolder.transform);
                 }
-                gameObject.SetActive(false);
                 break;
             }
         }
-    }
-    private void Shuffle(List<GameObject> list)
-    {
-        for (int i = list.Count - 1; i > 0; i--)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            int j = Random.Range(0, i + 1);
-            GameObject temp = list[i];
-            list[i] = list[j];
-            list[j] = temp;
+            Destroy(transform.GetChild(i).gameObject);
+        }
+        transform.parent.gameObject.SetActive(false);
+    }
+    public void GetWeaponList()
+    {
+        for (int i = 0; i < weaponListAmount; i++)
+        {
+            playerWeaponsFolder = GameObject.Find("Weapons");
+            int randomIndex = Random.Range(0, weapons.Length);
+            if (listedWeapons.Count != 0)
+            {
+                while (!listedWeapons.Contains(weapons[randomIndex].name))
+                {
+                    randomIndex = Random.Range(0, weapons.Length);
+                }
+            }
+            GameObject newButton = Instantiate(templateButton, transform);
+            newButton.SetActive(true);
+            newButton.GetComponentInChildren<TextMeshProUGUI>().text = weapons[randomIndex].name;
+            newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(newButton.GetComponentInChildren<TextMeshProUGUI>().text));
+            listedWeapons.Add(weapons[randomIndex].name);
         }
     }
 }

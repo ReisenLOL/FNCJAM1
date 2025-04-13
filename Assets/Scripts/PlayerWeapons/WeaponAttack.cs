@@ -3,7 +3,7 @@ using UnityEngine;
 public class WeaponAttack : MonoBehaviour
 {
     public int level;
-    public int maxLevel;
+    public WeaponLevelData[] WeaponLevels;
     public float attackRate;
     public float attackTime;
     public GameObject attack;
@@ -14,6 +14,13 @@ public class WeaponAttack : MonoBehaviour
     {
         attackTime += Time.deltaTime;
         if (attackTime >= attackRate)
+        {
+            InstantiateAttack();
+        }
+    }
+    void InstantiateAttack()
+    {
+        for (int i = 0; i < WeaponLevels[level].attackCount; i++)
         {
             attackTime -= attackRate;
             GameObject newAttack = Instantiate(attack, transform.position, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
@@ -30,6 +37,9 @@ public class WeaponAttack : MonoBehaviour
     public void LevelUp()
     {
         level++;
-        attackTime *= 0.5f;
+        attackRate = WeaponLevels[level].attackRate;
+        damageDealt = WeaponLevels[level].damage;
+        range = WeaponLevels[level].range;
+
     }
 }

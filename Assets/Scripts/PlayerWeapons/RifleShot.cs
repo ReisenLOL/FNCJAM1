@@ -4,6 +4,8 @@ public class RifleShot : Weapon
 {
     public float dissipationDelay;
     private float dissipationTime;
+    public int pierceAmount;
+    public int amountPierced;
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
@@ -21,7 +23,12 @@ public class RifleShot : Weapon
     {
         if (collision.CompareTag("Enemy"))
         {
+            amountPierced++;
             collision.gameObject.GetComponent<UnitStats>().TakeDamage(damage);
+            if (amountPierced > pierceAmount)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

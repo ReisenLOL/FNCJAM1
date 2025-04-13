@@ -28,6 +28,7 @@ public class PlayerLevelManager : MonoBehaviour
         level++;
         requiredPowerToNextLevel += requiredPowerToNextLevel;
         levelUpUI.SetActive(true);
+        levelUpUI.GetComponentInChildren<WeaponSelect>().GetWeaponList();
         levelText.text = "Level: " + level;
         Debug.Log("Level up: " + level);
     }

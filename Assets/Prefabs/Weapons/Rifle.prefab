@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 0.5
+  level: 0
+  maxLevel: 0
+  attackRate: 2
   attackTime: 0
   attack: {fileID: 8698217737396998779, guid: 2f21d27819f5d83408b2a3f59b295b59, type: 3}
   damageDealt: 30

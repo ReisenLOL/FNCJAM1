@@ -1,0 +1,10 @@
+using UnityEngine;
+[CreateAssetMenu(fileName = "New Weapon Level Data", menuName = "Scripts/WeaponLevelData")]
+
+public class WeaponLevelData : ScriptableObject
+{
+    public float attackCount;
+    public float damage;
+    public float attackRate;
+    public float range;
+}
