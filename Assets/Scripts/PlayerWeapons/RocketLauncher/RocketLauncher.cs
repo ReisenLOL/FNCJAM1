@@ -8,8 +8,16 @@ public class RocketLauncher : Weapon
     private float dissipationTime;
     [SerializeField] LayerMask unitCollectionLayer;
     [SerializeField] float explosionRadius = 5f;
-    void Update()
+    private void Start()
     {
+        if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
+        {
+            RotateToTarget(a.CurrentPosition);
+
+        }
+    }
+        void Update()
+        {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
         dissipationTime += Time.deltaTime;
         if (dissipationTime >= dissipationDelay)
