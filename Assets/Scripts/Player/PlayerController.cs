@@ -108,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("MASSIVE SKILL ISSUE");
+            health = 0;
         }
         healthBar.localScale = new Vector3(health / maxHealth, healthBar.localScale.y);
     }

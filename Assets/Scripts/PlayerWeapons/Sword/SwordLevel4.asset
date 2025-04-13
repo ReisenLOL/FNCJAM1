@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SwordLevel4
   m_EditorClassIdentifier: 
   attackCount: 1
-  damage: 20
-  attackRate: 2
+  damage: 120
+  attackRate: 0.5
   range: 10

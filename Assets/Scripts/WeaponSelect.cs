@@ -1,4 +1,7 @@
+using Core.Extensions;
+using NUnit.Framework;
 using System.Collections.Generic;
+using System.Net.WebSockets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,7 +26,7 @@ public class WeaponSelect : MonoBehaviour
                 Transform weaponFound = playerWeaponsFolder.transform.Find(weaponName);
                 if (weaponFound != null)
                 {
-                    Debug.Log(weaponFound);
+                    Debug.Log(weaponFound + " weapon found ");
                     weaponFound.gameObject.GetComponent<WeaponAttack>().LevelUp();
                 }
                 else
@@ -35,6 +38,7 @@ public class WeaponSelect : MonoBehaviour
         }
         for (int i = 0; i < transform.childCount; i++)
         {
+            if(transform.GetChild(i).gameObject == templateButton) { continue; } //why remove template button grr
             Destroy(transform.GetChild(i).gameObject);
         }
         transform.parent.gameObject.SetActive(false);
@@ -43,20 +47,35 @@ public class WeaponSelect : MonoBehaviour
     {
         for (int i = 0; i < weaponListAmount; i++)
         {
+            if(listedWeapons.Count > weapons.Length - 1) { return; }
             playerWeaponsFolder = GameObject.Find("Weapons");
             int randomIndex = Random.Range(0, weapons.Length);
-            if (listedWeapons.Count != 0)
+            if (listedWeapons.Count < weaponListAmount)
             {
-                while (!listedWeapons.Contains(weapons[randomIndex].name))
+                while (listedWeapons.Contains(weapons[randomIndex].name))
                 {
                     randomIndex = Random.Range(0, weapons.Length);
                 }
+                ShowWeaponChoices(weapons, randomIndex);
             }
-            GameObject newButton = Instantiate(templateButton, transform);
-            newButton.SetActive(true);
-            newButton.GetComponentInChildren<TextMeshProUGUI>().text = weapons[randomIndex].name;
-            newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(newButton.GetComponentInChildren<TextMeshProUGUI>().text));
-            listedWeapons.Add(weapons[randomIndex].name);
         }
+    }
+
+    public void ShowWeaponChoices(GameObject[] weaponChoices, int randomIndex)
+    {
+        Debug.Log("giving new choices...");
+        GameObject newButton = Instantiate(templateButton, transform);
+        if (newButton == null) { Debug.LogWarning("new button is null!"); return; }
+        newButton.SetActive(true);
+        newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponChoices[randomIndex].name;
+        newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(newButton.GetComponentInChildren<TextMeshProUGUI>().text));
+        newButton.GetComponent<Button>().onClick.AddListener(() => ClearWeaponChoices());
+        newButton.name = weaponChoices[randomIndex].name;
+        listedWeapons.Add(weapons[randomIndex].name);
+    }
+
+    public void ClearWeaponChoices()
+    {
+        listedWeapons.Clear();
     }
 }

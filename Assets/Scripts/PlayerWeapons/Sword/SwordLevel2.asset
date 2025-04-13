@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SwordLevel2
   m_EditorClassIdentifier: 
   attackCount: 1
-  damage: 20
-  attackRate: 2
-  range: 10
+  damage: 80
+  attackRate: 1
+  range: 6

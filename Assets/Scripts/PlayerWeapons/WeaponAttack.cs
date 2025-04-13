@@ -10,6 +10,14 @@ public class WeaponAttack : MonoBehaviour
     public float damageDealt;
     public float range;
     // Update is called once per frame
+
+    private void Start()
+    {
+        attackRate = WeaponLevels[level].attackRate;
+        damageDealt = WeaponLevels[level].damage;
+        range = WeaponLevels[level].range;
+    }
+
     void Update()
     {
         attackTime += Time.deltaTime;
@@ -36,6 +44,7 @@ public class WeaponAttack : MonoBehaviour
     }
     public void LevelUp()
     {
+        if(level >= WeaponLevels.Length - 1) { return; } //just this line added to check if weapon level is above the cap
         level++;
         attackRate = WeaponLevels[level].attackRate;
         damageDealt = WeaponLevels[level].damage;
