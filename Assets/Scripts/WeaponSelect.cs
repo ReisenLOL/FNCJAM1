@@ -1,7 +1,5 @@
 using Core.Extensions;
-using NUnit.Framework;
 using System.Collections.Generic;
-using System.Net.WebSockets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,11 +7,13 @@ using UnityEngine.UI;
 public class WeaponSelect : MonoBehaviour
 {
     public List<WeaponAttack> KnownWeapons = new();
+    static HashSet<string> existingSelectionOptions;
+    static int currentSelectionItemCount;
     public Button buttonPrefab;
     [SerializeField] RectTransform selectionPanel;
     void Start()
     {
-        RebuildWeaponList();
+        RebuildWeaponList(3);
         HideWeaponSelect();
     }
     public void ShowWeaponSelect()
@@ -34,26 +34,35 @@ public class WeaponSelect : MonoBehaviour
         }
         HideWeaponSelect();
     }
-    private void RebuildWeaponList(int choiceCount = 3)
+    private void RebuildWeaponList(int choices)
     {
         for (int i = 0; i < selectionPanel.childCount; i++)
         {
             Destroy(selectionPanel.GetChild(i).gameObject);
         }
-        for (int i = 0; i < choiceCount; i++)
-        {
-            int randomIndex = Random.Range(0, KnownWeapons.Count);
-            ShowWeaponChoices(KnownWeapons, randomIndex);
-        }
+        ShowWeaponChoices(KnownWeapons, choices);
     }
-    public void ShowWeaponChoices(List<WeaponAttack> weaponChoices, int randomIndex)
+    public void ShowWeaponChoices(List<WeaponAttack> weaponChoices, int choices)
     {
-        WeaponAttack choice = KnownWeapons[randomIndex];
-        string weaponName = choice.WeaponName;
-        Button newButton = Instantiate(buttonPrefab, selectionPanel);
-        newButton.gameObject.SetActive(true);
-        newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
-        newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice));
-        newButton.name = weaponName;
+        currentSelectionItemCount = 0;
+        existingSelectionOptions = new();
+        int attempts = 50;
+        while (attempts > 0 && currentSelectionItemCount < choices)
+        {
+            attempts--;
+            int random = 0.RandomBetween(0, KnownWeapons.Count);
+            Debug.Log(random);
+            WeaponAttack choice = KnownWeapons[random];
+            if (existingSelectionOptions.Contains(choice.WeaponName))
+                continue;
+            currentSelectionItemCount++;
+            string weaponName = choice.WeaponName;
+            Button newButton = Instantiate(buttonPrefab, selectionPanel);
+            newButton.gameObject.SetActive(true);
+            newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
+            newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice));
+            newButton.name = weaponName;
+            existingSelectionOptions.Add(choice.WeaponName);
+        }
     }
 }
