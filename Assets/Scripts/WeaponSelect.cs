@@ -9,13 +9,10 @@ using UnityEngine.UI;
 public class WeaponSelect : MonoBehaviour
 {
     public List<WeaponAttack> KnownWeapons = new();
-    [SerializeField] GameObject playerWeaponsFolder;
     public Button buttonPrefab;
-    Dictionary<string, WeaponAttack> spawnedWeapons;
     [SerializeField] RectTransform selectionPanel;
     void Start()
     {
-        spawnedWeapons = new();
         RebuildWeaponList();
         HideWeaponSelect();
     }
@@ -28,25 +25,9 @@ public class WeaponSelect : MonoBehaviour
     {
         selectionPanel.gameObject.SetActive(false);
     }
-    public WeaponAttack FindWeaponReference(WeaponAttack weapon, out bool wasCreated)
-    {
-        if (spawnedWeapons.TryGetValue(weapon.WeaponName, out WeaponAttack foundWeapon))
-        {
-            wasCreated = false;
-            return foundWeapon;
-        }
-        else
-        {
-            WeaponAttack spawned = Instantiate(weapon, playerWeaponsFolder.transform);
-            spawned.SetOwner(BaseUnit.Player);
-            spawnedWeapons[weapon.WeaponName] = spawned;
-            wasCreated = true;
-            return weapon;
-        }
-    }
     private void SelectWeapon(WeaponAttack w)
     {
-        WeaponAttack weapon = FindWeaponReference(w, out bool wasCreated);
+        WeaponAttack weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
         if (!wasCreated)
         {
             weapon.LevelUp();

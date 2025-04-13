@@ -12,7 +12,7 @@ public class UnitController : MonoBehaviour
     private float attackTime;
     private Rigidbody2D rb;
     private Vector2 lookDirection;
-    [SerializeField] float acceleration = 30f;
+    [SerializeField] float acceleration = 150f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

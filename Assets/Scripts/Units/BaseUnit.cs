@@ -16,6 +16,8 @@ public partial class BaseUnit : IHitListener
     public event HitEvent WhenHit;
     public void PerformHit(HitPacket packet)
     {
+        if (!IsAlive)
+            return;
         ChangeHealth(-packet.Damage);
         WhenHit?.Invoke(packet, this);
     }
@@ -29,10 +31,9 @@ public partial class BaseUnit : IHitListener
     }
     private void ChangeHealth(float value)
     {
-        bool wasAlive = IsAlive;
         CurrentHealth += value;
         CurrentHealth = CurrentHealth.Max(0f);
-        if (wasAlive && CurrentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Kill();
         }

@@ -24,7 +24,7 @@ public partial class PlayerController
         float maxHealth = unit.MaxHealth;
         if (health <= 0)
         {
-            Debug.Log("MASSIVE SKILL ISSUE");
+            TextPopupManager.PopupText(Owner.CurrentPosition, "MASSIVE##SKILL##ISSUE".ReplaceLineBreaks("##"));
         }
         healthBar.localScale = new Vector3(health / maxHealth, healthBar.localScale.y);
     }

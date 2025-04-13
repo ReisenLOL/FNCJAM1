@@ -383,6 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2304067790638222617}
   - component: {fileID: 8829255101487187414}
+  - component: {fileID: 8949582998835016739}
   m_Layer: 0
   m_Name: General Manager
   m_TagString: Untagged
@@ -426,3 +427,16 @@ MonoBehaviour:
   breakDownScore: 1
   visibleScoreDivisor: 0.01
   visibleScoreMultiplier: 100
+--- !u!114 &8949582998835016739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819992696731238189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124bc1d76b926b14eac1fb0164bc6873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupTextPrefab: {fileID: 3729533073341964451, guid: 6d666388ac61ef2429ceb73b4b46dc0f, type: 3}
