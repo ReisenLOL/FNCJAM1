@@ -48,6 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2465719283461132149, guid: 67e5d9ec227c3544fbaf385463230eb8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465719283461132149, guid: 67e5d9ec227c3544fbaf385463230eb8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465719283461132149, guid: 67e5d9ec227c3544fbaf385463230eb8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465719283461132149, guid: 67e5d9ec227c3544fbaf385463230eb8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 4.998169
+      objectReference: {fileID: 0}
     - target: {fileID: 8819992696731238189, guid: 67e5d9ec227c3544fbaf385463230eb8, type: 3}
       propertyPath: m_Name
       value: General Manager Variant

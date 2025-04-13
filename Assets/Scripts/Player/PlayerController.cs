@@ -106,22 +106,6 @@ public partial class PlayerController
     }
 }
 #endregion
-#region Camera Zoom
-public partial class PlayerController
-{
-    [SerializeField] CinemachineCamera playerCam;
-    float minOrthographicSize;
-    float maxOrthographicSize => minOrthographicSize * MaxCameraZoomOut;
-    [Range(1f, 5f)]
-    [SerializeField] float MaxCameraZoomOut = 5f;
-    private void ModifyOrthographicSize(float multiplier)
-    {
-        float orthographicSize = playerCam.Lens.OrthographicSize;
-        orthographicSize += orthographicSize * (multiplier * 1f);
-        playerCam.Lens.OrthographicSize = orthographicSize.Clamp(minOrthographicSize, maxOrthographicSize);
-    }
-}
-#endregion
 public partial class PlayerController : MonoBehaviour
 {
     [field: SerializeField] public BaseUnit Owner { get; private set; }
@@ -130,7 +114,6 @@ public partial class PlayerController : MonoBehaviour
     public Rigidbody2D RB => rb;
     private void Awake()
     {
-        minOrthographicSize = playerCam.Lens.OrthographicSize;
         rb = GetComponent<Rigidbody2D>();
     }
     private void Start()
@@ -143,8 +126,6 @@ public partial class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        float scroll = Input.mouseScrollDelta.y;
-        ModifyOrthographicSize(-scroll * 0.1f);
         if (TryMove(out moveInput))
         {
             if (ApplyMovementToSprite(moveInput))

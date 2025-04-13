@@ -31,14 +31,6 @@ public partial class BaseUnit : IHitListener
     }
     private void ChangeHealth(float value)
     {
-        if (value > 0)
-        {
-            TextPopupManager.HealthPopupText(transform.position, (int)value, Color.green); //popup text for health change
-        } else
-        {
-            TextPopupManager.HealthPopupText(transform.position, (int)value, Color.red); //popup text for health change
-        }
-
         CurrentHealth += value;
         CurrentHealth = CurrentHealth.Max(0f);
         if (CurrentHealth <= 0)
@@ -84,6 +76,11 @@ public abstract partial class BaseUnit : MonoBehaviour
     private void Start()
     {
         WhenStart();
+    }
+    protected abstract void WhenDestroy();
+    private void OnDestroy()
+    {
+        WhenDestroy();
     }
     private void Awake()
     {

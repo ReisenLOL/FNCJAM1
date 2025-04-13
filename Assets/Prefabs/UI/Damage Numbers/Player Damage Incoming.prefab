@@ -197,8 +197,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278198015
+  m_fontColor: {r: 1, g: 0.11576606, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 3729533073341964451}
   - component: {fileID: 2564992310566588798}
   m_Layer: 0
-  m_Name: Popup Text
+  m_Name: Player Damage Incoming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
     randomFlip: 0
     dragX: 0.1
     dragY: 1
-    gravity: 6
+    gravity: 7
   enableShaking: 0
   shakeSettings:
     offset: {x: 0.005, y: 0.005}

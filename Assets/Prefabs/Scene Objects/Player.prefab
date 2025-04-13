@@ -230,8 +230,6 @@ MonoBehaviour:
   moveAcceleration: 60
   moveFriction: 40
   PlayerMovementFlipAnchor: {fileID: 4431681148228129284}
-  playerCam: {fileID: 4296504511190089583}
-  MaxCameraZoomOut: 5
   <Owner>k__BackingField: {fileID: 3864224362199105629}
 --- !u!114 &3864224362199105629
 MonoBehaviour:
@@ -532,7 +530,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 7.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -564,7 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 0.05, y: 0.05, z: 0}
+    PositionDamping: {x: 0.5, y: 0.5, z: 0}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -585,7 +583,7 @@ MonoBehaviour:
   Damping: 0
   SlowingDistance: 5
   OversizeWindow:
-    Enabled: 0
+    Enabled: 1
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2

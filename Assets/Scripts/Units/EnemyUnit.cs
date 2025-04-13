@@ -2,6 +2,7 @@ using Bremsengine;
 using System.Collections.Generic;
 using UnityEngine;
 using Core.Extensions;
+using Unity.VisualScripting;
 
 #region Alive Enemies & Auto Aim
 public partial class EnemyUnit
@@ -16,8 +17,8 @@ public partial class EnemyUnit
     {
         AliveEnemies.Clear();
     }
-    public static HashSet<EnemyUnit> AliveEnemies;
-    public void RecalculateAliveEnemy()
+    public static List<EnemyUnit> AliveEnemies;
+    public void RecalculateAliveEnemy(HitPacket hit, BaseUnit unit)
     {
         if (CurrentHealth > 0f && !AliveEnemies.Contains(this))
         {
@@ -51,16 +52,24 @@ public partial class EnemyUnit
         }
         return selection != null;
     }
+    public static bool TryGetRandomAliveEnemy(out EnemyUnit selection)
+    {
+        selection = AliveEnemies[0.RandomBetween(0, AliveEnemies.Count)];
+        return selection != null;
+    }
 }
 #endregion
 public partial class EnemyUnit : BaseUnit
 {
+    private void ShowDamageText(HitPacket packet, BaseUnit unit)
+    {
+        TextPopupManager.PlayerDamageOutwards(packet.HitPosition, packet.Damage.ToInt());
+    }
     [SerializeField] bool funnyexplosion = false;
     public override float DamageScale(float inputDamage)
     {
         return inputDamage;
     }
-
     protected override void OnKillEffects()
     {
         if (funnyexplosion) GeneralManager.FunnyExplosion(CurrentPosition, 1f);
@@ -70,9 +79,14 @@ public partial class EnemyUnit : BaseUnit
     {
 
     }
-
     protected override void WhenStart()
     {
-
+        WhenHit += RecalculateAliveEnemy;
+        WhenHit += ShowDamageText;
+    }
+    protected override void WhenDestroy()
+    {
+        WhenHit -= RecalculateAliveEnemy;
+        WhenHit -= ShowDamageText;
     }
 }

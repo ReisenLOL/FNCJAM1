@@ -6,6 +6,8 @@ public class TextPopupManager : MonoBehaviour
 {
     static TextPopupManager instance;
     [SerializeField] DamageNumber popupTextPrefab;
+    [SerializeField] DamageNumber playerDamageIncoming;
+    [SerializeField] DamageNumber playerDamageOutgoing;
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void ResetState()
     {
@@ -22,11 +24,17 @@ public class TextPopupManager : MonoBehaviour
     {
         instance.popupTextPrefab.Spawn(position, text);
     }
-
-    public static void HealthPopupText(Vector2 position, int damage, Color color)
+    public static void PlayerDamageOutwards(Vector2 position, int damage)
+    {
+        if (damage <= 0f)
+        {
+            return;
+        }
+        instance.playerDamageOutgoing.Spawn(position, damage);
+    }
+    public static void PlayerDamageIncoming(Vector2 position, int damage)
     {
         if (damage == 0) return;
-        instance.popupTextPrefab.Spawn(position, damage);
-        instance.popupTextPrefab.SetColor(color);
+        instance.playerDamageIncoming.Spawn(position, damage);
     }
 }

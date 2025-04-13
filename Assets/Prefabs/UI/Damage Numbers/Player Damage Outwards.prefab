@@ -197,8 +197,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285722623
+  m_fontColor: {r: 1, g: 0.93681, b: 0.4481132, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 3729533073341964451}
   - component: {fileID: 2564992310566588798}
   m_Layer: 0
-  m_Name: Popup Text
+  m_Name: Player Damage Outwards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   permanent: 0
-  lifetime: 1.5
+  lifetime: 1
   unscaledTime: 0
   enable3DGame: 0
   faceCameraView: 1
@@ -546,8 +546,8 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     fromNumber: 10
     toNumber: 100
-  durationFadeIn: 0.2
-  enableOffsetFadeIn: 1
+  durationFadeIn: 0.1
+  enableOffsetFadeIn: 0
   offsetFadeIn: {x: 0.5, y: 0}
   enableScaleFadeIn: 1
   scaleFadeIn: {x: 2, y: 2}
@@ -583,7 +583,7 @@ MonoBehaviour:
     randomFlip: 0
     dragX: 0.1
     dragY: 1
-    gravity: 6
+    gravity: 7
   enableShaking: 0
   shakeSettings:
     offset: {x: 0.005, y: 0.005}
@@ -664,7 +664,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.45
+      value: 0.74
       inSlope: 0
       outSlope: 0
       tangentMode: 0

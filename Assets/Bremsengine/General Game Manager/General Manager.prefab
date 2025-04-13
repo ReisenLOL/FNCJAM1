@@ -440,3 +440,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupTextPrefab: {fileID: 3729533073341964451, guid: 6d666388ac61ef2429ceb73b4b46dc0f, type: 3}
+  playerDamageIncoming: {fileID: 3729533073341964451, guid: 6d666e4255f7fff43ae38edc5a7db9aa, type: 3}
+  playerDamageOutgoing: {fileID: 3729533073341964451, guid: ac44402abaad81347abc6835f6245844, type: 3}
