@@ -1,4 +1,5 @@
 using Core.Extensions;
+using System.Collections;
 using UnityEngine;
 
 public class WeaponAttack : MonoBehaviour
@@ -8,6 +9,7 @@ public class WeaponAttack : MonoBehaviour
     public int level;
     public WeaponLevelData[] WeaponLevels;
     public float nextAttackTime;
+    public float shootDuration = 0.25f;
     public Weapon attack;
     float attackRate;
     [Tooltip("Optional")]
@@ -32,23 +34,29 @@ public class WeaponAttack : MonoBehaviour
         float range = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].range;
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
         float dissipationDelay = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].dissipationDelay;
-        for (int i = 0; i < attackCount; i++)
+        IEnumerator CO_Shoot()
         {
-            Weapon spawnedAttack = Instantiate(attack, SpawnPosition, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
-            spawnedAttack.SetOwner(Owner);
-            spawnedAttack.firedFrom = gameObject;
-            spawnedAttack.damage = damageDealt;
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = Camera.main.nearClipPlane + 10;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-            spawnedAttack.RotateToTarget(worldPos);
-            spawnedAttack.maxRange = range;
-            spawnedAttack.weaponNumber = i;
-            if (dissipationDelay != 0)
+            WaitForSeconds repeatDelay = new WaitForSeconds(shootDuration / attackCount);
+            for (int i = 0; i < attackCount; i++)
             {
-                spawnedAttack.dissipationDelay = dissipationDelay;
+                Weapon spawnedAttack = Instantiate(attack, SpawnPosition, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
+                spawnedAttack.SetOwner(Owner);
+                spawnedAttack.firedFrom = gameObject;
+                spawnedAttack.damage = damageDealt;
+                Vector3 mousePos = Input.mousePosition;
+                mousePos.z = Camera.main.nearClipPlane + 10;
+                Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+                spawnedAttack.RotateToTarget(worldPos);
+                spawnedAttack.maxRange = range;
+                spawnedAttack.weaponNumber = i;
+                if (dissipationDelay != 0)
+                {
+                    spawnedAttack.dissipationDelay = dissipationDelay;
+                }
+                yield return repeatDelay;
             }
         }
+        StartCoroutine(CO_Shoot());
     }
     public void LevelUp()
     {
