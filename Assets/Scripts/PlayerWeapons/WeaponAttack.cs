@@ -10,6 +10,9 @@ public class WeaponAttack : MonoBehaviour
     public float nextAttackTime;
     public Weapon attack;
     float attackRate;
+    [Tooltip("Optional")]
+    public Transform overrideSpawnPosition;
+    public Vector2 SpawnPosition => overrideSpawnPosition == null ? transform.position : overrideSpawnPosition.position;
     private void Start()
     {
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
@@ -28,10 +31,10 @@ public class WeaponAttack : MonoBehaviour
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
         float range = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].range;
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
-        Transform spawnLocations = transform.Find("SpawnLocations");
+        
         for (int i = 0; i < attackCount; i++)
         {
-            Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
+            Weapon spawnedAttack = Instantiate(attack, SpawnPosition, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
             spawnedAttack.SetOwner(Owner);
             spawnedAttack.firedFrom = gameObject;
             spawnedAttack.damage = damageDealt;
@@ -40,10 +43,6 @@ public class WeaponAttack : MonoBehaviour
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
             spawnedAttack.RotateToTarget(worldPos);
             spawnedAttack.maxRange = range;
-            if (spawnLocations != null)
-            {
-                spawnedAttack.transform.position = spawnLocations.GetChild(i).transform.position;
-            }
         }
     }
     public void LevelUp()
