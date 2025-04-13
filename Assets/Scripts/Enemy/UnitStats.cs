@@ -14,12 +14,9 @@ public class UnitStats : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            GameObject droppedPower = Instantiate(powerObject, collectableFolder.transform);
+            droppedPower.transform.position = gameObject.transform.position;
             Destroy(gameObject);
         }
-    }
-    private void OnDestroy()
-    {
-        GameObject droppedPower = Instantiate(powerObject, collectableFolder.transform);
-        droppedPower.transform.position = gameObject.transform.position;
     }
 }

@@ -6,12 +6,13 @@ public class PlayerLevelManager : MonoBehaviour
     public int level;
     public int requiredPowerToNextLevel;
     public int currentPower;
+    public GameObject levelUpUI;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI powerText;
     private void Start()
     {
-        UpdatePower(0);
-        LevelUp();
+        powerText.text = "Power: " + currentPower;
+        levelText.text = "Level: " + level;
     }
     public void UpdatePower(int power)
     {
@@ -26,6 +27,7 @@ public class PlayerLevelManager : MonoBehaviour
     {
         level++;
         requiredPowerToNextLevel += requiredPowerToNextLevel;
+        levelUpUI.SetActive(true);
         levelText.text = "Level: " + level;
         Debug.Log("Level up: " + level);
     }

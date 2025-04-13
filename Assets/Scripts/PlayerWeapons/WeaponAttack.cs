@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class WeaponAttack : MonoBehaviour
 {
+    public int level;
+    public int maxLevel;
     public float attackRate;
     public float attackTime;
     public GameObject attack;
