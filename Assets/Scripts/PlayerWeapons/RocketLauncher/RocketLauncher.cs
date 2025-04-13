@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RocketLauncher : Weapon
@@ -5,6 +7,8 @@ public class RocketLauncher : Weapon
     private float dissipationTime;
     public int pierceAmount;
     public int amountPierced;
+    [SerializeField] LayerMask unitCollectionLayer;
+    [SerializeField] float explosionRadius = 5f;
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
@@ -23,10 +27,20 @@ public class RocketLauncher : Weapon
         HitPacket packet = new(transform.position, damage);
         if (TryHitOther(packet, collision))
         {
+            EnemyUnit originalHitUnit = collision.GetOrAddComponent<EnemyUnit>();
             amountPierced++;
             if (amountPierced > pierceAmount)
             {
                 Destroy(gameObject);
+            }
+            if (EnemyUnit.TryFindInCircleCast(transform.position, explosionRadius, unitCollectionLayer, out HashSet<EnemyUnit> explodedUnits))
+            {
+                foreach (var item in explodedUnits)
+                {
+                    if (item == originalHitUnit)
+                        continue;
+                    item.PerformHit(packet);
+                }
             }
         }
     }

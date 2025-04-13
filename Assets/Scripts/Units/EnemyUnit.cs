@@ -59,6 +59,19 @@ public partial class EnemyUnit
     }
 }
 #endregion
+#region Enemy Circle Cast
+public partial class EnemyUnit
+{
+    public static bool TryFindInCircleCast(Vector2 position, float radius, LayerMask mask, out HashSet<EnemyUnit> result)
+    {
+        if (Helper.TryFindInCircleCast<EnemyUnit>(position, radius, mask, out result))
+        {
+            return true;
+        }
+        return false;
+    }
+}
+#endregion
 public partial class EnemyUnit : BaseUnit
 {
     private void ShowDamageText(HitPacket packet, BaseUnit unit)
