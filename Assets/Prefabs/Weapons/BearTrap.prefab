@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1031843684155584608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6088354989259053749}
+  - component: {fileID: 2903617769560647650}
+  m_Layer: 0
+  m_Name: BearTrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6088354989259053749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2903617769560647650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  <WeaponName>k__BackingField: Bear Trap
+  level: 0
+  WeaponLevels:
+  - {fileID: 11400000, guid: 47a10d12da353d64194618e0baf9f403, type: 2}
+  - {fileID: 11400000, guid: 81fc28b41ee0407439c1c8d517ce5118, type: 2}
+  - {fileID: 11400000, guid: db0d13ae09278dc4496a46dde8e70e6e, type: 2}
+  - {fileID: 11400000, guid: 8579dea1f47b8c6419ae6cbd8bc9a4f9, type: 2}
+  - {fileID: 11400000, guid: 6dbe20d215b2f914eae4efae6e2375cf, type: 2}
+  nextAttackTime: 0
+  attack: {fileID: 3255813774938795988, guid: ddd3488b54f973a46bfcda126bc1f80f, type: 3}

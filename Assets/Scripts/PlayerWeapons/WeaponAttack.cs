@@ -28,6 +28,7 @@ public class WeaponAttack : MonoBehaviour
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
         float range = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].range;
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
+        Transform spawnLocations = transform.Find("SpawnLocations");
         for (int i = 0; i < attackCount; i++)
         {
             Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
@@ -39,6 +40,10 @@ public class WeaponAttack : MonoBehaviour
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
             spawnedAttack.RotateToTarget(worldPos);
             spawnedAttack.maxRange = range;
+            if (spawnLocations != null)
+            {
+                spawnedAttack.transform.position = spawnLocations.GetChild(i).transform.position;
+            }
         }
     }
     public void LevelUp()
