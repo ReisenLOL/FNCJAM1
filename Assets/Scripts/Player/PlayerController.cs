@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
+    //wtf did fumorin do here
+    public float health;
     public float speed;
     private Rigidbody2D rb;
     public Rigidbody2D RB => rb;
@@ -76,6 +78,14 @@ public class PlayerController : MonoBehaviour
             {
 
             }
+        }
+    }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Debug.Log("MASSIVE SKILL ISSUE");
         }
     }
 }
