@@ -151,11 +151,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1873328882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -24.999996}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 10, y: 0}
   m_SizeDelta: {x: 780, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &72282463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582fce88b71102d46bb84e4fbaa8e095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  XPBar: {fileID: 72282462}
   level: 1
   requiredPowerToNextLevel: 5
   basePowerToNextLevel: 5
@@ -1177,6 +1178,7 @@ MonoBehaviour:
   - {fileID: 2903617769560647650, guid: 13a9856cddc52d1438ad7135195c7af6, type: 3}
   - {fileID: 2903617769560647650, guid: ff66b1adbd9a1a940b6360e9597dea02, type: 3}
   - {fileID: 2903617769560647650, guid: 390b7879226495f4ea55fc0601ae432b, type: 3}
+  - {fileID: 2903617769560647650, guid: eb473d65e3e4734449c6889b671be539, type: 3}
   - {fileID: 2903617769560647650, guid: ad108a8441f365944b01f6d8788de00d, type: 3}
   buttonPrefab: {fileID: 1931668739}
   selectionPanel: {fileID: 632408285}
@@ -1212,7 +1214,7 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
   enemyFolder: {fileID: 943318251}
   spawnPoints: []
-  spawnRate: 0.5
+  spawnRate: 0.2
   spawnTime: 0
 --- !u!4 &1818214239
 Transform:

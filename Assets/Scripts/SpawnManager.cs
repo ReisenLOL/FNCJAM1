@@ -12,8 +12,6 @@ public class SpawnManager : MonoBehaviour
     {
         spawnPoints = GameObject.Find("SpawnPoints").GetComponentsInChildren<Transform>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         spawnTime += Time.deltaTime;
