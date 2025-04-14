@@ -1,0 +1,51 @@
+using UnityEngine;
+
+public class ArcanePrism : Weapon
+{
+    public float rotationSpeed;
+    public float fireRate;
+    private float fireTime;
+    public float offset;
+    public Weapon attack;
+    private void Start()
+    {
+        transform.parent = firedFrom.transform;
+        UpdatePosition();
+        transform.RotateAround(firedFrom.transform.position, Vector3.forward, 90 * weaponNumber);
+    }
+    void UpdatePosition()
+    {
+        transform.position = transform.parent.position + (transform.right * offset);
+    }
+
+    void Update()
+    {
+        transform.RotateAround(firedFrom.transform.position, Vector3.forward, rotationSpeed * Time.deltaTime);
+        fireTime += Time.deltaTime;
+        if (fireTime > fireRate)
+        {
+            FireProjectile();
+            fireTime -= fireRate;
+        }
+    }
+    private void FireProjectile()
+    {
+        Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation);
+        spawnedAttack.SetOwner(Owner);
+        spawnedAttack.firedFrom = gameObject;
+        spawnedAttack.damage = damage;
+        if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
+        {
+            spawnedAttack.RotateToTarget(a.CurrentPosition);
+        }
+        else
+        {
+            spawnedAttack.RotateToTarget(Vector2.right);
+        }
+            spawnedAttack.maxRange = maxRange;
+        if (dissipationDelay != 0)
+        {
+            spawnedAttack.dissipationDelay = dissipationDelay;
+        }
+    }
+}

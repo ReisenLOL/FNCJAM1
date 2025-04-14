@@ -13,7 +13,6 @@ public class RocketLauncher : Weapon
         if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
         {
             RotateToTarget(a.CurrentPosition);
-
         }
     }
         void Update()

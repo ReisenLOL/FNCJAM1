@@ -10,6 +10,8 @@ public class WeaponAttack : MonoBehaviour
     public WeaponLevelData[] WeaponLevels;
     public float nextAttackTime;
     public float shootDuration = 0.25f;
+    public bool willRegenerate = true;
+    public bool canFire = true;
     public Weapon attack;
     float attackRate;
     [Tooltip("Optional")]
@@ -21,7 +23,12 @@ public class WeaponAttack : MonoBehaviour
     }
     void Update()
     {
-        if (Time.time >= nextAttackTime)
+        if (!willRegenerate && canFire)
+        {
+            InstantiateAttack();
+            canFire = false;
+        }
+        if (Time.time >= nextAttackTime && canFire)
         {
             nextAttackTime = Time.time + (1f / attackRate.Clamp(0.1f, 10f));
             InstantiateAttack();
@@ -63,6 +70,10 @@ public class WeaponAttack : MonoBehaviour
     {
         if (level >= WeaponLevels.Length - 1) { return; } //just this line added to check if weapon level is above the cap
         level++;
+        if (!willRegenerate)
+        {
+            canFire = true;
+        }
     }
     public void SetOwner(BaseUnit owner)
     {
