@@ -133,7 +133,7 @@ namespace Bremsengine
                 selectedTrack = 2;
                 if (crossfade == 0)
                 {
-                    track2.volume = clip.musicVolume * GlobalVolume;
+                    track2.volume = clip.musicVolume;
                     track1.volume = 0f;
                 }
                 else
@@ -146,7 +146,7 @@ namespace Bremsengine
                     }
                 }
                 track1.Stop();
-                track2.volume = clip.musicVolume * GlobalVolume;
+                track2.volume = clip.musicVolume;
                 track2.Play();
             }
             else
@@ -156,7 +156,7 @@ namespace Bremsengine
                 selectedTrack = 1;
                 if (crossfade == 0)
                 {
-                    track1.volume = clip.musicVolume * GlobalVolume;
+                    track1.volume = clip.musicVolume;
                     track2.volume = 0f;
                 }
                 else
@@ -169,7 +169,7 @@ namespace Bremsengine
                     }
                 }
                 track2.Stop();
-                track1.volume = clip.musicVolume * GlobalVolume;
+                track1.volume = clip.musicVolume;
                 track1.Play();
             }
             newTrack.track = selectedTrack;

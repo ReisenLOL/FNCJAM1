@@ -11,7 +11,8 @@ namespace Bremsengine
         public static implicit operator float(MusicWrapper mw) => mw == null ? 0f : mw.musicVolume;
         public string TrackName = Helper.DefaultName;
         public AudioClip musicClip;
-        public float musicVolume = 1f;
+        public float musicVolume => clipVolume * MusicPlayer.GlobalVolume;
+        [SerializeField] float clipVolume = 0.7f;
         [field: SerializeField] public bool dontReplaceSelf { get; private set; } = true;
         private void OnValidate()
         {
