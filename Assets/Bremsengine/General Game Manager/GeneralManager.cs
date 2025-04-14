@@ -28,7 +28,7 @@ namespace Bremsengine
         {
             Application.OpenURL("https://obsproject.com/");
         }
-        public static void StoreGameValue(string key, dynamic data)
+        public static void StoreGameValue<T>(string key, T data)
         {
             gameValues[key] = data;
         }

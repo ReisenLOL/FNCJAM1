@@ -1,3 +1,4 @@
+using Bremsengine;
 using Core.Extensions;
 using UnityEngine;
 
@@ -12,7 +13,13 @@ public class PlayerUnit : BaseUnit
     }
     public override float DamageScale(float inputDamage)
     {
-        return inputDamage.Multiply((Power * PowerScaler).Max(1f));
+        bool crit = false; // lol
+        float critChance = 30f;
+        if (Random.Range(0f,100f) < critChance)
+        {
+            crit = true;
+        }
+        return inputDamage.Multiply((Power * PowerScaler * crit.AsFloat(2f, 1f)).Max(1f));
     }
 
     protected override void OnKillEffects()

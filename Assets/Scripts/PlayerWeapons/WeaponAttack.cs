@@ -31,6 +31,7 @@ public class WeaponAttack : MonoBehaviour
     {
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
+        damageDealt = Owner.DamageScale(damageDealt);
         float range = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].range;
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
         float dissipationDelay = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].dissipationDelay;
