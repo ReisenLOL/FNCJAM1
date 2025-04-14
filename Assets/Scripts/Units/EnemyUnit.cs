@@ -54,6 +54,9 @@ public partial class EnemyUnit
     }
     public static bool TryGetRandomAliveEnemy(out EnemyUnit selection)
     {
+        selection = null;
+        if (AliveEnemies.Count == 0) { return selection = null; }
+
         selection = AliveEnemies[0.RandomBetween(0, AliveEnemies.Count)];
         return selection != null;
     }
