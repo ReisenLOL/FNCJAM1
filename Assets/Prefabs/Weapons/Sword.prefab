@@ -53,4 +53,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49a0dd4819a5657439874a7552a097b2, type: 2}
   - {fileID: 11400000, guid: b30cb02bf10294248ae8d5f1cc8b5ea4, type: 2}
   nextAttackTime: 0
+  shootDuration: 0.25
+  willRegenerate: 1
+  canFire: 1
   attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
+  attackSound: {fileID: 8300000, guid: 823e40e13e19f0340866c9fc6ef8c328, type: 3}
+  attackSoundVolume: 0.8
+  overrideSpawnPosition: {fileID: 0}

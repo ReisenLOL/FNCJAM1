@@ -13,6 +13,8 @@ public class WeaponAttack : MonoBehaviour
     public bool willRegenerate = true;
     public bool canFire = true;
     public Weapon attack;
+    public AudioClip attackSound;
+    public float attackSoundVolume;
     float attackRate;
     [Tooltip("Optional")]
     public Transform overrideSpawnPosition;
@@ -55,6 +57,10 @@ public class WeaponAttack : MonoBehaviour
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 spawnedAttack.RotateToTarget(worldPos);
                 spawnedAttack.weaponNumber = i;
+                if (attackSound != null)
+                {
+                    GetComponentInParent<AudioSource>().PlayOneShot(attackSound, attackSoundVolume);
+                }
                 yield return repeatDelay;
             }
         }

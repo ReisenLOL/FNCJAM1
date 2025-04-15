@@ -6,6 +6,7 @@ public class PowerItem : Collectable
     public int powerAmount;
     private Rigidbody2D rb;
     public Vector3 lookDirection;
+    public AudioClip collectionSound;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -14,6 +15,7 @@ public class PowerItem : Collectable
     private void OnTriggerEnter2D(Collider2D collision)
     {
         playerLevelManager.UpdatePower(powerAmount);
+        collision.GetComponent<AudioSource>().PlayOneShot(collectionSound, 0.5f);
         Destroy(gameObject);
     }
     private void FixedUpdate()

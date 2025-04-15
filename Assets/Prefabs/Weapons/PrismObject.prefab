@@ -107,7 +107,10 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0}
   weaponNumber: 0
   dissipationDelay: 0
+  weaponLevelData: {fileID: 0}
   rotationSpeed: 90
   fireRate: 2
   offset: 3
   attack: {fileID: 2659656222951051777, guid: 0da73934def90a24a9dd9c5720cf5b29, type: 3}
+  attackSound: {fileID: 8300000, guid: 83217b37fc59eb7448ace4c73fb8eb62, type: 3}
+  attackSoundVolume: 0.2

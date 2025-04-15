@@ -7,6 +7,8 @@ public class ArcanePrism : Weapon
     private float fireTime;
     public float offset;
     public Weapon attack;
+    public AudioClip attackSound;
+    public float attackSoundVolume;
     private void Start()
     {
         transform.parent = firedFrom.transform;
@@ -46,6 +48,10 @@ public class ArcanePrism : Weapon
         if (dissipationDelay != 0)
         {
             spawnedAttack.dissipationDelay = dissipationDelay;
+        }
+        if (attackSound != null)
+        {
+            GetComponentInParent<AudioSource>().PlayOneShot(attackSound, attackSoundVolume);
         }
     }
 }

@@ -55,5 +55,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3544a1dc7d6108d4293d8fae1d75736d, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
+  willRegenerate: 1
+  canFire: 1
   attack: {fileID: 8004712210503351708, guid: 6efe1cc352ef19746bbdcf0c86a127f8, type: 3}
+  attackSound: {fileID: 8300000, guid: dcb33f69759a8f242a23b54a9ea3cfec, type: 3}
+  attackSoundVolume: 0.8
   overrideSpawnPosition: {fileID: 0}

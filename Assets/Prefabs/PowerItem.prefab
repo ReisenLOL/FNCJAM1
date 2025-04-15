@@ -177,6 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMovingToPlayer: 0
   collectionSpeed: 0
-  moveToPlayer: {x: 0, y: 0, z: 0}
+  moveToPlayer: {fileID: 0}
   playerLevelManager: {fileID: 0}
   powerAmount: 1
+  lookDirection: {x: 0, y: 0, z: 0}
+  collectionSound: {fileID: 8300000, guid: 14c7242323da41548b256431a1761908, type: 3}
