@@ -88,6 +88,8 @@ public partial class EnemyUnit : BaseUnit
     }
     protected override void OnKillEffects()
     {
+        //i dunno where to put this line of code at so....
+        GameObject.Find("SpawnManager").GetComponent<SpawnManager>().currentKills++;
         if (funnyexplosion) GeneralManager.FunnyExplosion(CurrentPosition, 1f);
     }
 
