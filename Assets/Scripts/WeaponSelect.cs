@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class WeaponSelect : MonoBehaviour
 {
     public List<WeaponAttack> KnownWeapons = new();
+    public List<Passive> KnownPassives = new();
     static HashSet<string> existingSelectionOptions;
     static int currentSelectionItemCount;
     public Button buttonPrefab;
