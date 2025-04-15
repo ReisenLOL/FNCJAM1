@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5475291989503290059}
   - component: {fileID: 1208405583744882210}
   - component: {fileID: 8199027488562775055}
-  - component: {fileID: 5187138856504406741}
+  - component: {fileID: 1754116986036379369}
   - component: {fileID: 8846915252871540021}
   m_Layer: 7
-  m_Name: FairyEnemy 1
+  m_Name: EnemyThatExplodes
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
   powerObject: {fileID: 6212211480034386404, guid: b476273508dcf5e4f83702fd3a0660bd, type: 3}
---- !u!114 &5187138856504406741
+--- !u!114 &1754116986036379369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,13 +188,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2262917533461444525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebff8b5871cad34ca09ed193e09e6ec, type: 3}
+  m_Script: {fileID: 11500000, guid: a6e8698781d69f94a9ce286bda3ef1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
-  damage: 20
+  damage: 10
   speed: 4
   attackRate: 1
+  willSelfDestruct: 0
+  selfDestructRadius: 4
+  selfDestructRate: 4
+  selfDestructTime: 0
+  blastRadius: 4
+  blastDamage: 50
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
   acceleration: 150
 --- !u!114 &8846915252871540021
 MonoBehaviour:

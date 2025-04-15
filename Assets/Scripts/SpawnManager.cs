@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] enemyToSpawn;
     public Transform enemyFolder;
     public Transform[] spawnPoints;
+    public int killQuota;
+    public int currentKills;
     public float spawnRate;
     public float spawnTime;
     void Start()
