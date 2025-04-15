@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RifleShot : Weapon
@@ -5,6 +6,11 @@ public class RifleShot : Weapon
     private float dissipationTime;
     public int pierceAmount;
     public int amountPierced;
+    private void Start()
+    {
+        SetWeaponProperties();
+        pierceAmount = (int)weaponLevelData.specialPropertyA;
+    }
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);

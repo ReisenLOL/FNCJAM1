@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class WeaponLevelData : ScriptableObject
 {
+    public float movementSpeed;
     public float attackCount;
     public float damage;
     public float attackRate;
     public float range;
     public float dissipationDelay;
+    public float specialPropertyA;
+    public float specialPropertyB;
+    public float specialPropertyC;
 }

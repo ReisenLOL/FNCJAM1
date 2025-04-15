@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     public Vector2 targetPosition;
     public int weaponNumber;
     public float dissipationDelay;
+    public WeaponLevelData weaponLevelData;
     public void SetOwner(BaseUnit owner) => this.Owner = owner;
     public void RotateToTarget(Vector2 worldPosition)
     {
@@ -31,5 +32,15 @@ public class Weapon : MonoBehaviour
             return true;
         }
         return false;
+    }
+    public void SetWeaponProperties()
+    {
+        speed = weaponLevelData.movementSpeed;
+        damage = weaponLevelData.damage;
+        maxRange = weaponLevelData.range;
+        if (weaponLevelData.dissipationDelay != 0)
+        {
+            dissipationDelay = weaponLevelData.dissipationDelay;
+        }
     }
 }

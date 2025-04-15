@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Rifle Level 1
   m_EditorClassIdentifier: 
+  movementSpeed: 16
   attackCount: 1
   damage: 50
   attackRate: 1
   range: 25
   dissipationDelay: 8
+  specialPropertyA: 1
+  specialPropertyB: 0
+  specialPropertyC: 0

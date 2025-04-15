@@ -8,7 +8,7 @@ public class SwordSweep : Weapon
     {
         transform.parent = firedFrom.transform;
         UpdatePosition();
-
+        SetWeaponProperties();
     }
     void UpdatePosition()
     {

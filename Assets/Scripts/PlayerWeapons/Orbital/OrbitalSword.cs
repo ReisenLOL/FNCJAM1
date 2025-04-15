@@ -10,6 +10,7 @@ public class OrbitalSword : Weapon
         transform.parent = firedFrom.transform;
         UpdatePosition();
         transform.RotateAround(firedFrom.transform.position, Vector3.forward, 90 * weaponNumber);
+        SetWeaponProperties();
     }
     void UpdatePosition()
     {

@@ -39,15 +39,14 @@ public class WeaponAttack : MonoBehaviour
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
         damageDealt = Owner.DamageScale(damageDealt);
-        float range = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].range;
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
-        float dissipationDelay = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].dissipationDelay;
         IEnumerator CO_Shoot()
         {
             WaitForSeconds repeatDelay = new WaitForSeconds(shootDuration / attackCount);
             for (int i = 0; i < attackCount; i++)
             {
                 Weapon spawnedAttack = Instantiate(attack, SpawnPosition, attack.transform.rotation); // this is stupid WOW THAT WORKED?!
+                spawnedAttack.weaponLevelData = WeaponLevels[level.Clamp(0, WeaponLevels.Length)];
                 spawnedAttack.SetOwner(Owner);
                 spawnedAttack.firedFrom = gameObject;
                 spawnedAttack.damage = damageDealt;
@@ -55,12 +54,7 @@ public class WeaponAttack : MonoBehaviour
                 mousePos.z = Camera.main.nearClipPlane + 10;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 spawnedAttack.RotateToTarget(worldPos);
-                spawnedAttack.maxRange = range;
                 spawnedAttack.weaponNumber = i;
-                if (dissipationDelay != 0)
-                {
-                    spawnedAttack.dissipationDelay = dissipationDelay;
-                }
                 yield return repeatDelay;
             }
         }

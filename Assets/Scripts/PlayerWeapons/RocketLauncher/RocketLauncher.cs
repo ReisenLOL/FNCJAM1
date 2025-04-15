@@ -14,6 +14,7 @@ public class RocketLauncher : Weapon
         {
             RotateToTarget(a.CurrentPosition);
         }
+        SetWeaponProperties();
     }
         void Update()
         {
