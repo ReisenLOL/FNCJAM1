@@ -1266,6 +1266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3864224362199105629, guid: 9d88791e3146df6489e5c85f39acf7ca, type: 3}
+      propertyPath: startingHealth
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 6442401705395163802, guid: 9d88791e3146df6489e5c85f39acf7ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.51
@@ -1370,6 +1374,7 @@ MonoBehaviour:
   - {fileID: 2903617769560647650, guid: 390b7879226495f4ea55fc0601ae432b, type: 3}
   - {fileID: 2903617769560647650, guid: eb473d65e3e4734449c6889b671be539, type: 3}
   - {fileID: 2903617769560647650, guid: ad108a8441f365944b01f6d8788de00d, type: 3}
+  KnownPassives: []
   buttonPrefab: {fileID: 1931668739}
   selectionPanel: {fileID: 632408285}
 --- !u!1 &1818214237
@@ -1412,7 +1417,7 @@ MonoBehaviour:
   spawnPoints: []
   killQuota: 10000
   currentKills: 0
-  spawnRate: 0.35
+  spawnRate: 0.5
   spawnTime: 0
   canSpawn: 1
 --- !u!4 &1818214239
