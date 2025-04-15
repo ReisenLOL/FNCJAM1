@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3892957991763220551}
   healthBarBG: {fileID: 947674006254963517}
-  collectionRadius: 10
+  collectionRadius: 5
   collectionSpeed: 8
   collectionLayer:
     serializedVersion: 2

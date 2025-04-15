@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyToSpawn;
+    public GameObject[] enemyToSpawn;
     public Transform enemyFolder;
     public Transform[] spawnPoints;
     public float spawnRate;
@@ -21,14 +21,15 @@ public class SpawnManager : MonoBehaviour
             for (int i = 0; i < 5; i++)
             {
                 spawnTime = 0;
-                int randomIndex = Random.Range(0, spawnPoints.Length); 
-                spawnPosition = spawnPoints[randomIndex].position;
+                int randomSpawnIndex = Random.Range(0, spawnPoints.Length); 
+                spawnPosition = spawnPoints[randomSpawnIndex].position;
                 if (spawnPosition.SquareDistanceToGreaterThan(BaseUnit.Player.CurrentPosition, 3f))
                 {
                     break;
                 }
             }
-            GameObject newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+            int randomEnemyIndex = Random.Range(0, enemyToSpawn.Length);
+            GameObject newEnemy = Instantiate(enemyToSpawn[randomEnemyIndex], spawnPosition, Quaternion.identity);
             newEnemy.transform.SetParent(enemyFolder);
         }
     } //qhar?

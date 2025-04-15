@@ -32,9 +32,9 @@ public class ArcanePrism : Weapon
     private void FireProjectile()
     {
         Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation);
+        spawnedAttack.weaponLevelData = weaponLevelData;
         spawnedAttack.SetOwner(Owner);
         spawnedAttack.firedFrom = gameObject;
-        spawnedAttack.damage = damage;
         if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
         {
             spawnedAttack.RotateToTarget(a.CurrentPosition);
@@ -43,7 +43,6 @@ public class ArcanePrism : Weapon
         {
             spawnedAttack.RotateToTarget(Vector2.right);
         }
-            spawnedAttack.maxRange = maxRange;
         if (dissipationDelay != 0)
         {
             spawnedAttack.dissipationDelay = dissipationDelay;

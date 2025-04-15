@@ -1075,7 +1075,7 @@ PrefabInstance:
     - target: {fileID: 1760234193438978555, guid: 9d88791e3146df6489e5c85f39acf7ca, type: 3}
       propertyPath: startingWeapon
       value: 
-      objectReference: {fileID: 2903617769560647650, guid: 867c82ae8c4394047ac21a4423996e0c, type: 3}
+      objectReference: {fileID: 2903617769560647650, guid: ea778d35057efd14485f61b59920f021, type: 3}
     - target: {fileID: 2257177703543319234, guid: 9d88791e3146df6489e5c85f39acf7ca, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1215,10 +1215,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3afaeffc6b06f44a5d95b5f73526f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyToSpawn: {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+  enemyToSpawn:
+  - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+  - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
+  - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+  - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+  - {fileID: 2262917533461444525, guid: 33d1d7a39c6e53848b0df072502117f2, type: 3}
   enemyFolder: {fileID: 943318251}
   spawnPoints: []
-  spawnRate: 0.2
+  spawnRate: 0.35
   spawnTime: 0
 --- !u!4 &1818214239
 Transform:

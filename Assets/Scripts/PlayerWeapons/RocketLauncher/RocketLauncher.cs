@@ -7,7 +7,7 @@ public class RocketLauncher : Weapon
 {
     private float dissipationTime;
     [SerializeField] LayerMask unitCollectionLayer;
-    [SerializeField] float explosionRadius = 5f;
+    [SerializeField] float explosionRadius;
     private void Start()
     {
         if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
@@ -15,6 +15,7 @@ public class RocketLauncher : Weapon
             RotateToTarget(a.CurrentPosition);
         }
         SetWeaponProperties();
+        explosionRadius = weaponLevelData.specialPropertyA;
     }
         void Update()
         {

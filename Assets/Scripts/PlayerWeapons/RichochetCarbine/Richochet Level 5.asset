@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Richochet Level 5
   m_EditorClassIdentifier: 
+  movementSpeed: 12
   attackCount: 2
   damage: 125
   attackRate: 0.8
   range: 45
   dissipationDelay: 8
+  specialPropertyA: 0
+  specialPropertyB: 0
+  specialPropertyC: 0

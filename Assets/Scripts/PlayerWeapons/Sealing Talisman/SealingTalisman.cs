@@ -7,8 +7,9 @@ public class SealingTalisman : Weapon
     public LayerMask enemyLayer;
     void Start()
     {
-        transform.localScale = new Vector2(maxRange, maxRange);
         transform.parent = firedFrom.transform;
+        SetWeaponProperties();
+        transform.localScale = new Vector2(maxRange, maxRange);
     }
     private void Update()
     {
