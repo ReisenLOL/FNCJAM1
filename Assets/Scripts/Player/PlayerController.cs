@@ -51,7 +51,7 @@ public partial class PlayerController
                 Collectable moveCollectable = collectableList[i].GetComponent<Collectable>();
                 if (moveCollectable.isMovingToPlayer == false)
                 {
-                    moveCollectable.moveToPlayer = transform.position - collectableList[i].transform.position;
+                    moveCollectable.moveToPlayer = transform;
                     moveCollectable.collectionSpeed = collectionSpeed;
                     moveCollectable.isMovingToPlayer = true;
                 }

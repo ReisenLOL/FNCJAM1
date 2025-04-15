@@ -5,6 +5,7 @@ public class PowerItem : Collectable
     public PlayerLevelManager playerLevelManager;
     public int powerAmount;
     private Rigidbody2D rb;
+    public Vector3 lookDirection;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,7 +20,8 @@ public class PowerItem : Collectable
     {
         if (isMovingToPlayer)
         {
-            rb.linearVelocity = moveToPlayer * collectionSpeed;
+            lookDirection = (moveToPlayer.position - transform.position).normalized;
+            rb.linearVelocity = lookDirection * collectionSpeed;
         }
     }
 }
