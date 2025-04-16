@@ -875,6 +875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1809622279018485742, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3582528035652542653, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -1632,6 +1636,7 @@ MonoBehaviour:
   - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
   - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
   - {fileID: 2262917533461444525, guid: 33d1d7a39c6e53848b0df072502117f2, type: 3}
+  - {fileID: 2262917533461444525, guid: 7b6d2852a3df95146b1306ee8b201a3b, type: 3}
   dialogueManager: {fileID: 0}
   enemyFolder: {fileID: 943318251}
   spawnPoints: []

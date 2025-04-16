@@ -13,12 +13,12 @@ public class WeaponSelect : MonoBehaviour
     [SerializeField] RectTransform selectionPanel;
     void Start()
     {
-        RebuildWeaponList(3);
+        RebuildWeaponList(4);
         HideWeaponSelect();
     }
     public void ShowWeaponSelect()
     {
-        RebuildWeaponList(3);
+        RebuildWeaponList(4);
         selectionPanel.gameObject.SetActive(true);
     }
     public void HideWeaponSelect()
