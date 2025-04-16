@@ -37,8 +37,8 @@ public class Weapon : MonoBehaviour
     }
     public void SetWeaponProperties()
     {
-        speed = weaponLevelData.movementSpeed;
-        damage = weaponLevelData.damage;
+        speed = weaponLevelData.movementSpeed * speedModifier;
+        damage = weaponLevelData.damage * damageModifier;
         maxRange = weaponLevelData.range;
         if (weaponLevelData.dissipationDelay != 0)
         {

@@ -35,6 +35,8 @@ public class ArcanePrism : Weapon
     {
         Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation);
         spawnedAttack.weaponLevelData = weaponLevelData;
+        spawnedAttack.damageModifier = damageModifier;
+        spawnedAttack.speedModifier = speedModifier;
         spawnedAttack.SetOwner(Owner);
         spawnedAttack.firedFrom = gameObject;
         if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))

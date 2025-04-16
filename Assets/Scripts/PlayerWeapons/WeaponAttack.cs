@@ -40,7 +40,7 @@ public class WeaponAttack : Item
     void InstantiateAttack()
     {
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate * attackRateModifier;
-        float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
+        float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage * damageModifier;
         damageDealt = Owner.DamageScale(damageDealt);
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
         IEnumerator CO_Shoot()
@@ -53,6 +53,8 @@ public class WeaponAttack : Item
                 spawnedAttack.SetOwner(Owner);
                 spawnedAttack.firedFrom = gameObject;
                 spawnedAttack.damage = damageDealt;
+                spawnedAttack.damageModifier = damageModifier;
+                spawnedAttack.speedModifier = speedModifier;
                 Vector3 mousePos = Input.mousePosition;
                 mousePos.z = Camera.main.nearClipPlane + 10;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);

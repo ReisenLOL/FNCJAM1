@@ -1,8 +1,12 @@
 using Core.Extensions;
+using System;
+using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
+    public TextMeshProUGUI timerUI;
     public GameObject[] enemyToSpawn;
     public DialogueManager dialogueManager;
     public Transform enemyFolder;
@@ -20,6 +24,15 @@ public class SpawnManager : MonoBehaviour
     }
     void Update()
     {
+        TimeSpan timer = TimeSpan.FromSeconds(Time.realtimeSinceStartup);
+        if (timer.Seconds < 10)
+        {
+            timerUI.text = timer.Minutes.ToString() + ":0" + timer.Seconds.ToString();
+        }
+        else
+        {
+            timerUI.text = timer.Minutes.ToString() + ":" + timer.Seconds.ToString();
+        }
         if (currentKills > killQuota)
         {
             Debug.Log("WOW!");

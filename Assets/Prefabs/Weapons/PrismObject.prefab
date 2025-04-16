@@ -108,6 +108,8 @@ MonoBehaviour:
   weaponNumber: 0
   dissipationDelay: 0
   weaponLevelData: {fileID: 0}
+  speedModifier: 1
+  damageModifier: 1
   rotationSpeed: 90
   fireRate: 2
   offset: 3
