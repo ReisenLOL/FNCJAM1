@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Bear Trap
+  <ItemName>k__BackingField: Bear Trap
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 47a10d12da353d64194618e0baf9f403, type: 2}

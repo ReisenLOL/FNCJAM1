@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Orbital Sword
+  <ItemName>k__BackingField: Orbital Sword
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 9e07454c449363343b3f84d806664685, type: 2}

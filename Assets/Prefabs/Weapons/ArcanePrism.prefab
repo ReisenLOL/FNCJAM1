@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Arcane Prism
+  <ItemName>k__BackingField: Arcane Prism
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: a4dbc020f40cfa84b8564d9810922219, type: 2}

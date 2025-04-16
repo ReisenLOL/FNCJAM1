@@ -2,10 +2,8 @@ using Core.Extensions;
 using System.Collections;
 using UnityEngine;
 
-public class WeaponAttack : MonoBehaviour
+public class WeaponAttack : Item
 {
-    [SerializeField] BaseUnit Owner;
-    [field: SerializeField] public string WeaponName { get; private set; } = "Headhunter, Leather Belt";
     public int level;
     public WeaponLevelData[] WeaponLevels;
     public float nextAttackTime;
@@ -81,9 +79,5 @@ public class WeaponAttack : MonoBehaviour
                 Destroy(transform.GetChild(i).gameObject);
             }
         }
-    }
-    public void SetOwner(BaseUnit owner)
-    {
-        Owner = owner;
     }
 }

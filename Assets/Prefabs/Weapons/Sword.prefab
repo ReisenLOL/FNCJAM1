@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Sword
+  <ItemName>k__BackingField: Sword
   level: 1
   WeaponLevels:
   - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}

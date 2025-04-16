@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Richochet Carbine
+  <ItemName>k__BackingField: Richochet Carbine
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}

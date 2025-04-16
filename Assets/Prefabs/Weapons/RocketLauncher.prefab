@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Rocket Launcher
+  <ItemName>k__BackingField: Rocket Launcher
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: b972e7c611a7714439146c2453c1922a, type: 2}

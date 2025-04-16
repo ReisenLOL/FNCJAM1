@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class WeaponSelect : MonoBehaviour
 {
-    public List<WeaponAttack> KnownWeapons = new();
-    public List<Passive> KnownPassives = new();
+    public List<Item> KnownItems = new();
     static HashSet<string> existingSelectionOptions;
     static int currentSelectionItemCount;
     public Button buttonPrefab;
@@ -26,12 +25,19 @@ public class WeaponSelect : MonoBehaviour
     {
         selectionPanel.gameObject.SetActive(false);
     }
-    private void SelectWeapon(WeaponAttack w)
+    private void SelectWeapon(Item w)
     {
-        WeaponAttack weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
+        Item weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
         if (!wasCreated)
         {
-            weapon.LevelUp();
+            if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
+            {
+                isWeaponAttack.LevelUp();
+            }
+            else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem))
+            {
+                isPassiveItem.LevelUp();
+            }
         }
         Passive[] passives = FindObjectsByType<Passive>(FindObjectsSortMode.None);
         if (passives.Length > 0)
@@ -49,9 +55,9 @@ public class WeaponSelect : MonoBehaviour
         {
             Destroy(selectionPanel.GetChild(i).gameObject);
         }
-        ShowWeaponChoices(KnownWeapons, choices);
+        ShowWeaponChoices(KnownItems, choices);
     }
-    public void ShowWeaponChoices(List<WeaponAttack> weaponChoices, int choices)
+    public void ShowWeaponChoices(List<Item> weaponChoices, int choices)
     {
         currentSelectionItemCount = 0;
         existingSelectionOptions = new();
@@ -59,19 +65,19 @@ public class WeaponSelect : MonoBehaviour
         while (attempts > 0 && currentSelectionItemCount < choices)
         {
             attempts--;
-            int random = 0.RandomBetween(0, KnownWeapons.Count);
+            int random = 0.RandomBetween(0, KnownItems.Count);
             Debug.Log(random);
-            WeaponAttack choice = KnownWeapons[random];
-            if (existingSelectionOptions.Contains(choice.WeaponName))
+            Item choice = KnownItems[random];
+            if (existingSelectionOptions.Contains(choice.ItemName))
                 continue;
             currentSelectionItemCount++;
-            string weaponName = choice.WeaponName;
+            string weaponName = choice.ItemName;
             Button newButton = Instantiate(buttonPrefab, selectionPanel);
             newButton.gameObject.SetActive(true);
             newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
             newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice));
             newButton.name = weaponName;
-            existingSelectionOptions.Add(choice.WeaponName);
+            existingSelectionOptions.Add(choice.ItemName);
         }
     }
 }

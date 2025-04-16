@@ -4,9 +4,9 @@ using UnityEngine;
 public class PlayerWeaponHandler : MonoBehaviour
 {
     static PlayerWeaponHandler instance;
-    Dictionary<string, WeaponAttack> spawnedWeapons;
+    Dictionary<string, Item> spawnedWeapons;
     [SerializeField] Transform playerWeaponsFolder;
-    [SerializeField] WeaponAttack startingWeapon;
+    [SerializeField] Item startingWeapon;
     private void Awake()
     {
         spawnedWeapons = new();
@@ -21,22 +21,22 @@ public class PlayerWeaponHandler : MonoBehaviour
         FindWeaponReference(startingWeapon, out bool wasCreated);
     }
 
-    public static WeaponAttack FindWeaponReference(WeaponAttack weapon, out bool wasCreated)
+    public static Item FindWeaponReference(Item weapon, out bool wasCreated)
     {
         if (instance == null)
         {
             Debug.LogError("Missing PlayerWeaponHandler.cs instance");
         }
-        if (instance.spawnedWeapons.TryGetValue(weapon.WeaponName, out WeaponAttack foundWeapon))
+        if (instance.spawnedWeapons.TryGetValue(weapon.ItemName, out Item foundWeapon))
         {
             wasCreated = false;
             return foundWeapon;
         }
         else
         {
-            WeaponAttack spawned = Instantiate(weapon, instance.playerWeaponsFolder.transform);
+            Item spawned = Instantiate(weapon, instance.playerWeaponsFolder.transform);
             spawned.SetOwner(BaseUnit.Player);
-            instance.spawnedWeapons[weapon.WeaponName] = spawned;
+            instance.spawnedWeapons[weapon.ItemName] = spawned;
             wasCreated = true;
             return weapon;
         }

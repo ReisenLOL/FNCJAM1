@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <WeaponName>k__BackingField: Sealing Talisman
+  <ItemName>k__BackingField: Sealing Talisman
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 8d916b7350b3cf847888ffabbed9ac82, type: 2}

@@ -76,8 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd65447d62daa524ebbc82a4f4ca5030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <WeaponName>k__BackingField: Accelerative Booster
   Owner: {fileID: 0}
+  <ItemName>k__BackingField: Accelerative Booster
+  <WeaponName>k__BackingField: Accelerative Booster
   modifierValue: 1.25
   level: 0
   passiveLevels:
