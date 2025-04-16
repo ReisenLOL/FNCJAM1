@@ -8,16 +8,17 @@ public partial class PlayerLevelManager
     public RectTransform XPBar;
     public void UpdateXPBar()
     {
-        XPBar.localScale = new Vector3((float)currentPower / (float)requiredPowerToNextLevel, XPBar.localScale.y);
+        XPBar.localScale = new Vector3(currentPower / requiredPowerToNextLevel, XPBar.localScale.y);
     }
 }
 #endregion
 public partial class PlayerLevelManager : MonoBehaviour
 {
     public int level;
-    public int requiredPowerToNextLevel;
-    public int basePowerToNextLevel;
-    public int currentPower;
+    public float requiredPowerToNextLevel;
+    public float basePowerToNextLevel;
+    public float currentPower;
+    public float powerModifier = 1f;
     public float exponentIncrease;
     public WeaponSelect levelUpUI;
     public TextMeshProUGUI levelText;
@@ -28,9 +29,9 @@ public partial class PlayerLevelManager : MonoBehaviour
         levelText.text = "Level: " + level;
         UpdateXPBar();
     }
-    public void UpdatePower(int power)
+    public void UpdatePower(float power)
     {
-        currentPower += power;
+        currentPower += power * powerModifier;
         powerText.text = "Power: " + currentPower;
         if (currentPower >= requiredPowerToNextLevel)
         {

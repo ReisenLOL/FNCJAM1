@@ -40,9 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6088354989259053749}
-  - component: {fileID: 7339957262606650096}
+  - component: {fileID: 3122771533703608673}
   m_Layer: 0
-  m_Name: TestItem
+  m_Name: Seiran Brand Dango
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ Transform:
   - {fileID: 3797302048972281316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7339957262606650096
+--- !u!114 &3122771533703608673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,18 +73,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031843684155584608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd65447d62daa524ebbc82a4f4ca5030, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c66efc4c0cb8f24b87a8d573c28ecb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Accelerative Booster
-  <WeaponName>k__BackingField: Accelerative Booster
-  modifierValue: 1.25
+  <ItemName>k__BackingField: Seiran Brand Dango
+  modifierValue: 0
+  specialValueA: 0
   level: 0
   passiveLevels:
-  - {fileID: 11400000, guid: 14aac4738b669064fabc4ba0ee47f5e5, type: 2}
+  - {fileID: 11400000, guid: 8f3339bd68f36324d807874a549d90f7, type: 2}
+  - {fileID: 11400000, guid: 4d20be473d7931d4eb650e2e4aa077e8, type: 2}
+  - {fileID: 11400000, guid: db55c483eb21b244ea6d93658cf22670, type: 2}
   refreshWeaponList: 0
-  weapons: []
+  player: {fileID: 0}
+  regenTime: 0
 --- !u!1 &1623549349369429720
 GameObject:
   m_ObjectHideFlags: 0

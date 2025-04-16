@@ -3,7 +3,7 @@ using UnityEngine;
 public class PowerItem : Collectable
 {
     public PlayerLevelManager playerLevelManager;
-    public int powerAmount;
+    public float powerAmount;
     private Rigidbody2D rb;
     public Vector3 lookDirection;
     public AudioClip collectionSound;

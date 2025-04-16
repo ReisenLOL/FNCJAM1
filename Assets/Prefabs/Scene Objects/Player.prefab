@@ -223,6 +223,7 @@ MonoBehaviour:
   healthBar: {fileID: 3892957991763220551}
   healthBarBG: {fileID: 947674006254963517}
   collectionRadius: 5
+  collectionRadiusMultiplier: 1
   collectionSpeed: 8
   collectionLayer:
     serializedVersion: 2
@@ -244,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bb6c177eed5ea4da8fda44e3503278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 500
   centerPositionOverride: {fileID: 6442401705395163802}
   Power: 100
 --- !u!82 &7176320857606144288

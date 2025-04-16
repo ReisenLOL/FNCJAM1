@@ -4,6 +4,7 @@ using UnityEngine;
 public class Passive : Item
 {
     public float modifierValue;
+    public float specialValueA;
     public int level;
     public PassiveItemLevelData[] passiveLevels;
     public bool refreshWeaponList = false;
@@ -12,5 +13,6 @@ public class Passive : Item
         if (level >= passiveLevels.Length - 1) { return; }
         level++;
         modifierValue = passiveLevels[level.Clamp(0, passiveLevels.Length)].modifierValue;
+        specialValueA = passiveLevels[level.Clamp(0, passiveLevels.Length)].specialValueA;
     }
 }

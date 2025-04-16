@@ -29,7 +29,7 @@ public partial class BaseUnit : IHitListener
     {
         WhenHit -= hitAction;
     }
-    private void ChangeHealth(float value)
+    public void ChangeHealth(float value) //i hope changing this to public wont destroy the game - sylvia
     {
         CurrentHealth += value;
         CurrentHealth = CurrentHealth.Max(0f);
@@ -67,7 +67,7 @@ public abstract partial class BaseUnit : MonoBehaviour
     public bool IsAlive => CurrentHealth > 0f && gameObject.activeInHierarchy;
     [SerializeField] float startingHealth = 100f;
     public float CurrentHealth { get; protected set; }
-    public float MaxHealth => startingHealth;
+    public float MaxHealth = 100f; //setting this to its own variable - sylvia
 
     [SerializeField] Transform centerPositionOverride;
     protected Vector2 Origin;

@@ -209,5 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 125
+  MaxHealth: 125
   centerPositionOverride: {fileID: 6022167792110622834}
   funnyexplosion: 0

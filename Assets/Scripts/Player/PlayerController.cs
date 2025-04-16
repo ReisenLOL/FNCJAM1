@@ -34,12 +34,13 @@ public partial class PlayerController
 public partial class PlayerController
 {
     public float collectionRadius;
+    public float collectionRadiusMultiplier = 1f;
     public float collectionSpeed;
     public LayerMask collectionLayer;
     private Collider2D[] collectableList;
     private Collider2D[] DetectCollectables()
     {
-        return Physics2D.OverlapCircleAll(transform.position, collectionRadius, collectionLayer);
+        return Physics2D.OverlapCircleAll(transform.position, collectionRadius * collectionRadiusMultiplier, collectionLayer);
     }
     private void CollectionLoop()
     {
