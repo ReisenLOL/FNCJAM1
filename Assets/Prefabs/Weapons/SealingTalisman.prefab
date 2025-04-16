@@ -58,4 +58,9 @@ MonoBehaviour:
   willRegenerate: 0
   canFire: 1
   attack: {fileID: 3365961109633720470, guid: d404f8f14a0b9ec4bae84eec53e5aa4a, type: 3}
+  attackSound: {fileID: 0}
+  attackSoundVolume: 0
+  attackRateModifier: 1
+  speedModifier: 1
+  damageModifier: 1
   overrideSpawnPosition: {fileID: 0}

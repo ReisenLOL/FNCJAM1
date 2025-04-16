@@ -13,6 +13,8 @@ public class Weapon : MonoBehaviour
     public int weaponNumber;
     public float dissipationDelay;
     public WeaponLevelData weaponLevelData;
+    public float speedModifier;
+    public float damageModifier;
     public void SetOwner(BaseUnit owner) => this.Owner = owner;
     public void RotateToTarget(Vector2 worldPosition)
     {

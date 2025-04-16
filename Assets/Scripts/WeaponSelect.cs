@@ -33,6 +33,14 @@ public class WeaponSelect : MonoBehaviour
         {
             weapon.LevelUp();
         }
+        Passive[] passives = FindObjectsByType<Passive>(FindObjectsSortMode.None);
+        if (passives.Length > 0)
+        {
+            for (int i = 0; i < passives.Length; i++)
+            {
+                passives[i].refreshWeaponList = true;
+            }
+        }
         HideWeaponSelect();
     }
     private void RebuildWeaponList(int choices)

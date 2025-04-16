@@ -16,6 +16,9 @@ public class WeaponAttack : MonoBehaviour
     public AudioClip attackSound;
     public float attackSoundVolume;
     float attackRate;
+    public float attackRateModifier = 1;
+    public float speedModifier = 1;
+    public float damageModifier = 1;
     [Tooltip("Optional")]
     public Transform overrideSpawnPosition;
     public Vector2 SpawnPosition => overrideSpawnPosition == null ? transform.position : overrideSpawnPosition.position;
@@ -38,7 +41,7 @@ public class WeaponAttack : MonoBehaviour
     }
     void InstantiateAttack()
     {
-        attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
+        attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate * attackRateModifier;
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage;
         damageDealt = Owner.DamageScale(damageDealt);
         float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;

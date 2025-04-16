@@ -60,4 +60,7 @@ MonoBehaviour:
   attack: {fileID: 3255813774938795988, guid: ddd3488b54f973a46bfcda126bc1f80f, type: 3}
   attackSound: {fileID: 8300000, guid: 77904d6c22f44114ca6bfaa7a37af176, type: 3}
   attackSoundVolume: 0.4
+  attackRateModifier: 1
+  speedModifier: 1
+  damageModifier: 1
   overrideSpawnPosition: {fileID: 0}
