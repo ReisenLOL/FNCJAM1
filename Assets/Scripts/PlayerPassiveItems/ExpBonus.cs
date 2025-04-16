@@ -5,7 +5,8 @@ public class ExpBonus : Passive
     public PlayerLevelManager levelManager;
     private void Start()
     {
-        levelManager = GameObject.Find("Player").GetComponentInChildren<PlayerLevelManager>();
+        LevelUp();
+        levelManager = GameObject.Find("PlayerLevelManager").GetComponentInChildren<PlayerLevelManager>();
         ApplyModifierToPlayer();
     }
     private void Update()

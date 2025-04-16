@@ -5,6 +5,7 @@ public class CollectablePickupRange : Passive
     public PlayerController player;
     private void Start()
     {
+        LevelUp();
         player = GameObject.Find("Player").GetComponentInChildren<PlayerController>();
         ApplyModifierToPlayer();
     }

@@ -12,6 +12,10 @@ public class Passive : Item
     {
         if (level >= passiveLevels.Length - 1) { return; }
         level++;
+        SetModifierValues();
+    }
+    public void SetModifierValues()
+    {
         modifierValue = passiveLevels[level.Clamp(0, passiveLevels.Length)].modifierValue;
         specialValueA = passiveLevels[level.Clamp(0, passiveLevels.Length)].specialValueA;
     }

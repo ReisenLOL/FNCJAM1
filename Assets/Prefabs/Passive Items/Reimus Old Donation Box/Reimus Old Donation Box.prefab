@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Reimu's Old Donation Box
-  modifierValue: 0
+  modifierValue: 1
   specialValueA: 0
   level: 0
   passiveLevels:
