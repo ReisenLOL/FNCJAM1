@@ -1,3 +1,4 @@
+using Bremsengine;
 using UnityEngine;
 
 public class StageManager : MonoBehaviour
@@ -6,8 +7,8 @@ public class StageManager : MonoBehaviour
     public static StageManager instance;
     public Stage currentStage;
     public Stage nextStage;
-    public SpawnManager spawnManager;
-    public PlayerUnit playerUnit;
+    [SerializeField] SpawnManager spawnManager;
+    [SerializeField] PlayerUnit playerUnit;
     #endregion
     private void Awake()
     {
@@ -39,5 +40,8 @@ public class StageManager : MonoBehaviour
         spawnManager.currentKills = 0;
         spawnManager.canSpawn = true;
         playerUnit.ChangeHealth(playerUnit.MaxHealth);
+        DialogueManager dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+
+        //dialogueManager.StartDialogue();
     }
 }
