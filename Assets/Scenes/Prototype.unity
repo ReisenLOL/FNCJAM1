@@ -2207,6 +2207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tick Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4975484940928400748, guid: ca435aabac684504897ac3883fb9bb9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

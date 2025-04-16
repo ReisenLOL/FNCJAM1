@@ -26,15 +26,15 @@ namespace Bremsengine
             Dialogue.BindDialogueText(dialogueText);
             Dialogue.BindRunner(this);
             DialogueText.SetDialogueTextRenderer(dialogueTextComponent);
-            dialogueContainer.SetActive(false);
+            //dialogueContainer.SetActive(false); REASON THIS IS COMMENTED OUT IS CUZ NULL EXCEPTION -PetarS
         }
-        public static void SetDialogueVisibility(bool state)
+        public static void SetDialogueVisibility(bool state)     
         {
-            Instance.dialogueContainer.SetActive(state);
+            /*Instance.dialogueContainer.SetActive(state);     //SAME REASON
             foreach (var item in Instance.characterSprites)
             {
                 item.sprite = null;
-            }
+            }*/
         }
         public static DialogueRunner BoxVisibility(bool state)
         {
