@@ -92,6 +92,7 @@ public class SpawnManager : MonoBehaviour
             spawnTime += Time.deltaTime;
             if (spawnTime >= spawnRate)
             {
+                spawnTime = 0;
                 SpawnRandomEnemy();
             }
         }
