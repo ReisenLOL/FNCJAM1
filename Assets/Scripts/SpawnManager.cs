@@ -116,7 +116,7 @@ public class SpawnManager : MonoBehaviour
         {
             Debug.Log("WOW!");
             dialogueManager.StartDialogue();
-            canSpawn = false;
+            //canSpawn = false;
         }
         if (canSpawn)
         {

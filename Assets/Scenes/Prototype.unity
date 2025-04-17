@@ -2401,6 +2401,34 @@ MonoBehaviour:
   spawnRate: 0.5
   spawnTime: 0
   canSpawn: 1
+  enemyPhases:
+  - startTime: 0
+    spawnRate: 1
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+  - startTime: 60
+    spawnRate: 0.8
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+  - startTime: 120
+    spawnRate: 0.6
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+  - startTime: 180
+    spawnRate: 0.6
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+  - startTime: 180
+    spawnRate: 0.4
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
 --- !u!4 &1818214239
 Transform:
   m_ObjectHideFlags: 0
