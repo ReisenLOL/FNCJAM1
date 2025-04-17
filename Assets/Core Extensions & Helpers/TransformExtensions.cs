@@ -79,7 +79,6 @@ namespace Core.Extensions
         {
             //vibe coding lamao
             Vector2 direction = position - (Vector2)t.position;
-            Debug.DrawLine(t.position, position);
 
             if (direction.sqrMagnitude < 0.0001f)
             {

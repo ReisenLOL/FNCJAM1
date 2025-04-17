@@ -30,6 +30,10 @@ public class TimeHandler : MonoBehaviour
         {
             return 0f;
         }
+        if (WeaponSelect.IsSelecting)
+        {
+            return 0f;
+        }
         float timeScale = TimeSlowHandler.SlowdownHandledTimescale;
         return timeScale;
     }

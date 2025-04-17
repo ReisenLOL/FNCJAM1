@@ -13,7 +13,9 @@ public class SpawnManager : MonoBehaviour
     public GameObject miniBossToSpawn;
     public Transform enemyFolder;
     public Transform[] spawnPoints;
-    public int killQuota;
+    int killQuota;
+    public int KillQuota => killQuota;
+    public void AddKillQuota(int quota) => killQuota += quota;
     public int currentKills;
     private float gameTimer;
     public float spawnRate;
@@ -112,11 +114,9 @@ public class SpawnManager : MonoBehaviour
         {
             timerUI.text = timer.Minutes.ToString() + ":" + timer.Seconds.ToString();
         }
-        bool killQuotaCondition = currentKills > killQuota;
+        bool killQuotaCondition = currentKills > KillQuota;
         if (killQuotaCondition)
         {
-            //idk what this is supposed to do but ill hook up some dummy dialogue and just make it so it doesnt break.
-            killQuota += 50; //arbitrary number please change it to what u need it to actually do.
             KillQuotaDummyDialogue.StartDialogue();
             Debug.Log("WOW! cool dialogue stuff kill quota lmao");
         }

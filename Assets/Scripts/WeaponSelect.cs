@@ -12,6 +12,7 @@ public class WeaponSelect : MonoBehaviour
     public Button buttonPrefab;
     [SerializeField] RectTransform selectionPanel;
     [SerializeField] GameObject descriptionPanel;
+    public static bool IsSelecting { get; private set; }
     void Start()
     {
         RebuildWeaponList(4);
@@ -20,10 +21,12 @@ public class WeaponSelect : MonoBehaviour
     public void ShowWeaponSelect()
     {
         RebuildWeaponList(4);
+        IsSelecting = true;
         selectionPanel.gameObject.SetActive(true);
     }
     public void HideWeaponSelect()
     {
+        IsSelecting = false;
         selectionPanel.gameObject.SetActive(false);
     }
     private void SelectWeapon(Item w)

@@ -35,11 +35,10 @@ public class StageManager : MonoBehaviour
 
     void InitializeStage()
     {
-        spawnManager.killQuota = currentStage.stageEnemiesCount;
+        spawnManager.AddKillQuota(currentStage.stageEnemiesCount);
         spawnManager.spawnRate = currentStage.stageEnemiesSpawnRate;
         spawnManager.currentKills = 0;
         playerUnit.ChangeHealth(playerUnit.MaxHealth);
-        DialogueManager dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
         //dialogueManager.StartDialogue();
     }

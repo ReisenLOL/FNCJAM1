@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Stage 1
   m_EditorClassIdentifier: 
   type: 1
-  stageEnemiesCount: 1
+  stageEnemiesCount: 100
   stageEnemiesSpawnRate: 1
   stageDifficulty: 5
