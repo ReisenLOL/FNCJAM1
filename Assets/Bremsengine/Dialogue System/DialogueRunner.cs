@@ -26,33 +26,54 @@ namespace Bremsengine
             Dialogue.BindDialogueText(dialogueText);
             Dialogue.BindRunner(this);
             DialogueText.SetDialogueTextRenderer(dialogueTextComponent);
-            //dialogueContainer.SetActive(false); REASON THIS IS COMMENTED OUT IS CUZ NULL EXCEPTION -PetarS
+            dialogueContainer.SetActive(false);
         }
-        public static void SetDialogueVisibility(bool state)     
+        public static void SetDialogueVisibility(bool state)
         {
-            /*Instance.dialogueContainer.SetActive(state);     //SAME REASON
+            Instance.dialogueContainer.SetActive(state);
             foreach (var item in Instance.characterSprites)
             {
                 item.sprite = null;
-            }*/
+            }
         }
         public static DialogueRunner BoxVisibility(bool state)
         {
             Instance.dialogueContainer.SetActive(state);
             return Instance;
         }
+        public static List<Image> AllCharacterSprites => Instance.characterSprites;
         public static DialogueRunner SetCharacterSprite(int index, Sprite s)
         {
-            Instance.characterSprites[index].sprite = s;
+            Image selection = Instance.characterSprites[index];
+            if (s != null && selection != null)
+            {
+                selection.color = new(255f, 255f, 255f, 255f);
+            }
+            else
+            {
+                selection.color = new(0, 0, 0, 0);
+            }
+
+            selection.sprite = s;
             return Instance;
         }
         public static DialogueRunner SetCharacterFocus(int index)
         {
             foreach (var item in Instance.characterSprites)
             {
+                if (item.sprite == null)
+                {
+                    item.color = item.color.Opacity(0);
+                    continue;
+                }
                 item.color = item.color.Opacity(170);
             }
-            Instance.characterSprites[index].color = Instance.characterSprites[index].color.Opacity(255);
+            Image selection = Instance.characterSprites[index];
+            if (Instance.characterSprites[index].sprite == null)
+            {
+                return Instance;
+            }
+            selection.color = selection.color.Opacity(255);
             return Instance;
         }
         public void PressButton(int index)
@@ -62,16 +83,6 @@ namespace Bremsengine
         private void Start()
         {
 
-        }
-        private void Update()
-        {
-            if (Gamepad.current == null)
-                return;
-            float readValue = Gamepad.current.rightTrigger.ReadValue();
-            if (readValue > 0.5f)
-            {
-                Dialogue.PressContinueInput();
-            }
         }
         private void ContinueInput()
         {

@@ -18,6 +18,8 @@ namespace Bremsengine
         }
         bool isPaused;
         static List<SlowdownEntry> timeSlow = new();
+        public static float SlowdownHandledTimescale => Instance == null ? 1f : calculatedTimescale;
+        private static float calculatedTimescale;
         private void Update()
         {
             SlowdownEntry item;
@@ -31,13 +33,13 @@ namespace Bremsengine
                     i--;
                 }
             }
-            Time.timeScale = GetTimescale();
+            calculatedTimescale = GetTimescale();
         }
         public static void AddSlow(float amount, float length)
         {
             if (Instance == null || Instance.gameObject == null)
             {
-                GameObject g = new GameObject("Gameobject");
+                GameObject g = new GameObject("Time Slow Handler");
                 Instance = g.AddComponent<TimeSlowHandler>();
             }
             timeSlow.Add(new SlowdownEntry(amount, length));

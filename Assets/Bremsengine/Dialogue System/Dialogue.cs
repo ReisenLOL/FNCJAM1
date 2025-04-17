@@ -105,6 +105,7 @@ namespace Bremsengine
         [System.Serializable]
         public class DialogueButton
         {
+            int continueProgress = -999;
             #region Button Actions
             public DialogueButton SetText(string s)
             {
@@ -117,10 +118,26 @@ namespace Bremsengine
                 ButtonReference.gameObject.SetActive(state);
                 return this;
             }
-            public DialogueButton SetContinueWhenPressed(bool state = true)
+
+            public DialogueButton SetProgressWhenPressed(int progress = -999)
             {
-                ContinueDialogueWhenPressed = state;
+                continueProgress = progress;
                 return this;
+            }
+            public DialogueButton ContinueWhenPressed()
+            {
+                continueProgress = Progress + 2;
+                return this;
+            }
+            private void PressContinueButton()
+            {
+                Debug.Log(continueProgress);
+                OnContinuePressed = null;
+                if (continueProgress != -999)
+                {
+                    OnContinuePressed += Dialogue.SetProgress;
+                }
+                OnContinuePressed?.Invoke(continueProgress);
             }
             public DialogueButton SetForceEndWhenPressed()
             {
@@ -151,16 +168,7 @@ namespace Bremsengine
             public DialogueButton PressButton()
             {
                 OnPressedAction?.Invoke();
-                if (this == null)
-                {
-                    return null;
-                }
-                if (ContinueDialogueWhenPressed)
-                {
-                    Debug.Log("Test");
-                    Dialogue.TriggerContinue?.Invoke(Dialogue.activeDialogueCollection);
-                    ContinuePressedTime = Time.time;
-                }
+                PressContinueButton();
                 return this;
             }
             #endregion
@@ -169,6 +177,7 @@ namespace Bremsengine
             public Button ButtonReference;
             TMP_Text storedButtonText;
             public System.Action OnPressedAction;
+            public System.Action<int> OnContinuePressed;
             public bool ContinueDialogueWhenPressed { get; private set; }
             public TMP_Text ButtonText => storedButtonText == null ? FindAndCacheTextComponent(ButtonReference) : storedButtonText;
         }
@@ -220,6 +229,7 @@ namespace Bremsengine
                 }
                 iteration = item.Value;
                 iteration.OnPressedAction = null;
+                iteration.OnContinuePressed = null;
                 iteration.SetVisible(false);
             }
         }
@@ -229,7 +239,7 @@ namespace Bremsengine
             {
                 b.SetVisible(true);
                 b.SetText(buttonText);
-                b.SetContinueWhenPressed(false);
+                b.SetProgressWhenPressed(-999 /* -999 means no continue when pressed*/);
                 if (a != null)
                 {
                     b.OnPressedAction = a;
@@ -286,6 +296,7 @@ namespace Bremsengine
     public abstract partial class Dialogue
     {
         protected static DialogueText activeText;
+        protected DialogueText text => activeText;
         public static void BindDialogueText(DialogueText d)
         {
             activeText = d;
@@ -308,28 +319,29 @@ namespace Bremsengine
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Reinitialize()
         {
-            ContinuePressedTime = 0;
-        }
-        public static void PressContinue()
-        {
-            ContinuePressedTime = Time.time;
-        }
-        public static void PressContinueInput()
-        {
-            PressContinue();
+
         }
     }
     #endregion
     #region Dialogue Shortcuts
     public abstract partial class Dialogue
     {
-        protected void ContinueButton(int index) => SetButton(index, "Continue").SetContinueWhenPressed();
+        protected void ContinueButton(int index) => SetButton(index, "Continue").SetProgressWhenPressed(Progress + 2);
+        protected int NextContinueProgress => Progress + 2;
         protected void ActionButton(int index, Action<bool> buttonAction, bool state)
         {
             buttonAction?.Invoke(state);
         }
-        public static float ContinuePressedTime = 0;
-        protected WaitUntil Wait => new WaitUntil(() => Time.time <= ContinuePressedTime);
+        protected static int Progress = 0;
+        public static void SetProgress(int p) => Progress = p;
+        public WaitUntil WaitForProgressAbove(int progress) => new WaitUntil(() => Progress >= progress);
+        protected void CharacterSelect(int index) => DialogueRunner.SetCharacterFocus(index);
+    }
+    #endregion
+    #region Character Sprites
+    public partial class Dialogue
+    {
+        [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
     }
     #endregion
     public abstract partial class Dialogue : MonoBehaviour
@@ -351,6 +363,7 @@ namespace Bremsengine
         [ContextMenu("Start Dialogue")]
         public void StartDialogue(int progress = 0)
         {
+            Progress = progress;
             if (activeDialogueRoutine != null && runnerInstance == null)
             {
                 Debug.Log("Really bad");
@@ -361,6 +374,16 @@ namespace Bremsengine
             }
             ActiveDialogue = this;
             DialogueRunner.SetDialogueVisibility(true);
+            int spriteIndex = 0;
+            foreach (var item in DialogueRunner.AllCharacterSprites)
+            {
+                item.sprite = null;
+            }
+            foreach (var item in characterSprites)
+            {
+                DialogueRunner.SetCharacterSprite(spriteIndex, item);
+                spriteIndex++;
+            }
             activeDialogueRoutine = runnerInstance.StartCoroutine(DialogueContents(progress));
             WhenStartDialogue(progress);
         }

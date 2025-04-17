@@ -71,7 +71,6 @@ public class WeaponSelect : MonoBehaviour
         {
             attempts--;
             int random = 0.RandomBetween(0, KnownItems.Count);
-            Debug.Log(random);
             Item choice = KnownItems[random];
             if (existingSelectionOptions.Contains(choice.ItemName))
                 continue;

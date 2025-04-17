@@ -1,3 +1,4 @@
+using Bremsengine;
 using Core.Extensions;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ public class SpawnManager : MonoBehaviour
     public TextMeshProUGUI timerUI;
     public GameObject[] enemyToSpawn;
     public GameObject miniBossToSpawn;
-    public DialogueManager dialogueManager;
     public Transform enemyFolder;
     public Transform[] spawnPoints;
     public int killQuota;
@@ -18,9 +18,10 @@ public class SpawnManager : MonoBehaviour
     private float gameTimer;
     public float spawnRate;
     public float spawnTime;
-    public bool canSpawn = true;
+    public static bool CanSpawn => !Dialogue.IsDialogueRunning && !GeneralManager.IsPaused; // leaving in some dummy values.
     public List<SpawnPhase> enemyPhases;
     private SpawnPhase currentPhase;
+    public Dialogue KillQuotaDummyDialogue;
 
     #region Enemy Spawning Methods
     public void SpawnRandomEnemy()
@@ -90,7 +91,6 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnMiniBoss", 60f, 60f);
-        dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         spawnPoints = GameObject.Find("SpawnPoints").GetComponentsInChildren<Transform>();
     }
     void Update()
@@ -103,7 +103,7 @@ public class SpawnManager : MonoBehaviour
                 currentPhase = enemyPhases[i];
             }
         }
-        TimeSpan timer = TimeSpan.FromSeconds(Time.realtimeSinceStartup);
+        TimeSpan timer = TimeSpan.FromSeconds(Time.time);
         if (timer.Seconds < 10)
         {
             timerUI.text = timer.Minutes.ToString() + ":0" + timer.Seconds.ToString();
@@ -112,13 +112,15 @@ public class SpawnManager : MonoBehaviour
         {
             timerUI.text = timer.Minutes.ToString() + ":" + timer.Seconds.ToString();
         }
-        if (currentKills > killQuota)
+        bool killQuotaCondition = currentKills > killQuota;
+        if (killQuotaCondition)
         {
-            Debug.Log("WOW!");
-            dialogueManager.StartDialogue();
-            //canSpawn = false;
+            //idk what this is supposed to do but ill hook up some dummy dialogue and just make it so it doesnt break.
+            killQuota += 50; //arbitrary number please change it to what u need it to actually do.
+            KillQuotaDummyDialogue.StartDialogue();
+            Debug.Log("WOW! cool dialogue stuff kill quota lmao");
         }
-        if (canSpawn)
+        if (CanSpawn)
         {
             spawnTime += Time.deltaTime;
             if (spawnTime >= spawnRate)
@@ -130,7 +132,7 @@ public class SpawnManager : MonoBehaviour
     } //qhar?
     private void SpawnMiniBoss()
     {
-        if (canSpawn)
+        if (CanSpawn)
         {
             SpawnSpecificEnemy(miniBossToSpawn);
         }
