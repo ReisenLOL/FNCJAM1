@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baff388b100c33b4d90627d4928d6388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  MaxHealth: 100
+  startingHealth: 1200
+  MaxHealth: 1200
   centerPositionOverride: {fileID: 6022167792110622834}
   funnyexplosion: 0

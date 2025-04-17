@@ -1,5 +1,6 @@
 using Core.Extensions;
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -8,14 +9,18 @@ public class SpawnManager : MonoBehaviour
 {
     public TextMeshProUGUI timerUI;
     public GameObject[] enemyToSpawn;
+    public GameObject miniBossToSpawn;
     public DialogueManager dialogueManager;
     public Transform enemyFolder;
     public Transform[] spawnPoints;
     public int killQuota;
     public int currentKills;
+    private float gameTimer;
     public float spawnRate;
     public float spawnTime;
     public bool canSpawn = true;
+    public List<SpawnPhase> enemyPhases;
+    private SpawnPhase currentPhase;
 
     #region Enemy Spawning Methods
     public void SpawnRandomEnemy()
@@ -48,6 +53,7 @@ public class SpawnManager : MonoBehaviour
         newEnemy.transform.SetParent(enemyFolder);
     }
 
+
     public void SpawnSpecificEnemy(GameObject enemy)
     {
         Vector2 spawnPosition = Vector2.zero;
@@ -64,14 +70,40 @@ public class SpawnManager : MonoBehaviour
         newEnemy.transform.SetParent(enemyFolder);
     }
     #endregion
+    #region Enemy Phase Spawning
+    [System.Serializable]
+    public class SpawnPhase
+    {
+        public float startTime;
+        public float spawnRate;
+        public GameObject[] enemyUnits;
+    }
+    void SpawnEnemyFromPhase(SpawnPhase phase)
+    {
+        int index = Random.Range(0, phase.enemyUnits.Length);
+        GameObject enemy = phase.enemyUnits[index];
+        SpawnSpecificEnemy(enemy);
+    }
+    #endregion
+
 
     void Start()
     {
+        InvokeRepeating("SpawnMiniBoss", 60f, 60f);
         dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         spawnPoints = GameObject.Find("SpawnPoints").GetComponentsInChildren<Transform>();
     }
     void Update()
     {
+        gameTimer += Time.deltaTime;
+        for (int i = 0; i < enemyPhases.Count; i++)
+        {
+            if (gameTimer >= enemyPhases[i].startTime)
+            {
+                currentPhase = enemyPhases[i];
+                break;
+            }
+        }
         TimeSpan timer = TimeSpan.FromSeconds(Time.realtimeSinceStartup);
         if (timer.Seconds < 10)
         {
@@ -93,8 +125,15 @@ public class SpawnManager : MonoBehaviour
             if (spawnTime >= spawnRate)
             {
                 spawnTime = 0;
-                SpawnRandomEnemy();
+                SpawnEnemyFromPhase(currentPhase);
             }
         }
     } //qhar?
+    private void SpawnMiniBoss()
+    {
+        if (canSpawn)
+        {
+            SpawnSpecificEnemy(miniBossToSpawn);
+        }
+    }
 }
