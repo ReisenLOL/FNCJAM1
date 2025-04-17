@@ -124,5 +124,9 @@ namespace Projectile
         {
             if (handler != null) handler.OnAttack -= PerformContainedAttack;
         }
+        public void OnAfterDeserialize()
+        {
+
+        }
     }
 }

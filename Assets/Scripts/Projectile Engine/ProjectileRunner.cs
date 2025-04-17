@@ -5,6 +5,7 @@ namespace Projectile
     public class ProjectileRunner : MonoBehaviour
     {
         static ProjectileRunner instance;
+        float nextSecond;
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void StartInstance()
         {
@@ -17,6 +18,11 @@ namespace Projectile
         {
             if (instance != this)
                 return;
+            if (Time.unscaledTime > nextSecond && TimeHandler.TimeScale > 0f)
+            {
+                nextSecond = Time.unscaledTime + 1f;
+                Projectile.RunEverySecond();
+            }
             Projectile.RunActiveBullets();
         }
         private void LateUpdate()

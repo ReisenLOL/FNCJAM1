@@ -15,7 +15,7 @@ TagManager:
   - UI
   - Collectable
   - Enemy
-  - 
+  - Projectile
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Skybox
+    uniqueID: 1958730465
+    locked: 0
+  - name: Projectile System
+    uniqueID: 954744745
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

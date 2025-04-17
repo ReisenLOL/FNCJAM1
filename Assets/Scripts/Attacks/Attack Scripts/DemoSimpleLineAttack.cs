@@ -5,8 +5,8 @@ namespace Projectile
 {
     public class DemoSimpleLineAttack : BaseAttack
     {
-        [SerializeField] Projectile prefab;
-        [SerializeField] Projectile prefab2;
+        [SerializeField] ProjectilePrefabSO prefab;
+        [SerializeField] ProjectilePrefabSO prefab2;
         protected override void AttackPayload(Projectile.InputSettings input)
         {
             Single(0f, 25f).Spawn(input, prefab, out iterationList);

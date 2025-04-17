@@ -7,8 +7,8 @@ namespace Projectile
 {
     public class SaunaQuestFinal : BaseAttack
     {
-        [SerializeField] Projectile spiralProjectile;
-        [SerializeField] Projectile ringProjectile;
+        [SerializeField] ProjectilePrefabSO spiralProjectile;
+        [SerializeField] ProjectilePrefabSO ringProjectile;
         [SerializeField] float attackLength = 35f;
         [SerializeField] int iterations = 300;
         protected override void AttackPayload(Projectile.InputSettings input)
@@ -38,6 +38,7 @@ namespace Projectile
                 WaitForSeconds stall = new WaitForSeconds(repeatDelay);
                 for (int i = 0; i < iterations; i++)
                 {
+                    input.SetOrigin(owner.CurrentPosition);
                     input.SetDirection(Down);
                     #region spirals
                     attackSound.Play(input.Origin);

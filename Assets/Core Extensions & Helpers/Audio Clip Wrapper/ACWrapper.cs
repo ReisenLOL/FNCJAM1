@@ -37,7 +37,11 @@ namespace Core.Extensions
         private void OnValidate()
         {
             this.FindEnumerableError(nameof(soundClips), soundClips);
-            this.FindStringError(nameof(SoundName) ,SoundName);
+            if (this.FindStringError(nameof(SoundName), SoundName))
+            {
+                SoundName = name;
+                this.Dirty();
+            }
         }
         private void Awake()
         {

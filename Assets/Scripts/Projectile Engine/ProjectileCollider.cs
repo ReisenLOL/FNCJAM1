@@ -18,6 +18,7 @@ namespace Projectile
         private void OnTriggerEnter2D(Collider2D collision)
         {
             Projectile.CollisionResult result = GetCollisionResult(collision);
+            Debug.Log(result);
             assignedProjectile.PerformCollisionResult(result, collision);
         }
         public Projectile.CollisionResult GetCollisionResult(Collider2D other)
@@ -31,6 +32,7 @@ namespace Projectile
             {
                 if (hitListener.Faction != BremseFaction.None && hitListener.CompareFaction(assignedProjectile.Faction))
                 {
+                    Debug.Log("T");
                     return Projectile.CollisionResult.Friends;
                 }
                 else

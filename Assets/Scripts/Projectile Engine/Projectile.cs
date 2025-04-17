@@ -320,6 +320,10 @@ namespace Projectile
             {
                 return false;
             }
+            if (!PlayerUnit.Player.IsAlive || PlayerUnit.Player.CurrentPosition.SquareDistanceToGreaterThan(position, playerOffscreenDistance))
+            {
+                return false;
+            }
             Projectile p = null;
             if (TryGetFromPool(prefab.poolID, out p) && p != null)
             {
@@ -516,9 +520,20 @@ namespace Projectile
     #region Offscreen
     public partial class Projectile
     {
-        static TagHandle stageboxTag => TagHandle.GetExistingTag("Projectile Stagebox");
+        public const float playerOffscreenDistance = 25f;
+        static TagHandle stageboxTag => TagHandle.GetExistingTag("MainCamera");
         public delegate void ScreenExitAction(Projectile p, Vector2 edgeNormal);
         private ScreenExitAction OnScreenExit;
+        static bool TryPlayerPosition(out Vector2 playerPosition)
+        {
+            playerPosition = Vector2.zero;
+            if (PlayerUnit.Player.IsAlive)
+            {
+                playerPosition = PlayerUnit.Player.CurrentPosition;
+                return true;
+            }
+            return false;
+        }
         public void AddOnScreenExitEvent(ScreenExitAction action)
         {
             OnScreenExit += action;
@@ -538,6 +553,17 @@ namespace Projectile
                 p.OnScreenExit?.Invoke(p, -(p.CurrentVelocity.QuantizeToStepSize(90f)));
                 p.OnScreenExit = null;
             }
+        }
+        private bool CleanLoop()
+        {
+            if (TryPlayerPosition(out Vector2 position))
+            {
+                if (CurrentPosition.SquareDistanceToGreaterThan(position, playerOffscreenDistance))
+                {
+                    return ClearProjectile();
+                }
+            }
+            return false;
         }
     }
     #endregion
@@ -630,6 +656,24 @@ namespace Projectile
             foreach (var item in activeBullets)
             {
                 item.RunProjectile();
+            }
+        }
+        static List<Projectile> cleanList = new();
+        public static void RunEverySecond()
+        {
+            cleanList.Clear();
+            foreach (var item in activeBullets)
+            {
+                //item.CleanLoop();
+                cleanList.Add(item);
+            }
+            for (int i = 0; i < cleanList.Count; i++)
+            {
+                if (cleanList[i] != null && cleanList[i].CleanLoop())
+                {
+                    cleanList.RemoveAt(i);
+                    i--;
+                }
             }
         }
         public static void LateRunActiveBullets(float velocityScale)

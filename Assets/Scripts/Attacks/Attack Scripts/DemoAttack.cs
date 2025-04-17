@@ -5,7 +5,7 @@ namespace Projectile
 {
     public class DemoAttack : BaseAttack
     {
-        [SerializeField] Projectile prefab;
+        [SerializeField] ProjectilePrefabSO prefab;
         protected override void AttackPayload(Projectile.InputSettings input)
         {
             Arc(-45f, 45, 90f / 9f, 0.1f).Spawn(input, prefab, out iterationList);

@@ -61,6 +61,17 @@ public partial class BaseUnit : IFaction
     BremseFaction IFaction.Faction { get; set; }
 }
 #endregion
+#region Stall
+public partial class BaseUnit
+{
+    float stallEndTime;
+    public void SetStallTime(float time)
+    {
+        stallEndTime = time + Time.time;
+    }
+    public bool IsStalled => Time.time < stallEndTime;
+}
+#endregion
 public abstract partial class BaseUnit : MonoBehaviour
 {
     public static BaseUnit Player { get; private set; }

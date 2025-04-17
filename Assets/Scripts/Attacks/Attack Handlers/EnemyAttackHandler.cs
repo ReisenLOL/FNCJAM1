@@ -27,5 +27,12 @@ namespace Projectile
         {
 
         }
+        private void Update()
+        {
+            if (ResolveTarget(out BaseUnit target))
+            {
+                TryAttack(target.CurrentPosition);
+            }
+        }
     }
 }

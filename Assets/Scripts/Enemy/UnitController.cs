@@ -32,6 +32,11 @@ public class UnitController : MonoBehaviour
     }
     void WhenTick()
     {
+        if (Owner.IsStalled)
+        {
+            rb.VelocityTowards(Vector2.zero, acceleration * 1.5f);
+            return;
+        }
         rb.VelocityTowards(lookDirection.ScaleToMagnitude(speed), acceleration);
     }
     private void OnCollisionEnter2D(Collision2D collision)

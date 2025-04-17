@@ -1,13 +1,14 @@
 using Core.Extensions;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 namespace Projectile
 {
     public class ReisenAttack : BaseAttack
     {
-        [SerializeField] Projectile burstShot;
-        [SerializeField] Projectile frontal;
+        [SerializeField] ProjectilePrefabSO burstShot;
+        [SerializeField] ProjectilePrefabSO frontal;
         [SerializeField] ACWrapper burstSound;
         [SerializeField] int burstCount = 6;
         protected override void AttackPayload(Projectile.InputSettings input)

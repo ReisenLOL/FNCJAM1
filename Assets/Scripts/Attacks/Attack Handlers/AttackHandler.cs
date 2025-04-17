@@ -38,16 +38,15 @@ namespace Projectile
         {
             stallTime = settings.UnitStallDuration + Time.time;
             NextAttackTime = Time.time + settings.SwingDuration;
+            Owner.SetStallTime(settings.UnitStallDuration);
         }
         float NextAttackTime;
         float stallTime;
         public bool IsStalled() => Time.time < stallTime;
         public bool IsAttackTimeAllowed() => Time.time >= NextAttackTime;
-        public BaseUnit Owner { get; private set; }
+        [field: SerializeField] public BaseUnit Owner { get; private set; }
         public delegate void AttackAction(Vector2 target);
         public AttackAction OnAttack;
-        public static Transform FallbackTarget;
-        public static void SetFallbackTarget(Transform t) => FallbackTarget = t;
         public void SetOwner(BaseUnit owner)
         {
             this.Owner = owner;

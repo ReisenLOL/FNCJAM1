@@ -1,3 +1,4 @@
+using Core.Extensions;
 using UnityEngine;
 
 public class ArcanePrism : Weapon
@@ -7,7 +8,7 @@ public class ArcanePrism : Weapon
     private float fireTime;
     public float offset;
     public Weapon attack;
-    public AudioClip attackSound;
+    [SerializeField] ACWrapper attackSound;
     public float attackSoundVolume;
     private void Start()
     {
@@ -51,9 +52,6 @@ public class ArcanePrism : Weapon
         {
             spawnedAttack.dissipationDelay = dissipationDelay;
         }
-        if (attackSound != null)
-        {
-            GetComponentInParent<AudioSource>().PlayOneShot(attackSound, attackSoundVolume);
-        }
+        attackSound.Play(transform.position);
     }
 }

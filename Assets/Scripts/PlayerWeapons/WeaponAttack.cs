@@ -11,8 +11,7 @@ public class WeaponAttack : Item
     public bool willRegenerate = true;
     public bool canFire = true;
     public Weapon attack;
-    public AudioClip attackSound;
-    public float attackSoundVolume;
+    [SerializeField] ACWrapper attackSound;
     float attackRate;
     public float attackRateModifier = 1;
     public float speedModifier = 1;
@@ -60,10 +59,7 @@ public class WeaponAttack : Item
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 spawnedAttack.RotateToTarget(worldPos);
                 spawnedAttack.weaponNumber = i;
-                if (attackSound != null)
-                {
-                    GetComponentInParent<AudioSource>().PlayOneShot(attackSound, attackSoundVolume);
-                }
+                attackSound.Play(transform.position);
                 yield return repeatDelay;
             }
         }
