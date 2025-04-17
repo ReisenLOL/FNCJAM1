@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Crimson Infusion
+  itemImage: {fileID: 0}
+  itemDescription: Increases your max HP
   modifierValue: 0
   specialValueA: 0
   level: 0
@@ -87,7 +89,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42327b6ea3ca3614dade94c502982b74, type: 2}
   refreshWeaponList: 0
   player: {fileID: 0}
-  regenTime: 0
 --- !u!1 &1623549349369429720
 GameObject:
   m_ObjectHideFlags: 0

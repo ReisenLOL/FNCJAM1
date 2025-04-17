@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Rifle
+  itemImage: {fileID: 0}
+  itemDescription: Shoots a bullet that can pierce through many enemies.
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}

@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Richochet Carbine
+  itemImage: {fileID: 0}
+  itemDescription: Shoots a projectile towards the cursor's position and bounces
+    off the screen.
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}

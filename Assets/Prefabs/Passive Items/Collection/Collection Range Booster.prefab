@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Collection Range Booster
+  itemImage: {fileID: 0}
+  itemDescription: Increases the radius where you can collect pickup items
   modifierValue: 0
   specialValueA: 0
   level: 0

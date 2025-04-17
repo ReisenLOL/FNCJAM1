@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Reimu's Old Donation Box
+  itemImage: {fileID: 0}
+  itemDescription: Gain a bonus to exp
   modifierValue: 1
   specialValueA: 0
   level: 0

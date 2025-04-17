@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Accelerative Booster
+  itemImage: {fileID: 0}
+  itemDescription: Increases attack speed
   modifierValue: 0
   specialValueA: 0
   level: 0

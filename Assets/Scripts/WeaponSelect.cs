@@ -11,6 +11,7 @@ public class WeaponSelect : MonoBehaviour
     static int currentSelectionItemCount;
     public Button buttonPrefab;
     [SerializeField] RectTransform selectionPanel;
+    [SerializeField] GameObject descriptionPanel;
     void Start()
     {
         RebuildWeaponList(4);
@@ -47,6 +48,10 @@ public class WeaponSelect : MonoBehaviour
                 passives[i].refreshWeaponList = true;
             }
         }
+        if (descriptionPanel.activeSelf)
+        {
+            descriptionPanel.SetActive(false);
+        }
         HideWeaponSelect();
     }
     private void RebuildWeaponList(int choices)
@@ -73,9 +78,15 @@ public class WeaponSelect : MonoBehaviour
             currentSelectionItemCount++;
             string weaponName = choice.ItemName;
             Button newButton = Instantiate(buttonPrefab, selectionPanel);
+            if (choice.itemImage != null)
+            {
+                Image buttonImage = newButton.transform.Find("Image").GetComponent<Image>();
+                buttonImage.sprite = choice.itemImage;
+            }
             newButton.gameObject.SetActive(true);
             newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
             newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice));
+            newButton.GetComponent<ShowDescriptionOnButtonHover>().buttonItem = choice;
             newButton.name = weaponName;
             existingSelectionOptions.Add(choice.ItemName);
         }

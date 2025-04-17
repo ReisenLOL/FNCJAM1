@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Sword
+  itemImage: {fileID: 0}
+  itemDescription: Large sword sweep that damages all enemies in its path.
   level: 1
   WeaponLevels:
   - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}
