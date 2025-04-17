@@ -101,7 +101,6 @@ public class SpawnManager : MonoBehaviour
             if (gameTimer >= enemyPhases[i].startTime)
             {
                 currentPhase = enemyPhases[i];
-                break;
             }
         }
         TimeSpan timer = TimeSpan.FromSeconds(Time.realtimeSinceStartup);
