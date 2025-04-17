@@ -9,6 +9,7 @@ public class ExplosiveUnitController : MonoBehaviour
     [field: SerializeField] public BaseUnit Owner { get; private set; }
     public float damage;
     public float speed;
+    public float explodingSpeed;
     public float attackRate;
     private float attackTime;
     public bool willSelfDestruct;
@@ -39,6 +40,7 @@ public class ExplosiveUnitController : MonoBehaviour
         }
         if (DetectPlayer(selfDestructRadius) != null && !willSelfDestruct)
         {
+            speed = explodingSpeed;
             willSelfDestruct = true;
         }
         if (willSelfDestruct)

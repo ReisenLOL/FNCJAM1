@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.71, y: 0.68, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 2038449967503034895, guid: 8a2bbffd4a1f05a45a808b09c301c584, type: 3}
-  m_Color: {r: 1, g: 0.22327036, b: 0.22327036, a: 1}
+  m_Sprite: {fileID: 5134573995892761913, guid: 2e59b972f8cd2ef45957966a536c4f7c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 1.705}
+    oldSize: {x: 1.2575, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -193,11 +193,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
   damage: 10
-  speed: 4
+  speed: 18
+  explodingSpeed: 2
   attackRate: 1
   willSelfDestruct: 0
   selfDestructRadius: 4
-  selfDestructRate: 4
+  selfDestructRate: 1
   selfDestructTime: 0
   blastRadius: 4
   blastDamage: 50
