@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Orbital Sword
-  itemImage: {fileID: -8350512866101388571, guid: c37b9f7ef95b6f94d84c22c0552e405f, type: 3}
+  itemImage: {fileID: 434976091246111242, guid: 29e8f371ba370ed4b978c27de33bcc6a, type: 3}
   itemDescription: Gain a sword that orbits the player and damages all nearby enemies
   level: 0
   WeaponLevels:
@@ -93,7 +93,6 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: 7715866026326152917, guid: 05c5ddc8674598d4baf13740438ba512, type: 3}
   attackSound: {fileID: 0}
-  attackSoundVolume: 0
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

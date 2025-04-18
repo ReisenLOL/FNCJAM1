@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Homing Talisman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,21 +45,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Sword
-  itemImage: {fileID: 8247329723496179466, guid: e61f0bff68d37b749bda03544c8d9bc6, type: 3}
-  itemDescription: Large sword sweep that damages all enemies in its path.
-  level: 1
+  <ItemName>k__BackingField: Homing Talisman
+  itemImage: {fileID: -2156038909900676472, guid: 437d29a5f1dfa3b4caa2f9bbd4780060, type: 3}
+  itemDescription: Shoots ofuda that will lock onto enemies
+  level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}
-  - {fileID: 11400000, guid: c1f9b09389871234391d3a541cebbbcd, type: 2}
-  - {fileID: 11400000, guid: 49a0dd4819a5657439874a7552a097b2, type: 2}
-  - {fileID: 11400000, guid: b30cb02bf10294248ae8d5f1cc8b5ea4, type: 2}
+  - {fileID: 11400000, guid: 1e258fa37887d34409cb5ec5433787fc, type: 2}
+  - {fileID: 11400000, guid: ef87c787a75734847911ee76e1497a53, type: 2}
+  - {fileID: 11400000, guid: 88649eda261ebfd40a4552125e9da0bf, type: 2}
+  - {fileID: 11400000, guid: 630913cbfd3842c49a2a380645ae5690, type: 2}
+  - {fileID: 11400000, guid: 9c16732ac996a944880b9b113d8477b7, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1
   canFire: 1
-  attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
-  attackSound: {fileID: 11400000, guid: fd286237c33ec10419734c457166ba98, type: 2}
+  attack: {fileID: 8416953628295921729, guid: 04f635774ecf024439b61984006028ef, type: 3}
+  attackSound: {fileID: 11400000, guid: f4ac0ca4ecc43784ca7d6b5dee34b230, type: 2}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

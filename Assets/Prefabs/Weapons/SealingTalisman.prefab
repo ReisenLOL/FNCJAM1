@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Sealing Talisman
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 417253313350925561, guid: cd00bdbb9210b9246ab8ecff19ec9f56, type: 3}
   itemDescription: Damages all enemies that get near the player.
   level: 0
   WeaponLevels:
