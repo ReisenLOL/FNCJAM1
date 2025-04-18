@@ -7,7 +7,6 @@ public class Passive : Item
     public float specialValueA;
     public int level;
     public PassiveItemLevelData[] passiveLevels;
-    public bool refreshWeaponList = false;
     public void LevelUp()
     {
         if (level >= passiveLevels.Length - 1) { return; }

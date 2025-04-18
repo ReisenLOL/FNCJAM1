@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Mini Hakkero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,26 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Sword
-  itemImage: {fileID: 8247329723496179466, guid: e61f0bff68d37b749bda03544c8d9bc6, type: 3}
-  itemDescription: Large sword sweep that damages all enemies in its path.
-  refreshWeaponList: 0
-  level: 1
+  <ItemName>k__BackingField: Mini Hakkero
+  itemImage: {fileID: -7321901480177674361, guid: ccaa42adb38221d4badc1f557c9f0920, type: 3}
+  itemDescription: Shoots a bullet that can pierce through many enemies.
+  level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}
-  - {fileID: 11400000, guid: c1f9b09389871234391d3a541cebbbcd, type: 2}
-  - {fileID: 11400000, guid: 49a0dd4819a5657439874a7552a097b2, type: 2}
-  - {fileID: 11400000, guid: b30cb02bf10294248ae8d5f1cc8b5ea4, type: 2}
+  - {fileID: 11400000, guid: 2d73ae05b948d48409f2c46fc28ab85e, type: 2}
+  - {fileID: 11400000, guid: b680f7ca8d6e0194db3cde69f50600f5, type: 2}
+  - {fileID: 11400000, guid: b3c052d6f6b1fcf41bc1c4962f7e6780, type: 2}
+  - {fileID: 11400000, guid: dcd32dac2733cbe4eb7d121693ce0448, type: 2}
+  - {fileID: 11400000, guid: d74bf5dccbe1a0f408810591411e28c2, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1
   canFire: 1
-  attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
-  attackSound: {fileID: 11400000, guid: fd286237c33ec10419734c457166ba98, type: 2}
+  attack: {fileID: -5853505412144738401, guid: efdcab9aa1eed55468b6cd780373c254, type: 3}
+  attackSound: {fileID: 11400000, guid: 56faac0084723e441bbbe41c3d184916, type: 2}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
-  requiredEvolutionItem: {fileID: 1031843684155584608, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
-  evolvedForm: {fileID: 0}
-  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

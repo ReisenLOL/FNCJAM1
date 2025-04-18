@@ -19,6 +19,7 @@ public class PlayerWeaponHandler : MonoBehaviour
     private void Start()
     {
         FindWeaponReference(startingWeapon, out bool wasCreated);
+        GameObject.Find("Item List").GetComponent<ItemList>().RebuildItemList();
     }
 
     public static Item FindWeaponReference(Item weapon, out bool wasCreated)

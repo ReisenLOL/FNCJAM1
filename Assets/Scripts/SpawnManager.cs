@@ -130,11 +130,6 @@ public class SpawnManager : MonoBehaviour
                 SpawnEnemyFromPhase(currentPhase);
             }
         }
-        else if (CanSpawn && currentPhase.isBossPhase)
-        {
-            spawnTime = 0;
-            SpawnEnemyFromPhase(currentPhase);
-        }
     } //qhar?
     private void SpawnMiniBoss()
     {

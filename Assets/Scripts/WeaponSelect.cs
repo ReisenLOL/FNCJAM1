@@ -10,6 +10,7 @@ public class WeaponSelect : MonoBehaviour
     static HashSet<string> existingSelectionOptions;
     static int currentSelectionItemCount;
     public Button buttonPrefab;
+    public ItemList itemList;
     [SerializeField] RectTransform selectionPanel;
     [SerializeField] GameObject descriptionPanel;
     public static bool IsSelecting { get; private set; }
@@ -43,18 +44,19 @@ public class WeaponSelect : MonoBehaviour
                 isPassiveItem.LevelUp();
             }
         }
-        Passive[] passives = FindObjectsByType<Passive>(FindObjectsSortMode.None);
-        if (passives.Length > 0)
+        Item[] equippedItems = FindObjectsByType<Item>(FindObjectsSortMode.None);
+        if (equippedItems.Length > 0)
         {
-            for (int i = 0; i < passives.Length; i++)
+            for (int i = 0; i < equippedItems.Length; i++)
             {
-                passives[i].refreshWeaponList = true;
+                equippedItems[i].refreshWeaponList = true;
             }
         }
         if (descriptionPanel.activeSelf)
         {
             descriptionPanel.SetActive(false);
         }
+        itemList.RebuildItemList();
         HideWeaponSelect();
     }
     private void RebuildWeaponList(int choices)
