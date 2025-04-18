@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
-  m_Name: Homing Talisman Level 5
+  m_Script: {fileID: 11500000, guid: 60442807ef3fe594aafd1de19b6f6c57, type: 3}
+  m_Name: Accelerative Booster Level 3
   m_EditorClassIdentifier: 
-  movementSpeed: 8
-  attackCount: 2
-  damage: 125
-  attackRate: 0.8
-  range: 45
-  dissipationDelay: 8
-  specialPropertyA: 8
-  specialPropertyB: 0.25
-  specialPropertyC: 0
+  modifierValue: 1.75
+  specialValueA: 0

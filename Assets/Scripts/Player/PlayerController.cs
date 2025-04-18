@@ -68,6 +68,7 @@ public partial class PlayerController
     private Vector2 moveInput;
     [SerializeField] float moveAcceleration = 60f;
     [SerializeField] float moveFriction = 40f;
+    public float speedModifier = 1f;
     private bool isFacingRight = true;
     [SerializeField] private Transform PlayerMovementFlipAnchor;
     private bool TryMove(out Vector2 output)
@@ -75,7 +76,7 @@ public partial class PlayerController
         output = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (output != Vector2.zero)
         {
-            RB.VelocityTowards(moveInput.ScaleToMagnitude(MaxMoveSpeed), moveAcceleration);
+            RB.VelocityTowards(moveInput.ScaleToMagnitude(MaxMoveSpeed * speedModifier), moveAcceleration);
             return true;
         }
         else

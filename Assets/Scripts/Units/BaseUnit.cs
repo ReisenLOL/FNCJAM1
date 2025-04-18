@@ -14,11 +14,12 @@ public partial class BaseUnit : IHitListener
 {
     public delegate void HitEvent(HitPacket packet, BaseUnit unit);
     public event HitEvent WhenHit;
+    public float defenseModifier = 1f; //i dunno where else to put this! - sylvia
     public void PerformHit(HitPacket packet)
     {
         if (!IsAlive)
             return;
-        ChangeHealth(-packet.Damage);
+        ChangeHealth(-packet.Damage * defenseModifier);
         WhenHit?.Invoke(packet, this);
     }
     public void BindHitEvent(HitEvent hitAction)

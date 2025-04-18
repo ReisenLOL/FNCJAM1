@@ -40,9 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6088354989259053749}
-  - component: {fileID: 7339957262606650096}
+  - component: {fileID: -2365649391267733898}
   m_Layer: 0
-  m_Name: Accelerative Booster
+  m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ Transform:
   - {fileID: 3797302048972281316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7339957262606650096
+--- !u!114 &-2365649391267733898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,22 +73,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031843684155584608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd65447d62daa524ebbc82a4f4ca5030, type: 3}
+  m_Script: {fileID: 11500000, guid: 66ad2c5bfa0e1a14a9a9ddb8af3885dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Accelerative Booster
+  <ItemName>k__BackingField: Armor
   itemImage: {fileID: 0}
-  itemDescription: Increases attack speed
+  itemDescription: 
   modifierValue: 0
   specialValueA: 0
   level: 0
   passiveLevels:
-  - {fileID: 11400000, guid: 14aac4738b669064fabc4ba0ee47f5e5, type: 2}
-  - {fileID: 11400000, guid: 6daa1ad3565a2754f8f9791ae0c5c9ef, type: 2}
-  - {fileID: 11400000, guid: 0d8796387b27f56489485880e423b35f, type: 2}
+  - {fileID: 11400000, guid: 02715765953ed7347b50d35887f7751a, type: 2}
+  - {fileID: 11400000, guid: ba20be87564ea3d4faaa5b762de2bf86, type: 2}
+  - {fileID: 11400000, guid: 3cae007d6a2aa83429a857843749b697, type: 2}
   refreshWeaponList: 0
-  weapons: []
+  player: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:
   m_ObjectHideFlags: 0

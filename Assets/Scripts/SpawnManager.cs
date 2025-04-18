@@ -79,6 +79,7 @@ public class SpawnManager : MonoBehaviour
     {
         public float startTime;
         public float spawnRate;
+        public bool isBossPhase;
         public GameObject[] enemyUnits;
     }
     void SpawnEnemyFromPhase(SpawnPhase phase)
@@ -117,10 +118,10 @@ public class SpawnManager : MonoBehaviour
         bool killQuotaCondition = currentKills > KillQuota;
         if (killQuotaCondition)
         {
-            KillQuotaDummyDialogue.StartDialogue();
+            //KillQuotaDummyDialogue.StartDialogue();
             Debug.Log("WOW! cool dialogue stuff kill quota lmao");
         }
-        if (CanSpawn)
+        if (CanSpawn && !currentPhase.isBossPhase)
         {
             spawnTime += Time.deltaTime;
             if (spawnTime >= spawnRate)
@@ -129,10 +130,15 @@ public class SpawnManager : MonoBehaviour
                 SpawnEnemyFromPhase(currentPhase);
             }
         }
+        else if (CanSpawn && currentPhase.isBossPhase)
+        {
+            spawnTime = 0;
+            SpawnEnemyFromPhase(currentPhase);
+        }
     } //qhar?
     private void SpawnMiniBoss()
     {
-        if (CanSpawn)
+        if (CanSpawn && !currentPhase.isBossPhase)
         {
             SpawnSpecificEnemy(miniBossToSpawn);
         }

@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
   damage: 10
-  speed: 10
+  speed: 8
   attackRate: 1
   acceleration: 150
 --- !u!114 &8846915252871540021
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baff388b100c33b4d90627d4928d6388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenseModifier: 1
   startingHealth: 50
   MaxHealth: 50
   centerPositionOverride: {fileID: 6022167792110622834}

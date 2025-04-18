@@ -40,9 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6088354989259053749}
-  - component: {fileID: -4909570935767480462}
+  - component: {fileID: 7339957262606650096}
   m_Layer: 0
-  m_Name: Collection Range Booster
+  m_Name: Clockwork Accelerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ Transform:
   - {fileID: 3797302048972281316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4909570935767480462
+--- !u!114 &7339957262606650096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,22 +73,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031843684155584608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96eeea88e8a34a4581e5fe522486b51, type: 3}
+  m_Script: {fileID: 11500000, guid: dd65447d62daa524ebbc82a4f4ca5030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Collection Range Booster
+  <ItemName>k__BackingField: Clockwork Accelerator
   itemImage: {fileID: 0}
-  itemDescription: Increases the radius where you can collect pickup items
+  itemDescription: Increases attack rate.
   modifierValue: 0
   specialValueA: 0
   level: 0
   passiveLevels:
-  - {fileID: 11400000, guid: 64ecedfacf1e3a84e9039b08510e27ed, type: 2}
-  - {fileID: 11400000, guid: 2379863f686ed2e439883dbb9c61d36f, type: 2}
-  - {fileID: 11400000, guid: 46b96b140bd2cf84c9722f2a2592e749, type: 2}
+  - {fileID: 11400000, guid: 14aac4738b669064fabc4ba0ee47f5e5, type: 2}
+  - {fileID: 11400000, guid: 6daa1ad3565a2754f8f9791ae0c5c9ef, type: 2}
+  - {fileID: 11400000, guid: 0d8796387b27f56489485880e423b35f, type: 2}
   refreshWeaponList: 0
-  player: {fileID: 0}
+  weapons: []
 --- !u!1 &1623549349369429720
 GameObject:
   m_ObjectHideFlags: 0
