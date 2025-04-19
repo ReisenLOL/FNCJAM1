@@ -5,21 +5,23 @@ using UnityEngine;
 public class RichochetCarbine : Weapon
 {
     private float dissipationTime;
+    public Transform sprite;
     Vector2 velocity;
     private Rigidbody2D rb;
+    public float rotationSpeed;
+    public int maxBounces;
+    public int currentBounces;
     private void Start()
     {
+        maxBounces = (int)weaponLevelData.specialPropertyA;
         rb = GetComponent<Rigidbody2D>();
         SetWeaponProperties();
         SetVelocity(transform.right * speed);
     }
     void Update()
     {
+        sprite.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
         dissipationTime += Time.deltaTime;
-        if (dissipationTime >= dissipationDelay)
-        {
-            Destroy(gameObject);
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,6 +52,11 @@ public class RichochetCarbine : Weapon
         if (TryGetExitNormal(box, transform.position, out Vector2 screenNormal))
         {
             SetVelocity(velocity.Bounce(screenNormal, 1f));
+            currentBounces++;
+            if (currentBounces > maxBounces)
+            {
+                Destroy(gameObject);
+            }    
         }
     }
     public bool TryGetExitNormal(BoxCollider2D boxCollider, Vector2 pointInside, out Vector2 normal)

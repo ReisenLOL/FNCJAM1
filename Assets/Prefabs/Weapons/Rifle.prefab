@@ -48,6 +48,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: Rifle
   itemImage: {fileID: -7321901480177674361, guid: ccaa42adb38221d4badc1f557c9f0920, type: 3}
   itemDescription: Shoots a bullet that can pierce through many enemies.
+  refreshWeaponList: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}
@@ -64,4 +65,7 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  evolvedForm: {fileID: 0}
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

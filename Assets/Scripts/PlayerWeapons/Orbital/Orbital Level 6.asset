@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
-  m_Name: Orbital Level 4
+  m_Name: Orbital Level 6
   m_EditorClassIdentifier: 
   movementSpeed: 0
-  attackCount: 4
-  damage: 70
-  attackRate: 0.5
-  range: 12
+  attackCount: 5
+  damage: 90
+  attackRate: 1
+  range: 14
   dissipationDelay: 2
   specialPropertyA: 0
   specialPropertyB: 0

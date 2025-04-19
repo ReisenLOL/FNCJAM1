@@ -48,6 +48,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: Homing Talisman
   itemImage: {fileID: -2156038909900676472, guid: 437d29a5f1dfa3b4caa2f9bbd4780060, type: 3}
   itemDescription: Shoots ofuda that will lock onto enemies
+  refreshWeaponList: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 1e258fa37887d34409cb5ec5433787fc, type: 2}
@@ -64,4 +65,7 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  evolvedForm: {fileID: 0}
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

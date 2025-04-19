@@ -80,6 +80,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: Orbital Sword
   itemImage: {fileID: 434976091246111242, guid: 29e8f371ba370ed4b978c27de33bcc6a, type: 3}
   itemDescription: Gain a sword that orbits the player and damages all nearby enemies
+  refreshWeaponList: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 9e07454c449363343b3f84d806664685, type: 2}
@@ -96,6 +97,9 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  evolvedForm: {fileID: 0}
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:
