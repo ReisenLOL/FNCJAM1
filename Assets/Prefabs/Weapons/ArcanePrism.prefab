@@ -46,9 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Arcane Prism
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -8899689620235115674, guid: 1f127e98e5dcac24e82f2dbf8f1f78d3, type: 3}
   itemDescription: Gain a prism that orbits the player and periodically shoot beams
     at a random enemy.
+  refreshWeaponList: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: a4dbc020f40cfa84b8564d9810922219, type: 2}
@@ -65,4 +66,7 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  evolvedForm: {fileID: 0}
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

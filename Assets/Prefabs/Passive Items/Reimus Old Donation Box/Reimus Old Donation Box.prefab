@@ -78,8 +78,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Reimu's Old Donation Box
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 4958856469392035500, guid: d858873531711a647a528987cc7a9c29, type: 3}
   itemDescription: Gain a bonus to exp
+  refreshWeaponList: 0
   modifierValue: 1
   specialValueA: 0
   level: 0
@@ -87,7 +88,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c052b676cee275c4fab6025fccc8980a, type: 2}
   - {fileID: 11400000, guid: ee585f2c4d4cab94f99db53dc1afa357, type: 2}
   - {fileID: 11400000, guid: 0bebe3d1e19aeb049ae5c4fdb57d6546, type: 2}
-  refreshWeaponList: 0
   levelManager: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:

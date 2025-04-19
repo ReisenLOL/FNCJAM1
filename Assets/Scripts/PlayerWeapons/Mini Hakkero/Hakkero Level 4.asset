@@ -15,9 +15,9 @@ MonoBehaviour:
   movementSpeed: 16
   attackCount: 1
   damage: 120
-  attackRate: 0.8
+  attackRate: 0.05
   range: 40
-  dissipationDelay: 8
+  dissipationDelay: 1.5
   specialPropertyA: 6
   specialPropertyB: 0
   specialPropertyC: 0

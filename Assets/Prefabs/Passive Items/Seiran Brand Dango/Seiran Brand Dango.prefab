@@ -78,8 +78,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Seiran Brand Dango
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -7658881321844493803, guid: 963e6562bb6bc3f44bf23b1b9acff85c, type: 3}
   itemDescription: Gain health regen every second.
+  refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
   level: 0
@@ -87,7 +88,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f3339bd68f36324d807874a549d90f7, type: 2}
   - {fileID: 11400000, guid: 4d20be473d7931d4eb650e2e4aa077e8, type: 2}
   - {fileID: 11400000, guid: db55c483eb21b244ea6d93658cf22670, type: 2}
-  refreshWeaponList: 0
   player: {fileID: 0}
   regenTime: 0
 --- !u!1 &1623549349369429720

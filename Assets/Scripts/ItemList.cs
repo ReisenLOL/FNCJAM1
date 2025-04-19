@@ -9,6 +9,7 @@ public class ItemList : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
+        RebuildItemList();
     }
     public void RebuildItemList()
     {
