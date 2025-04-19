@@ -78,8 +78,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Needle of the Wind
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 4553058418262026816, guid: 7deab824900199f4a90b5d4dd41658f9, type: 3}
   itemDescription: Increases the speed of your projectiles
+  refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
   level: 0
@@ -87,7 +88,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c28123ca2c3a06045b0d2c34df5930ee, type: 2}
   - {fileID: 11400000, guid: 5ddd0e8ae5b338541959b9f79b415870, type: 2}
   - {fileID: 11400000, guid: 43f22e2df52c50943b0d8003fd8e2300, type: 2}
-  refreshWeaponList: 0
   weapons: []
 --- !u!1 &1623549349369429720
 GameObject:

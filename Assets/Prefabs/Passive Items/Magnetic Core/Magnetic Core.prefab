@@ -78,8 +78,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Magnetic Core
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 4877825377717948546, guid: 37ff6962b104bfc408f81009fa893e7e, type: 3}
   itemDescription: Increases the radius where you can collect pickup items
+  refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
   level: 0
@@ -87,7 +88,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64ecedfacf1e3a84e9039b08510e27ed, type: 2}
   - {fileID: 11400000, guid: 2379863f686ed2e439883dbb9c61d36f, type: 2}
   - {fileID: 11400000, guid: 46b96b140bd2cf84c9722f2a2592e749, type: 2}
-  refreshWeaponList: 0
   player: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:

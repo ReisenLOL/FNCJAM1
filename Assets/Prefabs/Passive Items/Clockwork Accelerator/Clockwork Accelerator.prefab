@@ -78,8 +78,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Clockwork Accelerator
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 2687936600271189394, guid: 5d708d35307e5944ca15e1fff41dea02, type: 3}
   itemDescription: Increases attack rate.
+  refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
   level: 0
@@ -87,7 +88,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14aac4738b669064fabc4ba0ee47f5e5, type: 2}
   - {fileID: 11400000, guid: 6daa1ad3565a2754f8f9791ae0c5c9ef, type: 2}
   - {fileID: 11400000, guid: 0d8796387b27f56489485880e423b35f, type: 2}
-  refreshWeaponList: 0
   weapons: []
 --- !u!1 &1623549349369429720
 GameObject:

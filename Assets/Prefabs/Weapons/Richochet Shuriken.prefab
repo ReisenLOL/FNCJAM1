@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: RichochetCarbine
+  m_Name: Richochet Shuriken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,17 +45,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Richochet Carbine
-  itemImage: {fileID: 0}
+  <ItemName>k__BackingField: Richochet Shuriken
+  itemImage: {fileID: -4345462867533152315, guid: c6bb8d24b2a1f344dbdb97df4bb7b413, type: 3}
   itemDescription: Shoots a projectile towards the cursor's position and bounces
     off the screen.
+  refreshWeaponList: 0
   level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}
-  - {fileID: 11400000, guid: 15bf62045708fe04c81dbd91c5809503, type: 2}
-  - {fileID: 11400000, guid: 5df6150a0fa2aee4a8ec0a9ab73fc7be, type: 2}
-  - {fileID: 11400000, guid: 90658ddfc07e89f48829a1ad45ac3743, type: 2}
-  - {fileID: 11400000, guid: 3544a1dc7d6108d4293d8fae1d75736d, type: 2}
+  - {fileID: 11400000, guid: da584867b8267624db3ebb8c872e24ab, type: 2}
+  - {fileID: 11400000, guid: 1d4a713b45b76e84ba58a211b9bc0530, type: 2}
+  - {fileID: 11400000, guid: 1f1d91ad5bf043d438f9350a4afaa774, type: 2}
+  - {fileID: 11400000, guid: 3953a36aaf6c95c40bbfa56f83a4eb94, type: 2}
+  - {fileID: 11400000, guid: b9e0745bf28cde94b90adb2a9b93681c, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1
@@ -65,4 +66,7 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  evolvedForm: {fileID: 0}
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}
