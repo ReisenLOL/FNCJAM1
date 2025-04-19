@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 0
   attackCount: 1
-  damage: 90
+  damage: 80
   attackRate: 0.75
-  range: 8
+  range: 7
   dissipationDelay: 0.2
   specialPropertyA: 0
   specialPropertyB: 0

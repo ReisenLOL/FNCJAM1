@@ -28,14 +28,16 @@ public class WeaponAttack : Item
     }
     void Update()
     {
+        nextAttackTime += Time.deltaTime;
         if (!willRegenerate && canFire)
         {
             InstantiateAttack();
             canFire = false;
         }
-        if (Time.time >= nextAttackTime && canFire)
+        if (nextAttackTime >= attackRate && canFire)
         {
-            nextAttackTime = Time.time + (1f / attackRate.Clamp(0.1f, 10f));
+            //nATTime = 1f / attackRate.Clamp(0.1f, 10f);
+            nextAttackTime = 0;
             InstantiateAttack();
         }
         if (!canEvolve && refreshWeaponList)

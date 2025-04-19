@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c54345d7b285f0549a0dbbc733f8c2ee, type: 2}
   - {fileID: 11400000, guid: 676cf177d3e99744a9174a2edce9ff14, type: 2}
   - {fileID: 11400000, guid: 1c9bb61685a15bb4290d35426b38549a, type: 2}
+  - {fileID: 11400000, guid: 4e079245b6809ef4f98ec7dc99e37bca, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1

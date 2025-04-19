@@ -155,7 +155,9 @@ MonoBehaviour:
   weaponNumber: 0
   dissipationDelay: 0
   weaponLevelData: {fileID: 0}
+  speedModifier: 0
+  damageModifier: 0
   unitCollectionLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 128
   explosionRadius: 5

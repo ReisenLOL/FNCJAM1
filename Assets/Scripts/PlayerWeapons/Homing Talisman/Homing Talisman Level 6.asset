@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Homing Talisman Level 6
   m_EditorClassIdentifier: 
-  movementSpeed: 8
+  movementSpeed: 12
   attackCount: 2
-  damage: 125
-  attackRate: 0.8
-  range: 45
+  damage: 140
+  attackRate: 0.6
+  range: 40
   dissipationDelay: 8
   specialPropertyA: 8
-  specialPropertyB: 0.25
+  specialPropertyB: 0.2
   specialPropertyC: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Prism Level 5
   m_EditorClassIdentifier: 
   movementSpeed: 8
-  attackCount: 4
+  attackCount: 3
   damage: 100
   attackRate: 0.8
   range: 45

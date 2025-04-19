@@ -49,12 +49,14 @@ MonoBehaviour:
   itemImage: {fileID: 8247329723496179466, guid: e61f0bff68d37b749bda03544c8d9bc6, type: 3}
   itemDescription: Large sword sweep that damages all enemies in its path.
   refreshWeaponList: 0
-  level: 1
+  level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}
   - {fileID: 11400000, guid: c1f9b09389871234391d3a541cebbbcd, type: 2}
   - {fileID: 11400000, guid: 49a0dd4819a5657439874a7552a097b2, type: 2}
   - {fileID: 11400000, guid: b30cb02bf10294248ae8d5f1cc8b5ea4, type: 2}
+  - {fileID: 11400000, guid: 23ce76e9d9c0bbc47a05f59503073141, type: 2}
+  - {fileID: 11400000, guid: 53d1c69cf41539f4194906616b45c57c, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1

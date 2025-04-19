@@ -35,14 +35,13 @@ public class RocketLauncher : Weapon
         HitPacket packet = new(transform.position, damage);
         if (TryHitOther(packet, collision))
         {
-            GeneralManager.FunnyExplosion(transform.position, explosionRadius * 0.25f);
-            EnemyUnit originalHitUnit = collision.GetOrAddComponent<EnemyUnit>();
+            GeneralManager.FunnyExplosion(transform.position, explosionRadius * 0.5f);
+            EnemyUnit originalHitUnit = collision.GetComponent<EnemyUnit>(); //this was for original unit check dunno why
             if (EnemyUnit.TryFindInCircleCast(transform.position, explosionRadius, unitCollectionLayer, out HashSet<EnemyUnit> explodedUnits))
             {
-                foreach (var item in explodedUnits)
+                foreach (EnemyUnit item in explodedUnits)
                 {
-                    if (item == originalHitUnit)
-                        continue;
+                    if(item == originalHitUnit) { continue; }
                     packet.HitPosition = item.CurrentPosition;
                     item.PerformHit(packet);
                 }

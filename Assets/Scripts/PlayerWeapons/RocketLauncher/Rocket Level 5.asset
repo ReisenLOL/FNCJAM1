@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Rocket Level 5
   m_EditorClassIdentifier: 
   movementSpeed: 12
-  attackCount: 2
-  damage: 125
-  attackRate: 0.8
+  attackCount: 1
+  damage: 50
+  attackRate: 1.5
   range: 45
   dissipationDelay: 8
-  specialPropertyA: 12
+  specialPropertyA: 5
   specialPropertyB: 0
   specialPropertyC: 0

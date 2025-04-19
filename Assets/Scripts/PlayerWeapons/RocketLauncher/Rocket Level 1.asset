@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 12
   attackCount: 1
-  damage: 50
-  attackRate: 0.15
+  damage: 25
+  attackRate: 2
   range: 25
   dissipationDelay: 8
-  specialPropertyA: 5
+  specialPropertyA: 3
   specialPropertyB: 0
   specialPropertyC: 0

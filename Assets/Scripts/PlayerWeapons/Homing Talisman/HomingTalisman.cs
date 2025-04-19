@@ -23,6 +23,7 @@ public class HomingTalisman : Weapon
         }
         if (_time > timeUntilHoming && !isHoming)
         {
+            _time = 0;
             isHoming = true;
             homingTarget = DetectEnemies(homingRange);
         }
@@ -30,7 +31,7 @@ public class HomingTalisman : Weapon
         {
             RotateToTarget(homingTarget.transform.position);
         }
-        transform.Translate(Vector2.right * Time.deltaTime * speed);
+        transform.Translate(Time.deltaTime * speed * Vector2.right);
         dissipationTime += Time.deltaTime;
         if (dissipationTime >= dissipationDelay)
         {
