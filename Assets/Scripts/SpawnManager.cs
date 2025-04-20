@@ -20,6 +20,9 @@ public class SpawnManager : MonoBehaviour
     private float gameTimer;
     public float spawnRate;
     public float spawnTime;
+
+    private bool bossSpawned = false;
+    private GameObject currentBoss;
     public static bool CanSpawn => !Dialogue.IsDialogueRunning && !GeneralManager.IsPaused; // leaving in some dummy values.
     public List<SpawnPhase> enemyPhases;
     private SpawnPhase currentPhase;
@@ -88,6 +91,13 @@ public class SpawnManager : MonoBehaviour
         GameObject enemy = phase.enemyUnits[index];
         SpawnSpecificEnemy(enemy);
     }
+    void SpawnBoss(SpawnPhase phase)
+    {
+        GameObject boss = phase.enemyUnits[0];
+        Vector2 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+        currentBoss = Instantiate(boss, spawnPosition, Quaternion.identity);
+        currentBoss.transform.SetParent(enemyFolder);
+    }
     #endregion
 
 
@@ -128,6 +138,18 @@ public class SpawnManager : MonoBehaviour
             {
                 spawnTime = 0;
                 SpawnEnemyFromPhase(currentPhase);
+            }
+        }
+        if (currentPhase.isBossPhase)
+        {
+            if (!bossSpawned)
+            {
+                SpawnBoss(currentPhase);
+                bossSpawned = true;
+            }
+            if (currentBoss == null)
+            {
+                bossSpawned = false;
             }
         }
     } //qhar?
