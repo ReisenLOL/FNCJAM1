@@ -29,12 +29,13 @@ public class SpawnManager : MonoBehaviour
     public Dialogue bossDialogue;
     public Dialogue postFightDialogue;
     public float healthModifier = 1f;
+    public float healthScalingValue;
 
     #region Enemy Spawning Methods
 
     public void RecalculateHealthModifier(int level)
     {
-        healthModifier = 1f + (level * 0.5f);
+        healthModifier = 1f + (level * healthScalingValue);
     }
     public void SpawnRandomEnemy()
     {
