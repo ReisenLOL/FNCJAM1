@@ -19,6 +19,8 @@ public class Infusion : Passive
     }
     public void ApplyModifierToPlayer()
     {
+        float pastMaxHealth = player.MaxHealth;
         player.MaxHealth = modifierValue;
+        player.ChangeHealth(modifierValue - pastMaxHealth);
     }
 }

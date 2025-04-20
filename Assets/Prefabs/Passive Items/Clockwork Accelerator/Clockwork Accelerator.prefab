@@ -79,7 +79,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Clockwork Accelerator
   itemImage: {fileID: 2687936600271189394, guid: 5d708d35307e5944ca15e1fff41dea02, type: 3}
-  itemDescription: Time waits for no youkai, and your weapons shouldn't be exempt.\nIncreases
+  itemDescription: Time waits for no youkai, and neither will it for your weapons.\nIncreases
     attack rate.
   refreshWeaponList: 0
   modifierValue: 0
