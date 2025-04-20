@@ -125,12 +125,6 @@ public class SpawnManager : MonoBehaviour
         {
             timerUI.text = timer.Minutes.ToString() + ":" + timer.Seconds.ToString();
         }
-        bool killQuotaCondition = currentKills > KillQuota;
-        if (killQuotaCondition)
-        {
-            //KillQuotaDummyDialogue.StartDialogue();
-            Debug.Log("WOW! cool dialogue stuff kill quota lmao");
-        }
         if (CanSpawn && !currentPhase.isBossPhase)
         {
             spawnTime += Time.deltaTime;
@@ -144,6 +138,7 @@ public class SpawnManager : MonoBehaviour
         {
             if (!bossSpawned)
             {
+                KillQuotaDummyDialogue.StartDialogue();
                 SpawnBoss(currentPhase);
                 bossSpawned = true;
             }
