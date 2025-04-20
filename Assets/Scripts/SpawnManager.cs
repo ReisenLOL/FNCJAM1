@@ -17,7 +17,7 @@ public class SpawnManager : MonoBehaviour
     public int KillQuota => killQuota;
     public void AddKillQuota(int quota) => killQuota += quota;
     public int currentKills;
-    private float gameTimer;
+    public float gameTimer;
     public float spawnRate;
     public float spawnTime;
 
