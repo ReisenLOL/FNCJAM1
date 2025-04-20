@@ -212,8 +212,8 @@ namespace Bremsengine
                 Time.timeScale = 0f;
                 IsPaused = true;
                 Debug.Log("Paused Game");
-                PlayerInputController.actions.Player.Disable();
-                PlayerInputController.actions.Shmup.Disable();
+                //PlayerInputController.actions.Player.Disable(); GAME IS COMPLAINING SO I COMMENT THESE OUT - Sylvia
+                //PlayerInputController.actions.Shmup.Disable();
             }
             else
             {
@@ -221,8 +221,8 @@ namespace Bremsengine
                 Time.timeScale = StoredPausedTimescale;
                 IsPaused = false;
                 Debug.Log("Un-paused Game");
-                PlayerInputController.actions.Player.Enable();
-                PlayerInputController.actions.Shmup.Enable();
+                //PlayerInputController.actions.Player.Enable();
+                //PlayerInputController.actions.Shmup.Enable();
             }
         }
         [QFSW.QC.Command("-Pause")]

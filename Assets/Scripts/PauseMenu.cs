@@ -1,16 +1,24 @@
+using Bremsengine;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject pauseUIElements;
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GeneralManager.TogglePause();
+            pauseUIElements.SetActive(!pauseUIElements.activeSelf);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Resume()
     {
-        
+        GeneralManager.SetPause(false);
+        pauseUIElements.SetActive(false);
+    }
+    public void ExitGame()
+    {
+        Debug.Log("Game Exited");
     }
 }
