@@ -26,7 +26,8 @@ public class SpawnManager : MonoBehaviour
     public static bool CanSpawn => !Dialogue.IsDialogueRunning && !GeneralManager.IsPaused; // leaving in some dummy values.
     public List<SpawnPhase> enemyPhases;
     private SpawnPhase currentPhase;
-    public Dialogue KillQuotaDummyDialogue;
+    public Dialogue bossDialogue;
+    public Dialogue postFightDialogue;
 
     #region Enemy Spawning Methods
     public void SpawnRandomEnemy()
@@ -138,12 +139,13 @@ public class SpawnManager : MonoBehaviour
         {
             if (!bossSpawned)
             {
-                KillQuotaDummyDialogue.StartDialogue();
+                bossDialogue.StartDialogue();
                 SpawnBoss(currentPhase);
                 bossSpawned = true;
             }
-            if (currentBoss == null)
+            if (currentBoss.activeSelf == false)
             {
+                postFightDialogue.StartDialogue();
                 bossSpawned = false;
             }
         }

@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 206220339}
   - component: {fileID: 206220340}
   m_Layer: 0
-  m_Name: Dummy Dialogue
+  m_Name: BossfightDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,8 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSprites:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -5486238616514719217, guid: 5d071436888eb9b408675220ffc1df08, type: 3}
+  - {fileID: 21300000, guid: 04f065b4d24ee244595f08b4ea46c724, type: 3}
 --- !u!1 &328096672
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,55 +962,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1809622279018485742, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899709377397973122, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899709377397973122, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899709377397973122, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899709377397973122, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582528035652542653, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582528035652542653, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582528035652542653, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582528035652542653, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582528035652542653, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818267929307504544, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4818267929307504544, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4818267929307504544, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4818267929307504544, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150.1485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4818267929307504544, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199442900313903762, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199442900313903762, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199442900313903762, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 470.1485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199442900313903762, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8027369595080293018, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8027369595080293018, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8027369595080293018, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 790.1485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8027369595080293018, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -35
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1448,6 +1484,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &998871767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998871769}
+  - component: {fileID: 998871768}
+  m_Layer: 0
+  m_Name: PostfightDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &998871768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998871767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4f8819f8a9f2e47b6e7cb67ed87be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterSprites:
+  - {fileID: -5486238616514719217, guid: 5d071436888eb9b408675220ffc1df08, type: 3}
+  - {fileID: 21300000, guid: 04f065b4d24ee244595f08b4ea46c724, type: 3}
+--- !u!4 &998871769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998871767}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1818214239}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1080814446 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3377593618308669245, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
@@ -1830,6 +1913,7 @@ MonoBehaviour:
   enemyFolder: {fileID: 943318251}
   spawnPoints: []
   currentKills: 0
+  gameTimer: 0
   spawnRate: 0.5
   spawnTime: 0
   enemyPhases:
@@ -1870,7 +1954,8 @@ MonoBehaviour:
     isBossPhase: 1
     enemyUnits:
     - {fileID: 5916187915891423065, guid: 501d9fc48cf8f4b4bb51100a9b1e57ad, type: 3}
-  KillQuotaDummyDialogue: {fileID: 206220340}
+  bossDialogue: {fileID: 206220340}
+  postFightDialogue: {fileID: 998871768}
 --- !u!4 &1818214239
 Transform:
   m_ObjectHideFlags: 0
@@ -1885,6 +1970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 206220339}
+  - {fileID: 998871769}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1873328881
