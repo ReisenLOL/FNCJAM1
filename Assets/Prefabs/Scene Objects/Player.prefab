@@ -206,7 +206,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &6134534935484789074
 MonoBehaviour:
@@ -231,6 +231,7 @@ MonoBehaviour:
   <MaxMoveSpeed>k__BackingField: 6
   moveAcceleration: 60
   moveFriction: 40
+  speedModifier: 1
   PlayerMovementFlipAnchor: {fileID: 4431681148228129284}
   <Owner>k__BackingField: {fileID: 3864224362199105629}
 --- !u!114 &3864224362199105629
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bb6c177eed5ea4da8fda44e3503278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenseModifier: 1
   startingHealth: 100
   MaxHealth: 100
   centerPositionOverride: {fileID: 6442401705395163802}

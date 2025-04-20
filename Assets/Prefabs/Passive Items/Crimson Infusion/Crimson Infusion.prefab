@@ -79,7 +79,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Crimson Infusion
   itemImage: {fileID: -3599767988975512551, guid: 32705bd1d2ec74342a24a1a536106a14, type: 3}
-  itemDescription: Increases your max HP
+  itemDescription: A vial containing some sorta red liquid those Eientei pharmacists
+    concocted.\nIncreases your max HP.
   refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
@@ -88,6 +89,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c013b0f4dcb926b4e819d4252bd956d2, type: 2}
   - {fileID: 11400000, guid: dcbaf308e73f0354b9355758ce539a76, type: 2}
   - {fileID: 11400000, guid: 42327b6ea3ca3614dade94c502982b74, type: 2}
+  - {fileID: 11400000, guid: 0bbc388b2ac86ce4398e01a53970a3a4, type: 2}
+  - {fileID: 11400000, guid: f68d7db45dcc6214f816c51262e1bbb4, type: 2}
   player: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:

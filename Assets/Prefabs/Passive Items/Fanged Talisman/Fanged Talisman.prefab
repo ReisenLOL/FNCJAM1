@@ -79,7 +79,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Fanged Talisman
   itemImage: {fileID: 5652445159396328574, guid: e63563b897405f24bbc8dd5898d578fb, type: 3}
-  itemDescription: Increases damage of all weapons
+  itemDescription: This talisman gives off a cursed aura, but it's pretty useful
+    to have.\nIncreases damage of all weapons
   refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
@@ -88,6 +89,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 850c74f88a4548c40a35da612fed8d4f, type: 2}
   - {fileID: 11400000, guid: 7b12ceabc487e7045973715835183011, type: 2}
   - {fileID: 11400000, guid: 677743b435cae6e4093b44dfeb6e476c, type: 2}
+  - {fileID: 11400000, guid: 4c218d49863b6e84e8aaf27b66fd3156, type: 2}
+  - {fileID: 11400000, guid: a4f4d44f205f0ab48882151bd26eb3dc, type: 2}
   weapons: []
 --- !u!1 &1623549349369429720
 GameObject:

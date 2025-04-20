@@ -79,7 +79,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Armor
   itemImage: {fileID: -1128947775675819744, guid: 09e6eba13e5994445a0047c525739dc8, type: 3}
-  itemDescription: 
+  itemDescription: You aren't a very good armorer, in comparison to weaponsmithing.\nIncreases
+    defense.
   refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
@@ -88,6 +89,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02715765953ed7347b50d35887f7751a, type: 2}
   - {fileID: 11400000, guid: ba20be87564ea3d4faaa5b762de2bf86, type: 2}
   - {fileID: 11400000, guid: 3cae007d6a2aa83429a857843749b697, type: 2}
+  - {fileID: 11400000, guid: fa6a7ad27304a2c47a48a3ebc3151a52, type: 2}
   player: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:

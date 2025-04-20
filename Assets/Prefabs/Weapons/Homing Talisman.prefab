@@ -47,7 +47,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Homing Talisman
   itemImage: {fileID: -2156038909900676472, guid: 437d29a5f1dfa3b4caa2f9bbd4780060, type: 3}
-  itemDescription: Shoots ofuda that will lock onto enemies
+  itemDescription: The classical approach to danmaku. Thrown with style, and guided
+    by spite,\nShoots ofuda that will lock onto enemies
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

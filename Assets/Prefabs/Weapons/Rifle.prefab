@@ -47,7 +47,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Rifle
   itemImage: {fileID: -7321901480177674361, guid: ccaa42adb38221d4badc1f557c9f0920, type: 3}
-  itemDescription: Shoots a bullet that can pierce through many enemies.
+  itemDescription: Looks like it came out of a war. Also that's not danmaku...\nShoots
+    a bullet that can pierce through many enemies.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

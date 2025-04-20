@@ -79,7 +79,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Tengu Wind Charm
   itemImage: {fileID: -1389442314326799938, guid: 6ebd470dd30bb954eabebc4bac631f3d, type: 3}
-  itemDescription: Increases movement speed.
+  itemDescription: Speed that could only granted by Tengu magic or caffiene.\nIncreases
+    movement speed.
   refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
@@ -88,6 +89,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c5bab811e1d1a2468a0a223c86545de, type: 2}
   - {fileID: 11400000, guid: 55779cd11c73f9c4f9dabb36e946c87a, type: 2}
   - {fileID: 11400000, guid: 4971824b3f9debb4d90677c912ab8f82, type: 2}
+  - {fileID: 11400000, guid: 93c794debcaba7648aa6ad1ea23c3dd1, type: 2}
+  - {fileID: 11400000, guid: 6edc9eee0f2988c4d8bab0769e78c784, type: 2}
   player: {fileID: 0}
 --- !u!1 &1623549349369429720
 GameObject:

@@ -47,7 +47,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Bear Trap
   itemImage: {fileID: -5949295138865634426, guid: fae182ca6943fd94f850d4c22ea7b247, type: 3}
-  itemDescription: Lays a bear trap on your position periodically
+  itemDescription: For what you're doing with these, it'd be better to call it a
+    "Fairy Trap"\nLays a bear trap on your position periodically
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

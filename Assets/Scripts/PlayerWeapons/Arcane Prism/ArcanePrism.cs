@@ -14,7 +14,7 @@ public class ArcanePrism : Weapon
     {
         transform.parent = firedFrom.transform;
         UpdatePosition();
-        transform.RotateAround(firedFrom.transform.position, Vector3.forward, 60 * weaponNumber);
+        transform.RotateAround(firedFrom.transform.position, Vector3.forward, 60  * weaponNumber);
         SetWeaponProperties();
     }
     void UpdatePosition()

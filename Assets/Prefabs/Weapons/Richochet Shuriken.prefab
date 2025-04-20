@@ -47,8 +47,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Richochet Shuriken
   itemImage: {fileID: -4345462867533152315, guid: c6bb8d24b2a1f344dbdb97df4bb7b413, type: 3}
-  itemDescription: Shoots a projectile towards the cursor's position and bounces
-    off the screen.
+  itemDescription: Not safe for indoor use.\nShoots a projectile towards the cursor's
+    position and bounces off the screen.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

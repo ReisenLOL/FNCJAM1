@@ -47,7 +47,9 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Sword
   itemImage: {fileID: 8247329723496179466, guid: e61f0bff68d37b749bda03544c8d9bc6, type: 3}
-  itemDescription: Large sword sweep that damages all enemies in its path.
+  itemDescription: The sharpest solution to any problem. The things that cannot be
+    cut by your sword, forged by you, are close to many!\nLarge sword sweep that
+    damages all enemies in its path.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

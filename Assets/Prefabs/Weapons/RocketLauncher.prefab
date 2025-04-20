@@ -47,8 +47,9 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Rocket Launcher
   itemImage: {fileID: 4296206841482116840, guid: 6458bbb8f7b44634980734d259e41ca2, type: 3}
-  itemDescription: Shoots a rocket towards a random enemy, and damages all in it's
-    blast radius.
+  itemDescription: Whatever the target was, it's getting vaporized. Overkill for
+    fairies.\nShoots a rocket towards a random enemy, and damages all in it's blast
+    radius.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

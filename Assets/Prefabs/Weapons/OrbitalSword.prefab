@@ -79,7 +79,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Orbital Sword
   itemImage: {fileID: 434976091246111242, guid: 29e8f371ba370ed4b978c27de33bcc6a, type: 3}
-  itemDescription: Gain a sword that orbits the player and damages all nearby enemies
+  itemDescription: Give those sword wings on your back an actual purpose.\nGain a
+    sword that orbits the player and damages all nearby enemies
   refreshWeaponList: 0
   level: 0
   WeaponLevels:

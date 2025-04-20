@@ -79,7 +79,8 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Needle of the Wind
   itemImage: {fileID: 4553058418262026816, guid: 7deab824900199f4a90b5d4dd41658f9, type: 3}
-  itemDescription: Increases the speed of your projectiles
+  itemDescription: Similar to the one that inchling holds, but you can feel it cut
+    through the wind easily.\nIncreases the speed of your projectiles
   refreshWeaponList: 0
   modifierValue: 0
   specialValueA: 0
@@ -88,6 +89,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c28123ca2c3a06045b0d2c34df5930ee, type: 2}
   - {fileID: 11400000, guid: 5ddd0e8ae5b338541959b9f79b415870, type: 2}
   - {fileID: 11400000, guid: 43f22e2df52c50943b0d8003fd8e2300, type: 2}
+  - {fileID: 11400000, guid: d3007512c3d56b34ab6e779281db0906, type: 2}
+  - {fileID: 11400000, guid: 148e81e28420daa45a9bf9428b9a0116, type: 2}
   weapons: []
 --- !u!1 &1623549349369429720
 GameObject:
