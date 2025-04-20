@@ -16,14 +16,16 @@ public class WeaponAttack : Item
     public float attackRateModifier = 1;
     public float speedModifier = 1;
     public float damageModifier = 1;
-    public GameObject requiredEvolutionItem;
+    public Passive requiredEvolutionItem;
     public WeaponAttack evolvedForm;
     public bool canEvolve;
     [Tooltip("Optional")]
     public Transform overrideSpawnPosition;
+    public WeaponSelect weaponSelect;
     public Vector2 SpawnPosition => overrideSpawnPosition == null ? transform.position : overrideSpawnPosition.position;
     private void Start()
     {
+        Debug.Log(WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate);
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
     }
     void Update()
@@ -40,14 +42,17 @@ public class WeaponAttack : Item
             nextAttackTime = 0;
             InstantiateAttack();
         }
-        if (!canEvolve && refreshWeaponList)
+        if (!canEvolve && refreshWeaponList && requiredEvolutionItem != null)
         {
             for (int i = 0; i < transform.parent.childCount; i++)
             {
-                if (transform.parent.GetChild(i) == requiredEvolutionItem)
+                if (transform.parent.GetChild(i).TryGetComponent(out Passive p))
                 {
-                    canEvolve = true;
-                    break;
+                    if (p.ItemName == requiredEvolutionItem.ItemName)
+                    {
+                        canEvolve = true;
+                        break;
+                    }
                 }
             }
             refreshWeaponList = false;

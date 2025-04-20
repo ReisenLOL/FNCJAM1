@@ -69,6 +69,23 @@ public class WeaponSelect : MonoBehaviour
     }
     public void ShowWeaponChoices(List<Item> weaponChoices, int choices)
     {
+        WeaponAttack[] equippedWeapons = FindObjectsByType<WeaponAttack>(FindObjectsSortMode.None);
+        for (int i = 0; i < equippedWeapons.Length; i++)
+        {
+            if (equippedWeapons[i].level == equippedWeapons[i].WeaponLevels.Length - 1)
+            {
+                Debug.Log("Found max level weapon: ", equippedWeapons[i]);
+                if (equippedWeapons[i].canEvolve && !KnownItems.Contains(equippedWeapons[i].evolvedForm))
+                {
+                    Debug.Log("Evolvable weapon found");
+                    KnownItems.Add(equippedWeapons[i].evolvedForm);
+                }
+                if (KnownItems.Contains(equippedWeapons[i]))
+                {
+                    KnownItems.Remove(equippedWeapons[i]);
+                }
+            }
+        }
         currentSelectionItemCount = 0;
         existingSelectionOptions = new();
         int attempts = 50;

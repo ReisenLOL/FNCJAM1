@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: SwordEvolved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,6 @@ MonoBehaviour:
   speedModifier: 1
   damageModifier: 1
   requiredEvolutionItem: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
-  evolvedForm: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+  evolvedForm: {fileID: 0}
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}
-  weaponSelect: {fileID: 0}

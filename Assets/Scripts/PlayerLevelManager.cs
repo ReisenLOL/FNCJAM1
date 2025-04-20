@@ -28,6 +28,7 @@ public partial class PlayerLevelManager : MonoBehaviour
         levelText.text = "Level: " + level;
         UpdateXPBar();
     }
+
     public void UpdatePower(float power)
     {
         currentPower += power * powerModifier;
@@ -37,6 +38,7 @@ public partial class PlayerLevelManager : MonoBehaviour
         }
         UpdateXPBar();
     }
+    [ContextMenu("Force Level Up")]
     public void LevelUp()
     {
         level++;

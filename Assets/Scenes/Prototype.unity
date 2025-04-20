@@ -1253,6 +1253,30 @@ PrefabInstance:
       propertyPath: itemList
       value: 
       objectReference: {fileID: 36049539}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: KnownItems.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'KnownItems.Array.data[18]'
+      value: 
+      objectReference: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'KnownItems.Array.data[19]'
+      value: 
+      objectReference: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'KnownItems.Array.data[20]'
+      value: 
+      objectReference: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'KnownItems.Array.data[21]'
+      value: 
+      objectReference: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'KnownItems.Array.data[22]'
+      value: 
+      objectReference: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
     - target: {fileID: 5773311955148008936, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: m_IsActive
       value: 0
