@@ -19,6 +19,7 @@ public class WeaponAttack : Item
     public Passive requiredEvolutionItem;
     public bool isEvolvedForm;
     public WeaponAttack evolvedForm;
+    public bool isOnWeaponList = true;
     public bool canEvolve;
     [Tooltip("Optional")]
     public Transform overrideSpawnPosition;

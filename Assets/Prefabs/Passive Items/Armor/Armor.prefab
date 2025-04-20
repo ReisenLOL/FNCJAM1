@@ -82,6 +82,7 @@ MonoBehaviour:
   itemDescription: You aren't a very good armorer, in comparison to weaponsmithing.\nIncreases
     defense.
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 0
   specialValueA: 0
   level: 0

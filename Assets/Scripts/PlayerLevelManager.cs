@@ -22,6 +22,7 @@ public partial class PlayerLevelManager : MonoBehaviour
     public float powerModifier = 1f;
     public float exponentIncrease;
     public WeaponSelect levelUpUI;
+    public SpawnManager spawnManager;
     public TextMeshProUGUI levelText;
     private void Start()
     {
@@ -46,6 +47,7 @@ public partial class PlayerLevelManager : MonoBehaviour
         requiredPowerToNextLevel = Mathf.FloorToInt(basePowerToNextLevel * Mathf.Pow(level, exponentIncrease));
         levelUpUI.gameObject.SetActive(true);
         levelUpUI.ShowWeaponSelect();
+        spawnManager.RecalculateHealthModifier(level);
         levelText.text = "Level: " + level;
         Debug.Log("Level up: " + level);
     }

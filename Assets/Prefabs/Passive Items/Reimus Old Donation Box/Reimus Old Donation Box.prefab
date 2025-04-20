@@ -81,6 +81,7 @@ MonoBehaviour:
   itemImage: {fileID: 4958856469392035500, guid: d858873531711a647a528987cc7a9c29, type: 3}
   itemDescription: As light as it looks.\nGain a bonus to exp earned from power items.
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 1
   specialValueA: 0
   level: 0

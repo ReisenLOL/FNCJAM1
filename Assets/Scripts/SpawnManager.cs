@@ -28,8 +28,14 @@ public class SpawnManager : MonoBehaviour
     private SpawnPhase currentPhase;
     public Dialogue bossDialogue;
     public Dialogue postFightDialogue;
+    public float healthModifier = 1f;
 
     #region Enemy Spawning Methods
+
+    public void RecalculateHealthModifier(int level)
+    {
+        healthModifier = 1f + (level * 0.5f);
+    }
     public void SpawnRandomEnemy()
     {
         Vector2 spawnPosition = Vector2.zero;
@@ -44,6 +50,10 @@ public class SpawnManager : MonoBehaviour
         }
         int randomEnemyIndex = Random.Range(0, enemyToSpawn.Length);
         GameObject newEnemy = Instantiate(enemyToSpawn[randomEnemyIndex], spawnPosition, Quaternion.identity);
+        BaseUnit enemyStats = newEnemy.GetComponent<BaseUnit>();
+        float pastMaxHealth = enemyStats.MaxHealth;
+        enemyStats.MaxHealth *= healthModifier;
+        enemyStats.ChangeHealth(enemyStats.MaxHealth - pastMaxHealth);
         newEnemy.transform.SetParent(enemyFolder);
     }
 
@@ -51,12 +61,20 @@ public class SpawnManager : MonoBehaviour
     {
         int randomEnemyIndex = Random.Range(0, enemyToSpawn.Length);
         GameObject newEnemy = Instantiate(enemyToSpawn[randomEnemyIndex], position, Quaternion.identity);
+        BaseUnit enemyStats = newEnemy.GetComponent<BaseUnit>();
+        float pastMaxHealth = enemyStats.MaxHealth;
+        enemyStats.MaxHealth *= healthModifier;
+        enemyStats.ChangeHealth(enemyStats.MaxHealth - pastMaxHealth);
         newEnemy.transform.SetParent(enemyFolder);
     }
 
     public void SpawnSpecificEnemyToPosition(GameObject enemy, Vector2 position)
     {
         GameObject newEnemy = Instantiate(enemy, position, Quaternion.identity);
+        BaseUnit enemyStats = newEnemy.GetComponent<BaseUnit>();
+        float pastMaxHealth = enemyStats.MaxHealth;
+        enemyStats.MaxHealth *= healthModifier;
+        enemyStats.ChangeHealth(enemyStats.MaxHealth - pastMaxHealth);
         newEnemy.transform.SetParent(enemyFolder);
     }
 
@@ -74,6 +92,10 @@ public class SpawnManager : MonoBehaviour
             }
         }
         GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
+        BaseUnit enemyStats = newEnemy.GetComponent<BaseUnit>();
+        float pastMaxHealth = enemyStats.MaxHealth;
+        enemyStats.MaxHealth *= healthModifier;
+        enemyStats.ChangeHealth(enemyStats.MaxHealth - pastMaxHealth);
         newEnemy.transform.SetParent(enemyFolder);
     }
     #endregion

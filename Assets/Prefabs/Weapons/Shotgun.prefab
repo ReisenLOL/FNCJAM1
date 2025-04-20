@@ -48,6 +48,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: Headhunter, Leather Belt
   itemImage: {fileID: 0}
   itemDescription: 
+  refreshWeaponList: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}
@@ -64,4 +65,10 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  isEvolvedForm: 0
+  evolvedForm: {fileID: 0}
+  isOnWeaponList: 1
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}
+  weaponSelect: {fileID: 0}

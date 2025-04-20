@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Passive : Item
 {
+    public bool isOnPassiveList = true;
     public float modifierValue;
     public float specialValueA;
     public int level;

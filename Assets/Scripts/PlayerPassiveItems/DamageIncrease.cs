@@ -5,7 +5,7 @@ public class DamageIncrease : Passive
     public WeaponAttack[] weapons;
     private void Start()
     {
-        LevelUp();
+        SetModifierValues();
         ApplyModifierToWeapons();
     }
     private void Update()

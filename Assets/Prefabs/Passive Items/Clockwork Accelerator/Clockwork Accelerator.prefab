@@ -82,6 +82,7 @@ MonoBehaviour:
   itemDescription: Time waits for no youkai, and neither will it for your weapons.\nIncreases
     attack rate.
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 0
   specialValueA: 0
   level: 0

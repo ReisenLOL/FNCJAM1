@@ -82,6 +82,7 @@ MonoBehaviour:
   itemDescription: This talisman gives off a cursed aura, but it's pretty useful
     to have.\nIncreases damage of all weapons
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 0
   specialValueA: 0
   level: 0

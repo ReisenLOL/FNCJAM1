@@ -82,6 +82,7 @@ MonoBehaviour:
   itemDescription: A vial containing some sorta red liquid those Eientei pharmacists
     concocted.\nIncreases your max HP.
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 0
   specialValueA: 0
   level: 0

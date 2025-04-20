@@ -1,5 +1,6 @@
 using Core.Extensions;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,11 @@ public class WeaponSelect : MonoBehaviour
     static int currentSelectionItemCount;
     public Button buttonPrefab;
     public ItemList itemList;
+    public int itemCapacity;
+    public bool weaponsAtMaxCapacity;
+    public bool passivesAtAMaxCapacity;
+    public int weaponCount;
+    public int passiveCount;
     [SerializeField] RectTransform selectionPanel;
     [SerializeField] GameObject descriptionPanel;
     public static bool IsSelecting { get; private set; }
@@ -70,6 +76,11 @@ public class WeaponSelect : MonoBehaviour
     public void ShowWeaponChoices(List<Item> weaponChoices, int choices)
     {
         WeaponAttack[] equippedWeapons = FindObjectsByType<WeaponAttack>(FindObjectsSortMode.None);
+        Passive[] equippedPassives = FindObjectsByType<Passive>(FindObjectsSortMode.None);
+        weaponCount = equippedWeapons.Length;
+        passiveCount = equippedPassives.Length;
+        HashSet<string> equippedWeaponNames = new HashSet<string>(equippedWeapons.Select(w => w.ItemName));
+        HashSet<string> equippedPassiveNames = new HashSet<string>(equippedPassives.Select(p => p.ItemName));
         for (int i = 0; i < equippedWeapons.Length; i++)
         {
             if (equippedWeapons[i].level == equippedWeapons[i].WeaponLevels.Length - 1)
@@ -80,11 +91,47 @@ public class WeaponSelect : MonoBehaviour
                     Debug.Log("Evolvable weapon found");
                     KnownItems.Add(equippedWeapons[i].evolvedForm);
                 }
-                if (KnownItems.Contains(equippedWeapons[i]))
+                if (equippedWeapons[i].isOnWeaponList)
                 {
-                    KnownItems.Remove(equippedWeapons[i]);
+                    for (int j = 0; j < KnownItems.Count; j++)
+                    {
+                        if (KnownItems[j].ItemName == equippedWeapons[i].ItemName)
+                        {
+                            KnownItems.Remove(KnownItems[j]);
+                            equippedWeapons[i].isOnWeaponList = false;
+                            break;
+                        }
+                    }
                 }
             }
+        }
+        for (int i = 0; i < equippedPassives.Length; i++)
+        {
+            if (equippedPassives[i].level == equippedPassives[i].passiveLevels.Length - 1)
+            {
+                if (equippedPassives[i].isOnPassiveList)
+                {
+                    for (int j = 0; j < KnownItems.Count; j++)
+                    {
+                        if (KnownItems[j].ItemName == equippedPassives[i].ItemName)
+                        {
+                            KnownItems.Remove(KnownItems[j]);
+                            equippedPassives[i].isOnPassiveList = false;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if (weaponCount >= itemCapacity && !weaponsAtMaxCapacity)
+        {
+            KnownItems.RemoveAll(item => item.TryGetComponent<WeaponAttack>(out _) && !equippedWeaponNames.Contains(item.ItemName));
+            weaponsAtMaxCapacity = true;
+        }
+        if (passiveCount >= itemCapacity && !passivesAtAMaxCapacity)
+        {
+            KnownItems.RemoveAll(item => item.TryGetComponent<Passive>(out _) && !equippedPassiveNames.Contains(item.ItemName));
+            passivesAtAMaxCapacity = true;
         }
         currentSelectionItemCount = 0;
         existingSelectionOptions = new();

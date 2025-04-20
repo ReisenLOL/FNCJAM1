@@ -82,6 +82,7 @@ MonoBehaviour:
   itemDescription: Speed that could only granted by Tengu magic or caffiene.\nIncreases
     movement speed.
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 0
   specialValueA: 0
   level: 0

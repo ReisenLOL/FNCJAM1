@@ -362,6 +362,7 @@ MonoBehaviour:
   powerModifier: 1
   exponentIncrease: 2
   levelUpUI: {fileID: 2080347106}
+  spawnManager: {fileID: 1818214238}
   levelText: {fileID: 576346979}
 --- !u!1 &140036642
 GameObject:
@@ -1956,6 +1957,7 @@ MonoBehaviour:
     - {fileID: 5916187915891423065, guid: 501d9fc48cf8f4b4bb51100a9b1e57ad, type: 3}
   bossDialogue: {fileID: 206220340}
   postFightDialogue: {fileID: 998871768}
+  healthModifier: 1
 --- !u!4 &1818214239
 Transform:
   m_ObjectHideFlags: 0

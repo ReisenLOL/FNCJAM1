@@ -82,6 +82,7 @@ MonoBehaviour:
   itemDescription: You can't fight on an empty stomach. How about some Seiran brand
     dango?\n Gain health regen every second.
   refreshWeaponList: 0
+  isOnPassiveList: 1
   modifierValue: 0
   specialValueA: 0
   level: 0
