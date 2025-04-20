@@ -5,7 +5,6 @@ public class Armor : Passive
     public PlayerUnit player;
     private void Start()
     {
-        LevelUp();
         player = GameObject.Find("Player").GetComponentInChildren<PlayerUnit>();
         ApplyModifierToPlayer();
     }

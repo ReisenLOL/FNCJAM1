@@ -5,7 +5,6 @@ public class ProjectileSpeed : Passive
     public WeaponAttack[] weapons;
     private void Start()
     {
-        LevelUp();
         ApplyModifierToWeapons();
     }
     private void Update()

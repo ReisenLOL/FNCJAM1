@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class WeaponLevelData : ScriptableObject
 {
+    public string upgradeDescription;
     public float movementSpeed;
     public float attackCount;
     public float damage;

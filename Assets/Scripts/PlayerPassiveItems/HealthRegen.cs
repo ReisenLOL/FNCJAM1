@@ -6,7 +6,6 @@ public class HealthRegen : Passive
     public float regenTime;
     private void Start()
     {
-        LevelUp();
         player = GameObject.Find("Player").GetComponentInChildren<PlayerUnit>();
         ApplyModifierToPlayer();
     }

@@ -17,6 +17,7 @@ public class WeaponAttack : Item
     public float speedModifier = 1;
     public float damageModifier = 1;
     public Passive requiredEvolutionItem;
+    public bool isEvolvedForm;
     public WeaponAttack evolvedForm;
     public bool canEvolve;
     [Tooltip("Optional")]
@@ -25,7 +26,6 @@ public class WeaponAttack : Item
     public Vector2 SpawnPosition => overrideSpawnPosition == null ? transform.position : overrideSpawnPosition.position;
     private void Start()
     {
-        Debug.Log(WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate);
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
     }
     void Update()
@@ -42,7 +42,7 @@ public class WeaponAttack : Item
             nextAttackTime = 0;
             InstantiateAttack();
         }
-        if (!canEvolve && refreshWeaponList && requiredEvolutionItem != null)
+        if (!isEvolvedForm && !canEvolve && refreshWeaponList && requiredEvolutionItem != null)
         {
             for (int i = 0; i < transform.parent.childCount; i++)
             {

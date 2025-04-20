@@ -12,7 +12,6 @@ public class ShowDescriptionOnButtonHover : MonoBehaviour, IPointerEnterHandler,
     [SerializeField] TextMeshProUGUI descriptionName;
     [SerializeField] TextMeshProUGUI descriptionLevel;
     [SerializeField] Image descriptionImage;
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         ShowDecription(buttonItem);
@@ -27,17 +26,31 @@ public class ShowDescriptionOnButtonHover : MonoBehaviour, IPointerEnterHandler,
         descriptionText.text = w.itemDescription;
         descriptionName.text = w.ItemName;
         descriptionImage.sprite = w.itemImage;
-        GameObject foundItem = GameObject.Find(w.gameObject.name);
+        Item[] equippedItems = FindObjectsByType<Item>(FindObjectsSortMode.None);
+        Item foundItem = null;
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (equippedItems[i].ItemName == w.ItemName)
+            {
+                foundItem = equippedItems[i]; //this code is so cooked;
+                break;
+            }
+            
+        }
         if (foundItem != null)
         {
             descriptionLevel.gameObject.SetActive(true);
             if (foundItem.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
             {
-                descriptionLevel.text = "Level: " + isWeaponAttack.level;
+                Debug.Log(isWeaponAttack.level);
+                descriptionLevel.text = "Level: " + (isWeaponAttack.level + 1);
+                descriptionText.text = isWeaponAttack.WeaponLevels[isWeaponAttack.level].upgradeDescription;
             }
             else if (foundItem.gameObject.TryGetComponent(out Passive isPassiveItem))
             {
-                descriptionLevel.text = "Level: " + isPassiveItem.level;
+                descriptionLevel.text = "Level: " + (isPassiveItem.level + 1);
+                descriptionText.text = isPassiveItem.itemDescription;
+                descriptionText.text = isPassiveItem.passiveLevels[isPassiveItem.level].upgradeDescription;
             }
         }
         else

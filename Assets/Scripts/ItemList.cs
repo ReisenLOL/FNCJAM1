@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +25,15 @@ public class ItemList : MonoBehaviour
         for (int j = 0; j < items.Length; j++)
         {
             Image newImage = Instantiate(templateImage, transform);
+            TextMeshProUGUI levelNumber = newImage.GetComponentInChildren<TextMeshProUGUI>();
+            if (items[j].TryGetComponent(out WeaponAttack isWeapon))
+            {
+                levelNumber.text = (isWeapon.level + 1).ToString();
+            }
+            if (items[j].TryGetComponent(out Passive isPassive))
+            {
+                levelNumber.text = (isPassive.level + 1).ToString();
+            }
             newImage.gameObject.SetActive(true);
             newImage.sprite = items[j].itemImage;
         }

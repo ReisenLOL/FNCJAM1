@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PassiveItemLevelData : ScriptableObject
 {
+    public string upgradeDescription;
     public float modifierValue;
     [Tooltip("Optional")]
     public float specialValueA;
