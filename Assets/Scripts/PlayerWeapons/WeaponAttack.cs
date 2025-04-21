@@ -19,6 +19,7 @@ public class WeaponAttack : Item
     public Passive requiredEvolutionItem;
     public bool isEvolvedForm;
     public WeaponAttack evolvedForm;
+    public WeaponAttack baseForm;
     public bool isOnWeaponList = true;
     public bool canEvolve;
     [Tooltip("Optional")]
@@ -28,6 +29,18 @@ public class WeaponAttack : Item
     private void Start()
     {
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate;
+        if (isEvolvedForm)
+        {
+            EvolutionUI evolutionUI = FindFirstObjectByType<EvolutionUI>();
+            for (int i = 0; i < evolutionUI.evolutionList.Count; i++)
+            {
+                if (evolutionUI.evolutionList[i].result.ItemName == ItemName) //string compare lmao
+                {
+                    evolutionUI.evolutionList[i].isKnown = true;
+                    evolutionUI.RefreshList();
+                }
+            }
+        }
     }
     void Update()
     {

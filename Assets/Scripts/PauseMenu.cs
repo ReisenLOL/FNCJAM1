@@ -1,5 +1,6 @@
 using Bremsengine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void ExitGame()
     {
-        Debug.Log("Game Exited");
+        GeneralManager.TogglePause();
+        SceneManager.LoadScene(0);
     }
 }

@@ -50,6 +50,18 @@ public class WeaponSelect : MonoBehaviour
                 isPassiveItem.LevelUp();
             }
         }
+        if (weapon.TryGetComponent(out WeaponAttack isWeaponAttackOfEvolvedForm) && isWeaponAttackOfEvolvedForm.isEvolvedForm)
+        {
+            WeaponAttack[] equippedWeapons = FindObjectsByType<WeaponAttack>(FindObjectsSortMode.None);
+            for (int i = 0; i < equippedWeapons.Length; i++)
+            {
+                if (equippedWeapons[i].ItemName == isWeaponAttackOfEvolvedForm.baseForm.ItemName)
+                {
+                    Destroy(equippedWeapons[i]); //this code is so cooked
+                    break;
+                }
+            }
+        }
         Item[] equippedItems = FindObjectsByType<Item>(FindObjectsSortMode.None);
         if (equippedItems.Length > 0)
         {

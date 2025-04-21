@@ -339,7 +339,7 @@ MonoBehaviour:
   basePowerToNextLevel: 5
   currentPower: 0
   powerModifier: 1
-  exponentIncrease: 2
+  exponentIncrease: 1.4
   levelUpUI: {fileID: 2080347106}
   spawnManager: {fileID: 1818214238}
   levelText: {fileID: 576346979}
@@ -1706,6 +1706,7 @@ GameObject:
   - component: {fileID: 697667347}
   - component: {fileID: 697667346}
   - component: {fileID: 697667350}
+  - component: {fileID: 697667351}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -1742,11 +1743,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1809,6 +1810,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseUIElements: {fileID: 431112915}
+--- !u!114 &697667351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697667345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e7aed4012156740a8711b92467b81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionList:
+  - weapon: {fileID: 2903617769560647650, guid: ea778d35057efd14485f61b59920f021, type: 3}
+    passive: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+    result: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+    isKnown: 0
+  evolutionUI: {fileID: 1521932724}
+  evolutionTemplate: {fileID: 1860993429}
 --- !u!1 &822954760
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,7 +3794,6 @@ GameObject:
   - component: {fileID: 1860993430}
   - component: {fileID: 1860993432}
   - component: {fileID: 1860993431}
-  - component: {fileID: 1860993433}
   m_Layer: 5
   m_Name: EvolutionTemplate
   m_TagString: Untagged
@@ -3844,18 +3863,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860993429}
   m_CullTransparentMesh: 1
---- !u!114 &1860993433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860993429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7aed4012156740a8711b92467b81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1873328881
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Landmine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,32 +45,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Sword
-  itemImage: {fileID: 8247329723496179466, guid: e61f0bff68d37b749bda03544c8d9bc6, type: 3}
-  itemDescription: The sharpest solution to any problem. The things that cannot be
-    cut by your sword, forged by you, are close to many!\nLarge sword sweep that
-    damages all enemies in its path.
+  <ItemName>k__BackingField: Bear Trap
+  itemImage: {fileID: -5949295138865634426, guid: fae182ca6943fd94f850d4c22ea7b247, type: 3}
+  itemDescription: For what you're doing with these, it'd be better to call it a
+    "Fairy Trap"\nLays a bear trap on your position periodically
   refreshWeaponList: 0
   level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 1724000ccca68684f9c8763597ce274e, type: 2}
-  - {fileID: 11400000, guid: c1f9b09389871234391d3a541cebbbcd, type: 2}
-  - {fileID: 11400000, guid: 49a0dd4819a5657439874a7552a097b2, type: 2}
-  - {fileID: 11400000, guid: b30cb02bf10294248ae8d5f1cc8b5ea4, type: 2}
-  - {fileID: 11400000, guid: 23ce76e9d9c0bbc47a05f59503073141, type: 2}
-  - {fileID: 11400000, guid: 53d1c69cf41539f4194906616b45c57c, type: 2}
+  - {fileID: 11400000, guid: 47a10d12da353d64194618e0baf9f403, type: 2}
+  - {fileID: 11400000, guid: 81fc28b41ee0407439c1c8d517ce5118, type: 2}
+  - {fileID: 11400000, guid: db0d13ae09278dc4496a46dde8e70e6e, type: 2}
+  - {fileID: 11400000, guid: 8579dea1f47b8c6419ae6cbd8bc9a4f9, type: 2}
+  - {fileID: 11400000, guid: 6dbe20d215b2f914eae4efae6e2375cf, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1
   canFire: 1
-  attack: {fileID: 3526630590352806427, guid: d1bdf74d203b2614abde67a1c42d2a08, type: 3}
-  attackSound: {fileID: 11400000, guid: fd286237c33ec10419734c457166ba98, type: 2}
+  attack: {fileID: 3255813774938795988, guid: ddd3488b54f973a46bfcda126bc1f80f, type: 3}
+  attackSound: {fileID: 11400000, guid: 57459d75ac20dba4aa5f7886884c8b3d, type: 2}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
-  requiredEvolutionItem: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+  requiredEvolutionItem: {fileID: 0}
   isEvolvedForm: 0
-  evolvedForm: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+  evolvedForm: {fileID: 0}
   isOnWeaponList: 1
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}
