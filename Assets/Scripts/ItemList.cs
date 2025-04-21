@@ -39,7 +39,15 @@ public class ItemList : MonoBehaviour
             {
                 newImage.transform.SetParent(WeaponListUI);
                 newImage.transform.localScale = Vector3.one;
-                levelNumber.text = (isWeapon.level + 1).ToString();
+                if (isWeapon.isEvolvedForm)
+                {
+                    levelNumber.text = "X";
+                    levelNumber.color = Color.red;
+                }
+                else
+                {
+                    levelNumber.text = (isWeapon.level + 1).ToString();
+                }
             }
             if (items[j].TryGetComponent(out Passive isPassive))
             {
