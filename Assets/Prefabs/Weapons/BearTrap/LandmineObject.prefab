@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5266622764538195209}
   - component: {fileID: 4305820712349607937}
   - component: {fileID: 1556981099083203856}
-  - component: {fileID: 3255813774938795988}
+  - component: {fileID: 4666874476209535396}
   m_Layer: 0
   m_Name: LandmineObject
   m_TagString: Untagged
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &3255813774938795988
+--- !u!114 &4666874476209535396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 176762968137959454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5000181ca29996b4e9ee58ea43399a56, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ef2ed9744f76cf4da6b4fde76f39142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
@@ -147,5 +147,7 @@ MonoBehaviour:
   weaponLevelData: {fileID: 0}
   speedModifier: 0
   damageModifier: 0
-  maxHits: 0
-  hitAmount: 0
+  unitCollectionLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  explosionRadius: 0
