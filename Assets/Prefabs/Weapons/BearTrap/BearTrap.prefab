@@ -66,9 +66,10 @@ MonoBehaviour:
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
-  requiredEvolutionItem: {fileID: 0}
+  requiredEvolutionItem: {fileID: -2365649391267733898, guid: 1cf90925d6b708b4eb85bf3a09f883c1, type: 3}
   isEvolvedForm: 0
-  evolvedForm: {fileID: 0}
+  evolvedForm: {fileID: 2903617769560647650, guid: 6343bcabde1292e4ab377db44ed27076, type: 3}
+  baseForm: {fileID: 0}
   isOnWeaponList: 1
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

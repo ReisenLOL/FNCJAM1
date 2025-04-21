@@ -35,7 +35,7 @@ public class EvolutionUI : MonoBehaviour
     }
     public void RefreshList()
     {
-        foreach(Transform template in evolutionUI)
+        foreach(GameObject template in evolutionUI)
         {
             Destroy(template);
         }
