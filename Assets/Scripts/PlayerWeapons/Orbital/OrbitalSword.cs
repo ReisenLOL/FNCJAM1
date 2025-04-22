@@ -5,11 +5,13 @@ public class OrbitalSword : Weapon
     public float rotationSpeed;
     private float dissipationTime;
     public float offset;
+    public float rotationOffset;
+    public bool willDissipate = true;
     private void Start()
     {
         transform.parent = firedFrom.transform;
         UpdatePosition();
-        transform.RotateAround(firedFrom.transform.position, Vector3.forward, 90 * weaponNumber);
+        transform.RotateAround(firedFrom.transform.position, Vector3.forward, rotationOffset * weaponNumber);
         SetWeaponProperties();
     }
     void UpdatePosition()
@@ -19,7 +21,7 @@ public class OrbitalSword : Weapon
     void Update()
     {
         dissipationTime += Time.deltaTime;
-        if (dissipationTime >= dissipationDelay)
+        if (willDissipate && dissipationTime >= dissipationDelay)
         {
             Destroy(gameObject);
         }

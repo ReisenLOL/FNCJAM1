@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c87273fbdcdd250409f01f57d5dbed91, type: 2}
   - {fileID: 11400000, guid: 84ef056c4f686ff43b0949288b288492, type: 2}
   nextAttackTime: 0
-  shootDuration: 0.25
+  shootDuration: 0
   willRegenerate: 1
   canFire: 1
   attack: {fileID: 7715866026326152917, guid: 05c5ddc8674598d4baf13740438ba512, type: 3}
@@ -100,7 +100,8 @@ MonoBehaviour:
   damageModifier: 1
   requiredEvolutionItem: {fileID: 0}
   isEvolvedForm: 0
-  evolvedForm: {fileID: 0}
+  evolvedForm: {fileID: 2903617769560647650, guid: a201a427f4f52fa47a1526ba1ccd4ae4, type: 3}
+  baseForm: {fileID: 0}
   isOnWeaponList: 1
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

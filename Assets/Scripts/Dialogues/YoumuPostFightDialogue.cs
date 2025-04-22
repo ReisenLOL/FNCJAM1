@@ -1,6 +1,7 @@
 using Bremsengine;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class YoumuPostFightDialogue : Dialogue
 {
@@ -45,15 +46,15 @@ public class YoumuPostFightDialogue : Dialogue
 
         CharacterSelect(1);
         DrawDialogue("Good luck, Kurogane Hozuki. If we meet again, I hope it’s not with swords drawn.");
-        SetButton(0, "->").SetForceEndWhenPressed();
+        SetButton(0, "->", SwitchScene).SetForceEndWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
     }
-    /*private void WowButton()
+    private void SwitchScene()
     {
-        GeneralManager.FunnyExplosion(PlayerUnit.Player.CurrentPosition, 3f);
+        SceneManager.LoadScene(2);
     }
-    private void BeansButton()
+    /*private void BeansButton()
     {
         if (text != null)
         {

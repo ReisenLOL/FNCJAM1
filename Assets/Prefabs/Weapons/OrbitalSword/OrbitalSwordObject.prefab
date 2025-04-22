@@ -125,7 +125,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.0055555557, y: 0.0055555557, z: 0.0055555557, w: 0.0055555557}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.3666666, y: 0.75}
     newSize: {x: 2.581818, y: 0.8181818}
@@ -155,5 +155,8 @@ MonoBehaviour:
   weaponNumber: 0
   dissipationDelay: 4
   weaponLevelData: {fileID: 0}
+  speedModifier: 0
+  damageModifier: 0
   rotationSpeed: 240
   offset: 2
+  rotationOffset: 90

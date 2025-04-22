@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Hakkero Level 1
   m_EditorClassIdentifier: 
+  upgradeDescription: 
   movementSpeed: 16
   attackCount: 1
   damage: 50
-  attackRate: 0.05
+  attackRate: 5
   range: 25
   dissipationDelay: 1.5
   specialPropertyA: 1

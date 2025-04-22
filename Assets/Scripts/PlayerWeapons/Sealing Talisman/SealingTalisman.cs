@@ -33,6 +33,6 @@ public class SealingTalisman : Weapon
     }
     private Collider2D[] DetectEnemies()
     {
-        return Physics2D.OverlapCircleAll(transform.position, maxRange, enemyLayer);
+        return Physics2D.OverlapCircleAll(transform.position, maxRange/2f, enemyLayer);
     }
 }

@@ -45,32 +45,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Sealing Talisman
+  <ItemName>k__BackingField: Doom Seal
   itemImage: {fileID: 417253313350925561, guid: cd00bdbb9210b9246ab8ecff19ec9f56, type: 3}
   itemDescription: Meant to keep spirits out of your house, but it'll work for keeping
     fairies away from your personal space\nDamages all enemies near the player.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 8d916b7350b3cf847888ffabbed9ac82, type: 2}
-  - {fileID: 11400000, guid: 93752718250f11644810c84f4b6c5b75, type: 2}
-  - {fileID: 11400000, guid: c425c1b2c90531e40beac645e89b6de8, type: 2}
-  - {fileID: 11400000, guid: 7da96532f1624f14490837ff58c90ef4, type: 2}
-  - {fileID: 11400000, guid: 00f73714528853e49bd969f2eac13c67, type: 2}
+  - {fileID: 11400000, guid: 7a9193eede108ea41bf3dee9b844a887, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 0
   canFire: 1
-  attack: {fileID: 3365961109633720470, guid: fca211078cc51b14397874dd0ed0aaad, type: 3}
+  attack: {fileID: 1471503061655926746, guid: fca211078cc51b14397874dd0ed0aaad, type: 3}
   attackSound: {fileID: 0}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
   requiredEvolutionItem: {fileID: 0}
-  isEvolvedForm: 0
+  isEvolvedForm: 1
   evolvedForm: {fileID: 0}
   baseForm: {fileID: 2903617769560647650, guid: eb473d65e3e4734449c6889b671be539, type: 3}
   isOnWeaponList: 1
-  canEvolve: 1
+  canEvolve: 0
   overrideSpawnPosition: {fileID: 0}
   weaponSelect: {fileID: 0}

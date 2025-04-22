@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Doom Seal
   m_EditorClassIdentifier: 
+  upgradeDescription: 
   movementSpeed: 0
   attackCount: 1
-  damage: 50
+  damage: 2
   attackRate: 0.5
-  range: 5
+  range: 2
   dissipationDelay: 0
   specialPropertyA: 0
   specialPropertyB: 0
