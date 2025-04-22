@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackName: lecat005
   musicClip: {fileID: 8300000, guid: 2a0663a23a9faf746aadd9731f789d47, type: 3}
-  clipVolume: 1
+  clipVolume: 1.2
   <dontReplaceSelf>k__BackingField: 1
