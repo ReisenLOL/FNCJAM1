@@ -11,6 +11,7 @@ public class RichochetCarbine : Weapon
     public float rotationSpeed;
     public int maxBounces;
     public int currentBounces;
+    [SerializeField] ACWrapper bounceSound;
     private void Start()
     {
         maxBounces = (int)weaponLevelData.specialPropertyA;
@@ -51,11 +52,12 @@ public class RichochetCarbine : Weapon
     {
         if (TryGetExitNormal(box, transform.position, out Vector2 screenNormal))
         {
+            bounceSound.Play(transform.position);
             SetVelocity(velocity.Bounce(screenNormal, 1f));
             currentBounces++;
             if (currentBounces > maxBounces)
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 0.2f);
             }    
         }
     }

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1031843684155584608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6088354989259053749}
+  - component: {fileID: 2903617769560647650}
+  m_Layer: 0
+  m_Name: Rifle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6088354989259053749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2903617769560647650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  <ItemName>k__BackingField: Rifle
+  itemImage: {fileID: -7321901480177674361, guid: ccaa42adb38221d4badc1f557c9f0920, type: 3}
+  itemDescription: Looks like it came out of a war. Also that's not danmaku...\nShoots
+    a bullet that can pierce through many enemies.
+  refreshWeaponList: 0
+  level: 0
+  WeaponLevels:
+  - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}
+  - {fileID: 11400000, guid: 15bf62045708fe04c81dbd91c5809503, type: 2}
+  - {fileID: 11400000, guid: 5df6150a0fa2aee4a8ec0a9ab73fc7be, type: 2}
+  - {fileID: 11400000, guid: 90658ddfc07e89f48829a1ad45ac3743, type: 2}
+  - {fileID: 11400000, guid: 3544a1dc7d6108d4293d8fae1d75736d, type: 2}
+  - {fileID: 11400000, guid: 5c67c450ede0e5546b544862ddfacce5, type: 2}
+  nextAttackTime: 0
+  shootDuration: 0.25
+  willRegenerate: 1
+  canFire: 1
+  attack: {fileID: 2659656222951051777, guid: 2f21d27819f5d83408b2a3f59b295b59, type: 3}
+  attackSound: {fileID: 11400000, guid: 75ab6fa31c7d6d3448efe37ebf0df8e0, type: 2}
+  attackRateModifier: 1
+  speedModifier: 1
+  damageModifier: 1
+  requiredEvolutionItem: {fileID: -7650172172640892011, guid: ddd0b02b9e0c19d4cb1e8d145bb68e88, type: 3}
+  isEvolvedForm: 0
+  evolvedForm: {fileID: 2903617769560647650, guid: 45f96ec39f858f1408c3b02e05dc68d3, type: 3}
+  baseForm: {fileID: 0}
+  isOnWeaponList: 1
+  canEvolve: 0
+  overrideSpawnPosition: {fileID: 0}
+  weaponSelect: {fileID: 0}

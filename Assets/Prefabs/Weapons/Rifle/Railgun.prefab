@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: Rifle
+  m_Name: Railgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,31 +45,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Rifle
+  <ItemName>k__BackingField: Railgun
   itemImage: {fileID: -7321901480177674361, guid: ccaa42adb38221d4badc1f557c9f0920, type: 3}
   itemDescription: Looks like it came out of a war. Also that's not danmaku...\nShoots
     a bullet that can pierce through many enemies.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 563ad8fdb3482f34b86d618b03cf0d2b, type: 2}
-  - {fileID: 11400000, guid: 15bf62045708fe04c81dbd91c5809503, type: 2}
-  - {fileID: 11400000, guid: 5df6150a0fa2aee4a8ec0a9ab73fc7be, type: 2}
-  - {fileID: 11400000, guid: 90658ddfc07e89f48829a1ad45ac3743, type: 2}
-  - {fileID: 11400000, guid: 3544a1dc7d6108d4293d8fae1d75736d, type: 2}
-  - {fileID: 11400000, guid: 5c67c450ede0e5546b544862ddfacce5, type: 2}
+  - {fileID: 11400000, guid: 8fd9329c88d6369488ee0e4fe5fbd821, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1
   canFire: 1
-  attack: {fileID: 2659656222951051777, guid: 2f21d27819f5d83408b2a3f59b295b59, type: 3}
-  attackSound: {fileID: 11400000, guid: f4ac0ca4ecc43784ca7d6b5dee34b230, type: 2}
+  attack: {fileID: 2659656222951051777, guid: 73141479dd252c848a0597c08f803d36, type: 3}
+  attackSound: {fileID: 11400000, guid: 7206de84c8f0a25489b380f5372c5091, type: 2}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
   requiredEvolutionItem: {fileID: 0}
-  isEvolvedForm: 0
+  isEvolvedForm: 1
   evolvedForm: {fileID: 0}
+  baseForm: {fileID: 2903617769560647650, guid: 867c82ae8c4394047ac21a4423996e0c, type: 3}
   isOnWeaponList: 1
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

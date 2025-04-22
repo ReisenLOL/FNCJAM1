@@ -167,6 +167,7 @@ MonoBehaviour:
     m_Bits: 128
   pointA: {fileID: 4664104544049250285}
   pointB: {fileID: 8331468528315097380}
+  knockbackForce: 100
 --- !u!1 &6022620343083014116
 GameObject:
   m_ObjectHideFlags: 0

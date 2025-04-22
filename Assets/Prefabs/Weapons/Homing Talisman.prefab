@@ -63,13 +63,14 @@ MonoBehaviour:
   willRegenerate: 1
   canFire: 1
   attack: {fileID: 8416953628295921729, guid: 04f635774ecf024439b61984006028ef, type: 3}
-  attackSound: {fileID: 11400000, guid: f4ac0ca4ecc43784ca7d6b5dee34b230, type: 2}
+  attackSound: {fileID: 11400000, guid: 7aa0d7845138a5643a7beb0bc2a19532, type: 2}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
   requiredEvolutionItem: {fileID: 0}
   isEvolvedForm: 0
   evolvedForm: {fileID: 0}
+  baseForm: {fileID: 0}
   isOnWeaponList: 1
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

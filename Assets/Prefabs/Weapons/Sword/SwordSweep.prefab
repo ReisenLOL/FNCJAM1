@@ -155,4 +155,7 @@ MonoBehaviour:
   weaponNumber: 0
   dissipationDelay: 0.1
   weaponLevelData: {fileID: 0}
+  speedModifier: 0
+  damageModifier: 0
   offset: 2
+  knockbackForce: 75

@@ -219,3 +219,6 @@ MonoBehaviour:
   damageModifier: 0
   sprite: {fileID: 2280431924980595074}
   rotationSpeed: 480
+  maxBounces: 0
+  currentBounces: 0
+  bounceSound: {fileID: 11400000, guid: 06e2ffe9b3eaf7b4baf9db2eba020146, type: 2}

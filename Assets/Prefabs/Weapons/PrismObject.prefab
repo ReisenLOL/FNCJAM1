@@ -114,5 +114,5 @@ MonoBehaviour:
   fireRate: 2
   offset: 3
   attack: {fileID: 2659656222951051777, guid: 0da73934def90a24a9dd9c5720cf5b29, type: 3}
-  attackSound: {fileID: 11400000, guid: 6c2a62c6f043a714d9f05feaa1244acf, type: 2}
+  attackSound: {fileID: 11400000, guid: e37b2eec0232b2949867beb49fcad18c, type: 2}
   attackSoundVolume: 0.2

@@ -10,6 +10,7 @@ public class Kusanagi : Weapon
     public LayerMask enemyLayer;
     public Transform pointA;
     public Transform pointB;
+    public float knockbackForce;
     void Start()
     {
         transform.parent = firedFrom.transform;
@@ -39,7 +40,7 @@ public class Kusanagi : Weapon
                     HitPacket packet = new(transform.position, damage);
                     if (TryHitOther(packet, detectedEnemies[i]))
                     {
-
+                        detectedEnemies[i].GetComponent<Rigidbody2D>().AddForce((detectedEnemies[i].transform.position - transform.position).normalized * knockbackForce);
                     }
                 }
             }
