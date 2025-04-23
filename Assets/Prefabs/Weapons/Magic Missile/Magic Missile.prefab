@@ -46,9 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Magic Missile
-  itemImage: {fileID: -8899689620235115674, guid: 1f127e98e5dcac24e82f2dbf8f1f78d3, type: 3}
-  itemDescription: The more, the merrier. It's quite flashy, in a literal sense.\nGain
-    a prism that orbits the player and periodically shoot beams at a random enemy.
+  itemImage: {fileID: 4377719885364283403, guid: a28e64c6570b18c4cbed161c5f016eb9, type: 3}
+  itemDescription: Shot in the direction of movement, knocks back enemies on hit.
   refreshWeaponList: 0
   level: 0
   WeaponLevels:
@@ -63,7 +62,7 @@ MonoBehaviour:
   willRegenerate: 1
   canFire: 1
   attack: {fileID: -5819992697664982162, guid: 1888d6a2cb54efa4f955a3fbef4e860d, type: 3}
-  attackSound: {fileID: 11400000, guid: f4ac0ca4ecc43784ca7d6b5dee34b230, type: 2}
+  attackSound: {fileID: 11400000, guid: 7206de84c8f0a25489b380f5372c5091, type: 2}
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

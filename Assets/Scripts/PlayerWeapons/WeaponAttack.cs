@@ -32,14 +32,7 @@ public class WeaponAttack : Item
         if (isEvolvedForm)
         {
             EvolutionUI evolutionUI = FindFirstObjectByType<EvolutionUI>();
-            for (int i = 0; i < evolutionUI.evolutionList.Count; i++)
-            {
-                if (evolutionUI.evolutionList[i].result.ItemName == ItemName) //string compare lmao
-                {
-                    evolutionUI.evolutionList[i].isKnown = true;
-                    evolutionUI.RefreshList();
-                }
-            }
+            evolutionUI.MarkKnownEvolution(baseForm, baseForm.requiredEvolutionItem);
         }
     }
     void Update()

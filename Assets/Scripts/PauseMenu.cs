@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void ExitGame()
     {
+        FindFirstObjectByType<EvolutionUI>().SaveKnownEvolutions();
         PlayerItemData.instance.ResetStats();
         GeneralManager.TogglePause();
         SceneManager.LoadScene(0);

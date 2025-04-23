@@ -207,6 +207,7 @@ MonoBehaviour:
   - {fileID: -2365649391267733898, guid: 1cf90925d6b708b4eb85bf3a09f883c1, type: 3}
   - {fileID: 2903617769560647650, guid: 867c82ae8c4394047ac21a4423996e0c, type: 3}
   - {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+  - {fileID: 2903617769560647650, guid: f29b53c2a85f1ac47a8dadfef94e75ef, type: 3}
   - {fileID: -4398999467599545108, guid: 0a74ae95b4675644da5eb5d729e62aac, type: 3}
   AllItems:
   - {fileID: 2903617769560647650, guid: 390b7879226495f4ea55fc0601ae432b, type: 3}
@@ -234,6 +235,7 @@ MonoBehaviour:
   - {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
   - {fileID: 2903617769560647650, guid: 10b01f24bdabb87438aced1116d5025b, type: 3}
   - {fileID: 2903617769560647650, guid: a201a427f4f52fa47a1526ba1ccd4ae4, type: 3}
+  - {fileID: 2903617769560647650, guid: f29b53c2a85f1ac47a8dadfef94e75ef, type: 3}
   - {fileID: 2903617769560647650, guid: 6343bcabde1292e4ab377db44ed27076, type: 3}
   buttonPrefab: {fileID: 6084271281815994972}
   itemList: {fileID: 0}

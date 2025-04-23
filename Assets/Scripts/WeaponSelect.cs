@@ -26,7 +26,7 @@ public class WeaponSelect : MonoBehaviour
     {
         RebuildWeaponList(4);
         HideWeaponSelect();
-        //RestoreWeapons();
+        RestoreWeapons();
     }
     void RestoreWeapons()
     {
