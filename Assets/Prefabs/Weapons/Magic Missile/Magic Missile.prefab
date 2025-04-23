@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1031843684155584608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6088354989259053749}
+  - component: {fileID: 2903617769560647650}
+  m_Layer: 0
+  m_Name: Magic Missile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6088354989259053749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2903617769560647650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  <ItemName>k__BackingField: Magic Missile
+  itemImage: {fileID: -8899689620235115674, guid: 1f127e98e5dcac24e82f2dbf8f1f78d3, type: 3}
+  itemDescription: The more, the merrier. It's quite flashy, in a literal sense.\nGain
+    a prism that orbits the player and periodically shoot beams at a random enemy.
+  refreshWeaponList: 0
+  level: 0
+  WeaponLevels:
+  - {fileID: 11400000, guid: 278b9962dd04eda40a8a34b4932022d9, type: 2}
+  - {fileID: 11400000, guid: e81edea5756783d4daecc33d9852af7f, type: 2}
+  - {fileID: 11400000, guid: 26a4ef6fd27c16148825d53be3ff7ccd, type: 2}
+  - {fileID: 11400000, guid: 38d1b8ab73e24314a88ed70ce47ac09b, type: 2}
+  - {fileID: 11400000, guid: 8825a55dc1164da45b50e416e6167360, type: 2}
+  - {fileID: 11400000, guid: 13360c99ed86c7e498d3385030205a2b, type: 2}
+  nextAttackTime: 0
+  shootDuration: 0.25
+  willRegenerate: 1
+  canFire: 1
+  attack: {fileID: -5819992697664982162, guid: 1888d6a2cb54efa4f955a3fbef4e860d, type: 3}
+  attackSound: {fileID: 11400000, guid: f4ac0ca4ecc43784ca7d6b5dee34b230, type: 2}
+  attackRateModifier: 1
+  speedModifier: 1
+  damageModifier: 1
+  requiredEvolutionItem: {fileID: 0}
+  isEvolvedForm: 0
+  evolvedForm: {fileID: 0}
+  baseForm: {fileID: 0}
+  isOnWeaponList: 1
+  canEvolve: 0
+  overrideSpawnPosition: {fileID: 0}
+  weaponSelect: {fileID: 0}

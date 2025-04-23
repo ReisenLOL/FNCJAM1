@@ -26,7 +26,7 @@ public class WeaponSelect : MonoBehaviour
     {
         RebuildWeaponList(4);
         HideWeaponSelect();
-        RestoreWeapons();
+        //RestoreWeapons();
     }
     void RestoreWeapons()
     {
@@ -61,14 +61,14 @@ public class WeaponSelect : MonoBehaviour
         {
             if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
             {
-                for (int i = 1; i < targetLevel; i++)
+                for (int i = 0; i < targetLevel; i++)
                 {
                     isWeaponAttack.LevelUp();
                 }
             }
             else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem))
             {
-                for (int i = 1; i < targetLevel; i++)
+                for (int i = 0; i < targetLevel; i++)
                 {
                     isPassiveItem.LevelUp();
                 }
@@ -189,7 +189,7 @@ public class WeaponSelect : MonoBehaviour
             }
             newButton.gameObject.SetActive(true);
             newButton.GetComponentInChildren<TextMeshProUGUI>().text = weaponName;
-            newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice));
+            newButton.GetComponent<Button>().onClick.AddListener(() => SelectWeapon(choice, 1));
             newButton.GetComponent<ShowDescriptionOnButtonHover>().buttonItem = choice;
             newButton.name = weaponName;
             existingSelectionOptions.Add(choice.ItemName);

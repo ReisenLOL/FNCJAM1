@@ -65,17 +65,19 @@ public partial class PlayerController
 public partial class PlayerController
 {
     [field: SerializeField] public float MaxMoveSpeed { get; private set; } = 6f;
-    private Vector2 moveInput;
+    public Vector2 moveInput;
     [SerializeField] float moveAcceleration = 60f;
     [SerializeField] float moveFriction = 40f;
     public float speedModifier = 1f;
     private bool isFacingRight = true;
     [SerializeField] private Transform PlayerMovementFlipAnchor;
+    private Vector2 lastMovementDirection = Vector2.right;
     private bool TryMove(out Vector2 output)
     {
         output = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (output != Vector2.zero)
         {
+            lastMovementDirection = output.normalized;
             RB.VelocityTowards(moveInput.ScaleToMagnitude(MaxMoveSpeed * speedModifier), moveAcceleration);
             return true;
         }
@@ -106,6 +108,7 @@ public partial class PlayerController
         }
         return false;
     }
+    public Vector2 LastMovementDirection => lastMovementDirection;
 }
 #endregion
 public partial class PlayerController : MonoBehaviour

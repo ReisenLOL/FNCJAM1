@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
+  m_Name: Magic Missile Level 5
+  m_EditorClassIdentifier: 
+  movementSpeed: 16
+  attackCount: 1
+  damage: 90
+  attackRate: 0.5
+  range: 45
+  dissipationDelay: 8
+  specialPropertyA: 4
+  specialPropertyB: 0
+  specialPropertyC: 0
