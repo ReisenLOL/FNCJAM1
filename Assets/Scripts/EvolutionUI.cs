@@ -54,6 +54,7 @@ public class EvolutionUI : MonoBehaviour
     public GameObject evolutionTemplate;
     private void Start()
     {
+        LoadKnownEvolutions();
         for (int i = 0; i < evolutionList.Count; i++)
         {
             NewEvolutionTemplate(evolutionList[i]);
