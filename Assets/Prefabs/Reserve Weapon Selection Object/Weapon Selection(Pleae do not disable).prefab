@@ -160,7 +160,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400479870225374564}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.92222, y: 0.92222, z: 0.92222}
   m_ConstrainProportionsScale: 0
@@ -206,8 +206,42 @@ MonoBehaviour:
   - {fileID: 4073879755468426370, guid: 3cabce86074ae2b41a812e0270620ad4, type: 3}
   - {fileID: -2365649391267733898, guid: 1cf90925d6b708b4eb85bf3a09f883c1, type: 3}
   - {fileID: 2903617769560647650, guid: 867c82ae8c4394047ac21a4423996e0c, type: 3}
+  - {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+  - {fileID: -4398999467599545108, guid: 0a74ae95b4675644da5eb5d729e62aac, type: 3}
+  AllItems:
+  - {fileID: 2903617769560647650, guid: 390b7879226495f4ea55fc0601ae432b, type: 3}
+  - {fileID: 2903617769560647650, guid: ad108a8441f365944b01f6d8788de00d, type: 3}
+  - {fileID: 2903617769560647650, guid: ac920f7ff5e580248926cc6e7a7738ae, type: 3}
+  - {fileID: 2903617769560647650, guid: ff66b1adbd9a1a940b6360e9597dea02, type: 3}
+  - {fileID: 2903617769560647650, guid: 13a9856cddc52d1438ad7135195c7af6, type: 3}
+  - {fileID: 2903617769560647650, guid: eb473d65e3e4734449c6889b671be539, type: 3}
+  - {fileID: 2903617769560647650, guid: ea778d35057efd14485f61b59920f021, type: 3}
+  - {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+  - {fileID: -4909570935767480462, guid: 7dba5e6089cfd294c9f662857dd57d3e, type: 3}
+  - {fileID: 7408986963520820097, guid: 4a04beb9ce97a0a44892471bb4038940, type: 3}
+  - {fileID: -7019384119727192798, guid: b47edadf780d93f47b156ee17d6ae87d, type: 3}
+  - {fileID: -7650172172640892011, guid: ddd0b02b9e0c19d4cb1e8d145bb68e88, type: 3}
+  - {fileID: -3015178660209932114, guid: 2787c4f3d54e4184490a425b1659f9a4, type: 3}
+  - {fileID: 3122771533703608673, guid: b2f8f2c3eb41e124480e0b8938960e19, type: 3}
+  - {fileID: 2903617769560647650, guid: 3ebd990ef7830af41982ca08f5ff274a, type: 3}
+  - {fileID: 4073879755468426370, guid: 3cabce86074ae2b41a812e0270620ad4, type: 3}
+  - {fileID: -2365649391267733898, guid: 1cf90925d6b708b4eb85bf3a09f883c1, type: 3}
+  - {fileID: 2903617769560647650, guid: 867c82ae8c4394047ac21a4423996e0c, type: 3}
+  - {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+  - {fileID: 2903617769560647650, guid: 9797d2b64ef57c745b5930e50a5c8eec, type: 3}
+  - {fileID: 2903617769560647650, guid: 45f96ec39f858f1408c3b02e05dc68d3, type: 3}
+  - {fileID: 2903617769560647650, guid: 4d50326446f38fd4291293d33b8932e9, type: 3}
+  - {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+  - {fileID: 2903617769560647650, guid: 10b01f24bdabb87438aced1116d5025b, type: 3}
+  - {fileID: 2903617769560647650, guid: a201a427f4f52fa47a1526ba1ccd4ae4, type: 3}
+  - {fileID: 2903617769560647650, guid: 6343bcabde1292e4ab377db44ed27076, type: 3}
   buttonPrefab: {fileID: 6084271281815994972}
   itemList: {fileID: 0}
+  itemCapacity: 5
+  weaponsAtMaxCapacity: 0
+  passivesAtAMaxCapacity: 0
+  weaponCount: 0
+  passiveCount: 0
   selectionPanel: {fileID: 6610505380247433564}
   descriptionPanel: {fileID: 5773311955148008936}
 --- !u!1 &2635060530071047066
@@ -244,7 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -10, y: 25}
+  m_AnchoredPosition: {x: -40, y: 25}
   m_SizeDelta: {x: 200, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4913048681231364602
@@ -456,7 +490,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 40, y: -50}
-  m_SizeDelta: {x: 140, y: 50}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1273431211054589520
 CanvasRenderer:
@@ -595,8 +629,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -150}
-  m_SizeDelta: {x: 250, y: 400}
+  m_AnchoredPosition: {x: -200, y: -150}
+  m_SizeDelta: {x: 300, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &17177530291312797
 CanvasRenderer:
@@ -671,7 +705,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 225, y: 300}
+  m_SizeDelta: {x: 275, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7914664678679359225
 CanvasRenderer:

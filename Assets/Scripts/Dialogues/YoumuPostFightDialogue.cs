@@ -50,8 +50,23 @@ public class YoumuPostFightDialogue : Dialogue
 
         yield return WaitForProgressAbove(NextContinueProgress);
     }
+    [ContextMenu("Switch Stage")]
     private void SwitchScene()
     {
+        Item[] itemList = FindObjectsByType<Item>(FindObjectsSortMode.None);
+        foreach (Item item in itemList)
+        {
+            if (item.TryGetComponent(out WeaponAttack isWeaponAttack))
+            {
+                PlayerItemData.instance.equippedItems.Add(new PlayerItemData.EquippedItemData(isWeaponAttack.ItemName, isWeaponAttack.level));
+            }
+            if (item.TryGetComponent(out Passive isPassive))
+            {
+                PlayerItemData.instance.equippedItems.Add(new PlayerItemData.EquippedItemData(isPassive.ItemName, isPassive.level));
+            }
+        }
+        PlayerItemData.instance.playerLevel = FindFirstObjectByType<PlayerLevelManager>().level;
+        PlayerItemData.instance.powerAmount = FindFirstObjectByType<PlayerLevelManager>().currentPower;
         SceneManager.LoadScene(2);
     }
     /*private void BeansButton()

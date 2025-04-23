@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class WeaponSelect : MonoBehaviour
 {
     public List<Item> KnownItems = new();
+    //knownItems appear in shop, all items is just a list of every item that can be equipped.
+    public List<Item> AllItems = new();
     static HashSet<string> existingSelectionOptions;
     static int currentSelectionItemCount;
     public Button buttonPrefab;
@@ -24,6 +26,22 @@ public class WeaponSelect : MonoBehaviour
     {
         RebuildWeaponList(4);
         HideWeaponSelect();
+        RestoreWeapons();
+    }
+    void RestoreWeapons()
+    {
+        foreach (PlayerItemData.EquippedItemData equippedItemData in PlayerItemData.instance.equippedItems)
+        {
+            Item itemToRestore = AllItems.Find(w => w.ItemName.Trim().ToLower() == equippedItemData.itemID.Trim().ToLower());
+            if (itemToRestore != null)
+            {
+                SelectWeapon(itemToRestore, equippedItemData.level);
+            }
+            else
+            {
+                Debug.LogWarning("lmao: " + equippedItemData.itemID);
+            }
+        }
     }
     public void ShowWeaponSelect()
     {
@@ -36,18 +54,24 @@ public class WeaponSelect : MonoBehaviour
         IsSelecting = false;
         selectionPanel.gameObject.SetActive(false);
     }
-    private void SelectWeapon(Item w)
+    private void SelectWeapon(Item w, int targetLevel = 1)
     {
         Item weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
         if (!wasCreated)
         {
             if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
             {
-                isWeaponAttack.LevelUp();
+                for (int i = 1; i < targetLevel; i++)
+                {
+                    isWeaponAttack.LevelUp();
+                }
             }
             else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem))
             {
-                isPassiveItem.LevelUp();
+                for (int i = 1; i < targetLevel; i++)
+                {
+                    isPassiveItem.LevelUp();
+                }
             }
         }
         if (weapon.TryGetComponent(out WeaponAttack isWeaponAttackOfEvolvedForm) && isWeaponAttackOfEvolvedForm.isEvolvedForm)

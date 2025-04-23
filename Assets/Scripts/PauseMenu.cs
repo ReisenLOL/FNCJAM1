@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void ExitGame()
     {
+        PlayerItemData.instance.ResetStats();
         GeneralManager.TogglePause();
         SceneManager.LoadScene(0);
     }
