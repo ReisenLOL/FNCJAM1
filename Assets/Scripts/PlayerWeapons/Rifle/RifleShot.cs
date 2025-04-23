@@ -29,6 +29,10 @@ public class RifleShot : Weapon
         HitPacket packet = new(transform.position, damage);
         if (TryHitOther(packet, collision))
         {
+            if (hasLeeching)
+            {
+                leechingItem.ApplyModifierToPlayer();
+            }
             amountPierced++;
             if (amountPierced > pierceAmount)
             {

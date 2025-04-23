@@ -40,6 +40,10 @@ public class Kusanagi : Weapon
                     HitPacket packet = new(transform.position, damage);
                     if (TryHitOther(packet, detectedEnemies[i]))
                     {
+                        if (hasLeeching)
+                        {
+                            leechingItem.ApplyModifierToPlayer();
+                        }
                         detectedEnemies[i].GetComponent<Rigidbody2D>().AddForce((detectedEnemies[i].transform.position - transform.position).normalized * knockbackForce);
                     }
                 }

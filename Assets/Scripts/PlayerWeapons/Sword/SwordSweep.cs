@@ -30,6 +30,10 @@ public class SwordSweep : Weapon
         {
             Vector3 knockbackDirection = collision.transform.position - firedFrom.transform.position;
             collision.GetComponent<Rigidbody2D>().AddForce(knockbackDirection.normalized * knockbackForce, ForceMode2D.Impulse);
+            if (hasLeeching)
+            {
+                leechingItem.ApplyModifierToPlayer();
+            }
         }
     }
 }

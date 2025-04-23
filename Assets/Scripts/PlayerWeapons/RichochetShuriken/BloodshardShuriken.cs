@@ -42,7 +42,10 @@ public class BloodshardShuriken : Weapon
         HitPacket packet = new(transform.position, damage);
         if (TryHitOther(packet, collision))
         {
-
+            if (hasLeeching)
+            {
+                leechingItem.ApplyModifierToPlayer();
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -80,6 +83,10 @@ public class BloodshardShuriken : Weapon
                     HitPacket packet = new(transform.position, damage);
                     if (TryHitOther(packet, detectedEnemies[i]))
                     {
+                        if (hasLeeching)
+                        {
+                            leechingItem.ApplyModifierToPlayer();
+                        }
                         isExploding = true;
                         blastEffect.SetActive(true);
                     }

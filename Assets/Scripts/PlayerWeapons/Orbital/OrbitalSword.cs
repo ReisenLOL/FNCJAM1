@@ -20,6 +20,10 @@ public class OrbitalSword : Weapon
     }
     void Update()
     {
+        if (hasLeeching)
+        {
+            leechingItem.ApplyModifierToPlayer();
+        }
         dissipationTime += Time.deltaTime;
         if (willDissipate && dissipationTime >= dissipationDelay)
         {

@@ -58,7 +58,13 @@ public class SpiritChain : Weapon
             {
                 damageTimer = 0;
                 HitPacket packet = new(transform.position, damage);
-                TryHitOther(packet, closestEnemy);
+                if (TryHitOther(packet, closestEnemy))
+                {
+                    if (hasLeeching)
+                    {
+                        leechingItem.ApplyModifierToPlayer();
+                    }
+                }
             }
         }
     }

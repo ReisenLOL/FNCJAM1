@@ -29,7 +29,10 @@ public class RichochetCarbine : Weapon
         HitPacket packet = new(transform.position, damage);
         if (TryHitOther(packet, collision))
         {
-
+            if (hasLeeching)
+            {
+                leechingItem.ApplyModifierToPlayer();
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

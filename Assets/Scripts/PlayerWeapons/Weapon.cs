@@ -15,6 +15,8 @@ public class Weapon : MonoBehaviour
     public WeaponLevelData weaponLevelData;
     public float speedModifier;
     public float damageModifier;
+    public bool hasLeeching;
+    public LeechingSteel leechingItem;
     public void SetOwner(BaseUnit owner) => this.Owner = owner;
     public void RotateToTarget(Vector2 worldPosition)
     {

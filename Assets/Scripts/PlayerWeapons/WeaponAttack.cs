@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class WeaponAttack : Item
 {
+    public bool hasLeeching;
+    [HideInInspector]
+    public LeechingSteel leechingItem;
+
     public int level;
     public WeaponLevelData[] WeaponLevels;
     public float nextAttackTime;
@@ -88,6 +92,11 @@ public class WeaponAttack : Item
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 spawnedAttack.RotateToTarget(worldPos);
                 spawnedAttack.weaponNumber = i;
+                if (hasLeeching)
+                {
+                    spawnedAttack.hasLeeching = hasLeeching;
+                    spawnedAttack.leechingItem = leechingItem;
+                }
                 attackSound.Play(transform.position);
                 yield return repeatDelay;
             }
