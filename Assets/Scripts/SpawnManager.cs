@@ -141,7 +141,8 @@ public class SpawnManager : MonoBehaviour
                 currentPhase = enemyPhases[i];
             }
         }
-        TimeSpan timer = TimeSpan.FromSeconds(Time.time);
+        float elapsed = Time.time - Timer.instance.gameStartTime;
+        TimeSpan timer = TimeSpan.FromSeconds(elapsed);
         if (timer.Seconds < 10)
         {
             timerUI.text = timer.Minutes.ToString() + ":0" + timer.Seconds.ToString();

@@ -10,6 +10,7 @@ public class GameOverUI : MonoBehaviour
     }
     public void RestartGame()
     {
+        Timer.instance.ResetTimer();
         PlayerItemData.instance.ResetStats();
         SceneManager.LoadScene(1);
     }

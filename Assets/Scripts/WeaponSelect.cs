@@ -27,6 +27,7 @@ public class WeaponSelect : MonoBehaviour
         RebuildWeaponList(4);
         HideWeaponSelect();
         RestoreWeapons();
+        itemList.RebuildItemList();
     }
     void RestoreWeapons()
     {

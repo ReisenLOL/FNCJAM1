@@ -48,8 +48,10 @@ public class MainMenuUIHandler : MonoBehaviour
             AddMusic(songList[i]);
         }
     }
+    //funny function spam
     public void StartGame()
     {
+        Timer.instance.ResetTimer();
         SceneManager.LoadScene(1);
     }
     public void ShowCredits()
@@ -82,7 +84,6 @@ public class MainMenuUIHandler : MonoBehaviour
         MusicRoomUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
-    //funny function spam
     public void ExitGame()
     {
 #if UNITY_EDITOR
