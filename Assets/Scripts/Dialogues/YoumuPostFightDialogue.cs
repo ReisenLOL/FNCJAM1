@@ -82,6 +82,5 @@ public class YoumuPostFightDialogue : Dialogue
     }
     protected override void WhenStartDialogue(int progress)
     {
-        Debug.Log(Progress);
     }
 }

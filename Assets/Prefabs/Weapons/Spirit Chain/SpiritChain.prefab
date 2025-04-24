@@ -50,6 +50,9 @@ MonoBehaviour:
   itemDescription: Meant to keep spirits out of your house, but it'll work for keeping
     fairies away from your personal space\nDamages all enemies near the player.
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: a7c54307c84fd3a4898547500b98f726, type: 2}
@@ -64,12 +67,13 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: -6935690958810795021, guid: d0373980129649043acb3967a879b3ce, type: 3}
   attackSound: {fileID: 0}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
-  requiredEvolutionItem: {fileID: -7019384119727192798, guid: b47edadf780d93f47b156ee17d6ae87d, type: 3}
+  requiredEvolutionItem: {fileID: 6221905329357746915, guid: ecff72a1b783d0442ad2d6af8a471595, type: 3}
   isEvolvedForm: 0
-  evolvedForm: {fileID: 2903617769560647650, guid: 4d50326446f38fd4291293d33b8932e9, type: 3}
+  evolvedForm: {fileID: 2903617769560647650, guid: 86d9fdc2b1769224ca7edc0e06db72cf, type: 3}
   baseForm: {fileID: 0}
   isOnWeaponList: 1
   canEvolve: 0

@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour
     public Transform enemyFolder;
     public Transform[] spawnPoints;
     int killQuota;
+    public bool hasStartedDialogue = false;
     public int KillQuota => killQuota;
     public void AddKillQuota(int quota) => killQuota += quota;
     public int currentKills;
@@ -166,10 +167,13 @@ public class SpawnManager : MonoBehaviour
                 SpawnBoss(currentPhase);
                 bossSpawned = true;
             }
-            if (currentBoss.activeSelf == false)
+        }
+        if (bossSpawned && currentBoss.activeSelf == false)
+        {
+            if (!hasStartedDialogue)
             {
                 postFightDialogue.StartDialogue();
-                bossSpawned = false;
+                hasStartedDialogue = true;
             }
         }
     } //qhar?

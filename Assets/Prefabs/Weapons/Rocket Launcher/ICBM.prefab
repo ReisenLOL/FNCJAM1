@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088354989259053749}
   - component: {fileID: 2903617769560647650}
   m_Layer: 0
-  m_Name: ArcanePrism
+  m_Name: ICBM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,30 +45,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Arcane Prism
-  itemImage: {fileID: -8899689620235115674, guid: 1f127e98e5dcac24e82f2dbf8f1f78d3, type: 3}
-  itemDescription: The more, the merrier. It's quite flashy, in a literal sense.\nGain
-    a prism that orbits the player and periodically shoot beams at a random enemy.
+  <ItemName>k__BackingField: ICBM
+  itemImage: {fileID: 4296206841482116840, guid: 6458bbb8f7b44634980734d259e41ca2, type: 3}
+  itemDescription: Whatever the target was, it's getting vaporized. Overkill for
+    fairies.\nShoots a rocket towards a random enemy, and damages all in it's blast
+    radius.
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: a4dbc020f40cfa84b8564d9810922219, type: 2}
-  - {fileID: 11400000, guid: 5cbb69127cf64ab4e9b3ea21fc6f3a76, type: 2}
-  - {fileID: 11400000, guid: ffefa3f261585414d9e87865945cb63d, type: 2}
-  - {fileID: 11400000, guid: 4b2fb23234bfef445a90e45144d9eb22, type: 2}
-  - {fileID: 11400000, guid: 3bc4fd8446c4af94b811697416f603a8, type: 2}
+  - {fileID: 11400000, guid: 2246ae16ebcc5424c8f3734fa96786c5, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
-  willRegenerate: 0
+  willRegenerate: 1
   canFire: 1
-  attack: {fileID: 3646374360044288093, guid: ef24a66fd8b1f8940bb3463eb1218f0a, type: 3}
-  attackSound: {fileID: 11400000, guid: f4ac0ca4ecc43784ca7d6b5dee34b230, type: 2}
+  attack: {fileID: 5256693561113329087, guid: d61332f4f47bc1640a8ec681b5416204, type: 3}
+  attackSound: {fileID: 11400000, guid: 94bd4b3a15e05264fa2ef4815ef8f30c, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
   requiredEvolutionItem: {fileID: 0}
-  isEvolvedForm: 0
+  isEvolvedForm: 1
   evolvedForm: {fileID: 0}
+  baseForm: {fileID: 2903617769560647650, guid: 13a9856cddc52d1438ad7135195c7af6, type: 3}
   isOnWeaponList: 1
   canEvolve: 0
   overrideSpawnPosition: {fileID: 0}

@@ -50,6 +50,9 @@ MonoBehaviour:
   itemDescription: Not safe for indoor use.\nShoots a projectile towards the cursor's
     position and bounces off the screen.
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 1
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: da584867b8267624db3ebb8c872e24ab, type: 2}
@@ -63,12 +66,13 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: 8004712210503351708, guid: 6efe1cc352ef19746bbdcf0c86a127f8, type: 3}
   attackSound: {fileID: 11400000, guid: e37b2eec0232b2949867beb49fcad18c, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1
-  requiredEvolutionItem: {fileID: 0}
+  requiredEvolutionItem: {fileID: 7408986963520820097, guid: 4a04beb9ce97a0a44892471bb4038940, type: 3}
   isEvolvedForm: 0
-  evolvedForm: {fileID: 0}
+  evolvedForm: {fileID: 2903617769560647650, guid: 10b01f24bdabb87438aced1116d5025b, type: 3}
   baseForm: {fileID: 0}
   isOnWeaponList: 1
   canEvolve: 0

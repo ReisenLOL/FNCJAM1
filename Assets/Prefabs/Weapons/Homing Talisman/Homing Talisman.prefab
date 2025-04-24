@@ -50,6 +50,9 @@ MonoBehaviour:
   itemDescription: The classical approach to danmaku. Thrown with style, and guided
     by spite,\nShoots ofuda that will lock onto enemies
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 1
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 1e258fa37887d34409cb5ec5433787fc, type: 2}
@@ -64,6 +67,7 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: 8416953628295921729, guid: 04f635774ecf024439b61984006028ef, type: 3}
   attackSound: {fileID: 11400000, guid: 7aa0d7845138a5643a7beb0bc2a19532, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

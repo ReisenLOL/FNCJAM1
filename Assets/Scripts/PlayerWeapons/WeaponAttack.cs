@@ -7,6 +7,7 @@ public class WeaponAttack : Item
     public bool hasLeeching;
     [HideInInspector]
     public LeechingSteel leechingItem;
+    public bool canDuplicateProjectiles = false;
 
     public int level;
     public WeaponLevelData[] WeaponLevels;
@@ -17,6 +18,7 @@ public class WeaponAttack : Item
     public Weapon attack;
     [SerializeField] ACWrapper attackSound;
     float attackRate;
+    public float attackCountModifier = 1;
     public float attackRateModifier = 1;
     public float speedModifier = 1;
     public float damageModifier = 1;
@@ -74,7 +76,7 @@ public class WeaponAttack : Item
         attackRate = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackRate * attackRateModifier;
         float damageDealt = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].damage * damageModifier;
         damageDealt = Owner.DamageScale(damageDealt);
-        float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount;
+        float attackCount = WeaponLevels[level.Clamp(0, WeaponLevels.Length)].attackCount * attackCountModifier;
         IEnumerator CO_Shoot()
         {
             WaitForSeconds repeatDelay = new WaitForSeconds(shootDuration / attackCount);

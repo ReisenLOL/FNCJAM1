@@ -50,6 +50,9 @@ MonoBehaviour:
   itemDescription: Looks like it came out of a war. Also that's not danmaku...\nShoots
     a bullet that can pierce through many enemies.
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 1
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 8fd9329c88d6369488ee0e4fe5fbd821, type: 2}
@@ -59,6 +62,7 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: 2659656222951051777, guid: 73141479dd252c848a0597c08f803d36, type: 3}
   attackSound: {fileID: 11400000, guid: 7206de84c8f0a25489b380f5372c5091, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

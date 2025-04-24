@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1031843684155584608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6088354989259053749}
+  - component: {fileID: 2903617769560647650}
+  m_Layer: 0
+  m_Name: RocketLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6088354989259053749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2903617769560647650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031843684155584608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c3e31caae6ff642bcb1217e9ec4f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  <ItemName>k__BackingField: Rocket Launcher
+  itemImage: {fileID: 4296206841482116840, guid: 6458bbb8f7b44634980734d259e41ca2, type: 3}
+  itemDescription: Whatever the target was, it's getting vaporized. Overkill for
+    fairies.\nShoots a rocket towards a random enemy, and damages all in it's blast
+    radius.
+  refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
+  level: 0
+  WeaponLevels:
+  - {fileID: 11400000, guid: b972e7c611a7714439146c2453c1922a, type: 2}
+  - {fileID: 11400000, guid: 9cf1f36c674c73a40a2bc7bfeda3b8f9, type: 2}
+  - {fileID: 11400000, guid: c54345d7b285f0549a0dbbc733f8c2ee, type: 2}
+  - {fileID: 11400000, guid: 676cf177d3e99744a9174a2edce9ff14, type: 2}
+  - {fileID: 11400000, guid: 1c9bb61685a15bb4290d35426b38549a, type: 2}
+  - {fileID: 11400000, guid: 4e079245b6809ef4f98ec7dc99e37bca, type: 2}
+  nextAttackTime: 0
+  shootDuration: 0.25
+  willRegenerate: 1
+  canFire: 1
+  attack: {fileID: 5256693561113329087, guid: d61332f4f47bc1640a8ec681b5416204, type: 3}
+  attackSound: {fileID: 11400000, guid: 94bd4b3a15e05264fa2ef4815ef8f30c, type: 2}
+  attackCountModifier: 1
+  attackRateModifier: 1
+  speedModifier: 1
+  damageModifier: 1
+  requiredEvolutionItem: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
+  isEvolvedForm: 0
+  evolvedForm: {fileID: 2903617769560647650, guid: 1d3c83c1e60f88e41bc0229bee29b9e1, type: 3}
+  baseForm: {fileID: 0}
+  isOnWeaponList: 1
+  canEvolve: 0
+  overrideSpawnPosition: {fileID: 0}
+  weaponSelect: {fileID: 0}

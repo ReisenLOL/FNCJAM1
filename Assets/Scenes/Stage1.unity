@@ -1888,23 +1888,35 @@ MonoBehaviour:
     isKnown: 0
   - weapon: {fileID: 2903617769560647650, guid: 13a9856cddc52d1438ad7135195c7af6, type: 3}
     passive: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
-    result: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+    result: {fileID: 2903617769560647650, guid: 1d3c83c1e60f88e41bc0229bee29b9e1, type: 3}
     isKnown: 0
   - weapon: {fileID: 2903617769560647650, guid: 390b7879226495f4ea55fc0601ae432b, type: 3}
     passive: {fileID: -4909570935767480462, guid: 7dba5e6089cfd294c9f662857dd57d3e, type: 3}
-    result: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+    result: {fileID: 2903617769560647650, guid: 7781617f342505d4584189f9997298d6, type: 3}
     isKnown: 0
   - weapon: {fileID: 2903617769560647650, guid: ad108a8441f365944b01f6d8788de00d, type: 3}
     passive: {fileID: -2365649391267733898, guid: 1cf90925d6b708b4eb85bf3a09f883c1, type: 3}
     result: {fileID: 2903617769560647650, guid: 6343bcabde1292e4ab377db44ed27076, type: 3}
     isKnown: 0
   - weapon: {fileID: 2903617769560647650, guid: ff66b1adbd9a1a940b6360e9597dea02, type: 3}
+    passive: {fileID: 7408986963520820097, guid: 4a04beb9ce97a0a44892471bb4038940, type: 3}
+    result: {fileID: 2903617769560647650, guid: 10b01f24bdabb87438aced1116d5025b, type: 3}
+    isKnown: 0
+  - weapon: {fileID: 2903617769560647650, guid: f29b53c2a85f1ac47a8dadfef94e75ef, type: 3}
     passive: {fileID: 3122771533703608673, guid: b2f8f2c3eb41e124480e0b8938960e19, type: 3}
-    result: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+    result: {fileID: 2903617769560647650, guid: 665d270dc5b10b0498c7cebfec3f2f98, type: 3}
+    isKnown: 0
+  - weapon: {fileID: 2903617769560647650, guid: 20f3e17e222576444b367dfa50c1ea44, type: 3}
+    passive: {fileID: 6221905329357746915, guid: ecff72a1b783d0442ad2d6af8a471595, type: 3}
+    result: {fileID: 2903617769560647650, guid: 86d9fdc2b1769224ca7edc0e06db72cf, type: 3}
+    isKnown: 0
+  - weapon: {fileID: 2903617769560647650, guid: 34aa291772bd38e4b8196bdbdce19bf8, type: 3}
+    passive: {fileID: -2193691921199447636, guid: 921d457228fc0b741a9eed708fe143e3, type: 3}
+    result: {fileID: 2903617769560647650, guid: a201a427f4f52fa47a1526ba1ccd4ae4, type: 3}
     isKnown: 0
   - weapon: {fileID: 2903617769560647650, guid: ac920f7ff5e580248926cc6e7a7738ae, type: 3}
     passive: {fileID: 7339957262606650096, guid: f6193a0dd2411f1498d5b9b3427df489, type: 3}
-    result: {fileID: 2903617769560647650, guid: 41254156f37062545ba0501491d15818, type: 3}
+    result: {fileID: 2903617769560647650, guid: a201a427f4f52fa47a1526ba1ccd4ae4, type: 3}
     isKnown: 0
   evolutionUI: {fileID: 1521932724}
   evolutionTemplate: {fileID: 1860993429}
@@ -2257,11 +2269,11 @@ PrefabInstance:
       objectReference: {fileID: 36049539}
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: AllItems.Array.size
-      value: 29
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: KnownItems.Array.size
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: 'AllItems.Array.data[26]'
@@ -2273,6 +2285,30 @@ PrefabInstance:
       objectReference: {fileID: 6221905329357746915, guid: ecff72a1b783d0442ad2d6af8a471595, type: 3}
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: 'AllItems.Array.data[28]'
+      value: 
+      objectReference: {fileID: 2903617769560647650, guid: 34aa291772bd38e4b8196bdbdce19bf8, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'AllItems.Array.data[29]'
+      value: 
+      objectReference: {fileID: -2193691921199447636, guid: 921d457228fc0b741a9eed708fe143e3, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'AllItems.Array.data[30]'
+      value: 
+      objectReference: {fileID: 2903617769560647650, guid: 7781617f342505d4584189f9997298d6, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'AllItems.Array.data[31]'
+      value: 
+      objectReference: {fileID: 2903617769560647650, guid: 1d3c83c1e60f88e41bc0229bee29b9e1, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'AllItems.Array.data[32]'
+      value: 
+      objectReference: {fileID: 2903617769560647650, guid: 86d9fdc2b1769224ca7edc0e06db72cf, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'AllItems.Array.data[33]'
+      value: 
+      objectReference: {fileID: 2903617769560647650, guid: 665d270dc5b10b0498c7cebfec3f2f98, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'AllItems.Array.data[34]'
       value: 
       objectReference: {fileID: 2903617769560647650, guid: 6343bcabde1292e4ab377db44ed27076, type: 3}
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
@@ -2286,9 +2322,13 @@ PrefabInstance:
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: 'KnownItems.Array.data[22]'
       value: 
-      objectReference: {fileID: -4398999467599545108, guid: 0a74ae95b4675644da5eb5d729e62aac, type: 3}
+      objectReference: {fileID: 2903617769560647650, guid: 34aa291772bd38e4b8196bdbdce19bf8, type: 3}
     - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
       propertyPath: 'KnownItems.Array.data[23]'
+      value: 
+      objectReference: {fileID: -2193691921199447636, guid: 921d457228fc0b741a9eed708fe143e3, type: 3}
+    - target: {fileID: 5324052232448939113, guid: 28dc5783e77aa0e4e987b3c526578fb9, type: 3}
+      propertyPath: 'KnownItems.Array.data[24]'
       value: 
       objectReference: {fileID: -4398999467599545108, guid: 0a74ae95b4675644da5eb5d729e62aac, type: 3}
     m_RemovedComponents: []
@@ -2768,7 +2808,7 @@ PrefabInstance:
     - target: {fileID: 1760234193438978555, guid: 9d88791e3146df6489e5c85f39acf7ca, type: 3}
       propertyPath: startingWeapon
       value: 
-      objectReference: {fileID: 2903617769560647650, guid: ea778d35057efd14485f61b59920f021, type: 3}
+      objectReference: {fileID: 2903617769560647650, guid: 665d270dc5b10b0498c7cebfec3f2f98, type: 3}
     - target: {fileID: 2257177703543319234, guid: 9d88791e3146df6489e5c85f39acf7ca, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3755,6 +3795,7 @@ MonoBehaviour:
   miniBossToSpawn: {fileID: 2262917533461444525, guid: 7b6d2852a3df95146b1306ee8b201a3b, type: 3}
   enemyFolder: {fileID: 943318251}
   spawnPoints: []
+  hasStartedDialogue: 0
   currentKills: 0
   gameTimer: 0
   spawnRate: 0.5

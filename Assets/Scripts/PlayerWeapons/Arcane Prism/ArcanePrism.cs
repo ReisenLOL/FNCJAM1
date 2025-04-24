@@ -1,8 +1,11 @@
 using Core.Extensions;
+using System.Collections;
 using UnityEngine;
 
 public class ArcanePrism : Weapon
 {
+    public float shootDuration = 0.25f;
+    public float attackCount = 1;
     public float rotationSpeed;
     public float fireRate;
     private float fireTime;
@@ -34,24 +37,33 @@ public class ArcanePrism : Weapon
     }
     private void FireProjectile()
     {
-        Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation);
-        spawnedAttack.weaponLevelData = weaponLevelData;
-        spawnedAttack.damageModifier = damageModifier;
-        spawnedAttack.speedModifier = speedModifier;
-        spawnedAttack.SetOwner(Owner);
-        spawnedAttack.firedFrom = gameObject;
-        if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
+        IEnumerator CO_Shoot()
         {
-            spawnedAttack.RotateToTarget(a.CurrentPosition);
+            WaitForSeconds repeatDelay = new WaitForSeconds(shootDuration / attackCount);
+            for (int i = 0; i < attackCount; i++)
+            {
+                Weapon spawnedAttack = Instantiate(attack, transform.position, attack.transform.rotation);
+                spawnedAttack.weaponLevelData = weaponLevelData;
+                spawnedAttack.damageModifier = damageModifier;
+                spawnedAttack.speedModifier = speedModifier;
+                spawnedAttack.SetOwner(Owner);
+                spawnedAttack.firedFrom = gameObject;
+                if (EnemyUnit.TryGetRandomAliveEnemy(out EnemyUnit a))
+                {
+                    spawnedAttack.RotateToTarget(a.CurrentPosition);
+                }
+                else
+                {
+                    spawnedAttack.RotateToTarget(transform.right);
+                }
+                if (dissipationDelay != 0)
+                {
+                    spawnedAttack.dissipationDelay = dissipationDelay;
+                }
+                attackSound.Play(transform.position);
+            }
+            yield return repeatDelay;
         }
-        else
-        {
-            spawnedAttack.RotateToTarget(Vector2.right);
-        }
-        if (dissipationDelay != 0)
-        {
-            spawnedAttack.dissipationDelay = dissipationDelay;
-        }
-        attackSound.Play(transform.position);
+        StartCoroutine(CO_Shoot());
     }
 }
