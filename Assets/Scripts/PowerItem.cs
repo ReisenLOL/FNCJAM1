@@ -15,7 +15,7 @@ public class PowerItem : Collectable
     private void OnTriggerEnter2D(Collider2D collision)
     {
         playerLevelManager.UpdatePower(powerAmount);
-        collision.GetComponent<AudioSource>().PlayOneShot(collectionSound, 0.5f);
+        collision.GetComponent<AudioSource>().PlayOneShot(collectionSound, 0.2f);
         Destroy(gameObject);
     }
     private void FixedUpdate()
