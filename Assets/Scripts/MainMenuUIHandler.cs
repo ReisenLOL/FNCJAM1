@@ -38,7 +38,8 @@ public class MainMenuUIHandler : MonoBehaviour
         songTitleUI.text = music.sound.name;
         songDescriptionUI.text = music.description;
         currentlyPlaying = music.sound;
-        audioSource.PlayOneShot(currentlyPlaying);
+        audioSource.resource = music.sound;
+        audioSource.Play();
     }
     #endregion
     private void Start()
