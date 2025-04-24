@@ -24,7 +24,7 @@ public class PlayerUnit : BaseUnit
 
     protected override void OnKillEffects()
     {
-
+        FindFirstObjectByType<GameOverUI>().GameOver();
     }
     protected override void WhenDestroy()
     {
