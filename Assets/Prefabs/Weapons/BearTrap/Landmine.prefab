@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  <ItemName>k__BackingField: Bear Trap
+  <ItemName>k__BackingField: Landmine
   itemImage: {fileID: -2055117614921296923, guid: f065111e638bcca49a4c3ea74c7ef77a, type: 3}
   itemDescription: For what you're doing with these, it'd be better to call it a
     "Fairy Trap"\nLays a bear trap on your position periodically

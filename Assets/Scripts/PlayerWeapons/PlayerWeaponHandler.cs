@@ -38,7 +38,7 @@ public class PlayerWeaponHandler : MonoBehaviour
             spawned.SetOwner(BaseUnit.Player);
             instance.spawnedWeapons[weapon.ItemName] = spawned;
             wasCreated = true;
-            return weapon;
+            return spawned;
         }
     }
 }

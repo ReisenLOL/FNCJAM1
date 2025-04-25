@@ -83,7 +83,7 @@ MonoBehaviour:
     movement speed.
   refreshWeaponList: 0
   isOnPassiveList: 1
-  modifierValue: 0
+  modifierValue: 1.2
   specialValueA: 0
   level: 0
   passiveLevels:

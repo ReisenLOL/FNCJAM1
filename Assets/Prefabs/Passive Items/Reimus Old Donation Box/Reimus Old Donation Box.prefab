@@ -82,7 +82,7 @@ MonoBehaviour:
   itemDescription: As light as it looks.\nGain a bonus to exp earned from power items.
   refreshWeaponList: 0
   isOnPassiveList: 1
-  modifierValue: 1
+  modifierValue: 1.4
   specialValueA: 0
   level: 0
   passiveLevels:

@@ -83,7 +83,7 @@ MonoBehaviour:
     attack rate.
   refreshWeaponList: 0
   isOnPassiveList: 1
-  modifierValue: 0
+  modifierValue: 0.65
   specialValueA: 0
   level: 0
   passiveLevels:

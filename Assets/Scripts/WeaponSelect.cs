@@ -69,10 +69,8 @@ public class WeaponSelect : MonoBehaviour
             }
             else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem))
             {
-                Debug.Log("we have a passive here");
                 for (int i = 0; i < targetLevel; i++)
                 {
-                    Debug.Log("level:" + i);
                     isPassiveItem.LevelUp();
                 }
             }
