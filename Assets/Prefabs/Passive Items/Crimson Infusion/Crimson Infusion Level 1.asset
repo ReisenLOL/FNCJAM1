@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60442807ef3fe594aafd1de19b6f6c57, type: 3}
   m_Name: Crimson Infusion Level 1
   m_EditorClassIdentifier: 
-  upgradeDescription: 
+  upgradeDescription: Increases max HP
   modifierValue: 120
   specialValueA: 0

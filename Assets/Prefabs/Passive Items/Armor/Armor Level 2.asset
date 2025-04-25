@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60442807ef3fe594aafd1de19b6f6c57, type: 3}
   m_Name: Armor Level 2
   m_EditorClassIdentifier: 
+  upgradeDescription: Extra Armor
   modifierValue: 0.8
   specialValueA: 0
