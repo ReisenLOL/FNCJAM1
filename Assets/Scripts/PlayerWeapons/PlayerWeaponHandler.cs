@@ -34,6 +34,7 @@ public class PlayerWeaponHandler : MonoBehaviour
         }
         else
         {
+            Debug.Log("new weapon created : " +  weapon.ItemName);
             Item spawned = Instantiate(weapon, instance.playerWeaponsFolder.transform);
             spawned.SetOwner(BaseUnit.Player);
             instance.spawnedWeapons[weapon.ItemName] = spawned;

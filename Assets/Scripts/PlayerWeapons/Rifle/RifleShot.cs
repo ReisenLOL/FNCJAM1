@@ -14,12 +14,13 @@ public class RifleShot : Weapon
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
+        Vector3 firedfrompos = firedFrom.transform.position;
         dissipationTime += Time.deltaTime;
         if (dissipationTime >= dissipationDelay)
         {
             Destroy(gameObject);
         }
-        if (Vector3.Distance(transform.position, firedFrom.transform.position) > maxRange)
+        if (Vector3.Distance(transform.position, firedfrompos) > maxRange)
         {
             Destroy(gameObject);
         }

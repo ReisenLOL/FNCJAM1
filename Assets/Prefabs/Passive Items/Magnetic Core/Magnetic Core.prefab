@@ -80,7 +80,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: Magnetic Core
   itemImage: {fileID: 4877825377717948546, guid: 37ff6962b104bfc408f81009fa893e7e, type: 3}
   itemDescription: Do not store near electronics, fairies, or other magical devices\nIncreases
-    the radius where you can collect pickup items
+    the collection radius
   refreshWeaponList: 0
   isOnPassiveList: 1
   modifierValue: 1.6

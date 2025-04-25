@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60442807ef3fe594aafd1de19b6f6c57, type: 3}
   m_Name: Accelerative Booster Level 3
   m_EditorClassIdentifier: 
-  upgradeDescription: 
+  upgradeDescription: Increases Attack Rate
   modifierValue: 0.65
   specialValueA: 0

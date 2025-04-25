@@ -79,7 +79,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Reimu's Old Donation Box
   itemImage: {fileID: 4958856469392035500, guid: d858873531711a647a528987cc7a9c29, type: 3}
-  itemDescription: As light as it looks.\nGain a bonus to exp earned from power items.
+  itemDescription: It's as light as it looks.\nBonus to exp earned from power items.
   refreshWeaponList: 0
   isOnPassiveList: 1
   modifierValue: 1.4

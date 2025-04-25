@@ -79,7 +79,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Fanged Talisman
   itemImage: {fileID: 5652445159396328574, guid: e63563b897405f24bbc8dd5898d578fb, type: 3}
-  itemDescription: This talisman gives off a cursed aura, but it's pretty useful
+  itemDescription: This talisman gives off a cursed aura...but it's pretty useful
     to have.\nIncreases damage of all weapons
   refreshWeaponList: 0
   isOnPassiveList: 1

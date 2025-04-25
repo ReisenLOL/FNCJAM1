@@ -80,7 +80,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: Needle of the Wind
   itemImage: {fileID: 4553058418262026816, guid: 7deab824900199f4a90b5d4dd41658f9, type: 3}
   itemDescription: Similar to the one that inchling holds, but you can feel it cut
-    through the wind easily.\nIncreases the speed of your projectiles
+    through the wind easily.\nIncreases the speed of your projectiles.
   refreshWeaponList: 0
   isOnPassiveList: 1
   modifierValue: 0
