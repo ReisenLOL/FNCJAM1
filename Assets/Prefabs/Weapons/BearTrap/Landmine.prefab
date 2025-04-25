@@ -46,10 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Bear Trap
-  itemImage: {fileID: -5949295138865634426, guid: fae182ca6943fd94f850d4c22ea7b247, type: 3}
+  itemImage: {fileID: -2055117614921296923, guid: f065111e638bcca49a4c3ea74c7ef77a, type: 3}
   itemDescription: For what you're doing with these, it'd be better to call it a
     "Fairy Trap"\nLays a bear trap on your position periodically
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 883133b3addfc964c87ab9db3bc72d47, type: 2}
@@ -59,6 +62,7 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: 4666874476209535396, guid: 03924307b0b67c74a831f5688e0e3bdb, type: 3}
   attackSound: {fileID: 11400000, guid: ac49a1f9ff2cae3478e10c1218af51aa, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

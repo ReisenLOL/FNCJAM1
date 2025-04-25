@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Spirit Chain
-  itemImage: {fileID: 417253313350925561, guid: cd00bdbb9210b9246ab8ecff19ec9f56, type: 3}
+  itemImage: {fileID: 4252789340624463729, guid: 090a8dc939941144483ca8cec4b5a9c3, type: 3}
   itemDescription: Meant to keep spirits out of your house, but it'll work for keeping
     fairies away from your personal space\nDamages all enemies near the player.
   refreshWeaponList: 0

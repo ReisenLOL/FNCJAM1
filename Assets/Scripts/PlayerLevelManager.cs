@@ -26,6 +26,19 @@ public partial class PlayerLevelManager : MonoBehaviour
     public TextMeshProUGUI levelText;
     private void Start()
     {
+        if (PlayerItemData.instance.playerLevel > 0)
+        {
+            level = PlayerItemData.instance.playerLevel;
+        }
+        currentPower = PlayerItemData.instance.powerAmount;
+        if (PlayerItemData.instance.requiredPowerToNextLevel > 0)
+        {
+            requiredPowerToNextLevel = PlayerItemData.instance.requiredPowerToNextLevel;
+        }
+        if (requiredPowerToNextLevelMin > 0)
+        {
+            requiredPowerToNextLevelMin = PlayerItemData.instance.requiredPowerToNextLevelMin;
+        }
         levelText.text = "Level: " + level;
         UpdateXPBar();
     }

@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Magic Mirror
-  itemImage: {fileID: 21300000, guid: a0db763ba950667428f64cfbbf90c309, type: 3}
+  itemImage: {fileID: -5386460887969858482, guid: 20f58dc9cbc84684da991bd0096708a9, type: 3}
   itemDescription: Will not teleport you to your home. Duplicates projectiles of
     weapons. Sounds pretty good, but not that useful in practice
   refreshWeaponList: 0

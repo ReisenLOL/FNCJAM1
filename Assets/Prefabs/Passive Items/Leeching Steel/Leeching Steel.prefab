@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Leeching Steel
-  itemImage: {fileID: 4296206841482116840, guid: 6458bbb8f7b44634980734d259e41ca2, type: 3}
+  itemImage: {fileID: -3294767391297621736, guid: 754520e58870afa4ab132620449e15da, type: 3}
   itemDescription: Heal damage when attacking with any weapon that contains steel
   refreshWeaponList: 0
   isOnPassiveList: 1

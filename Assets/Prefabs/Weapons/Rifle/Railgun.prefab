@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Railgun
-  itemImage: {fileID: -7321901480177674361, guid: ccaa42adb38221d4badc1f557c9f0920, type: 3}
+  itemImage: {fileID: 9158909444844237889, guid: 1602800990963cc44bbb0f5b8c74323a, type: 3}
   itemDescription: Looks like it came out of a war. Also that's not danmaku...\nShoots
     a bullet that can pierce through many enemies.
   refreshWeaponList: 0

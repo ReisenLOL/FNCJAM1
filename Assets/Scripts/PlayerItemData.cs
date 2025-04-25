@@ -20,6 +20,9 @@ public class PlayerItemData : MonoBehaviour
     public List<EquippedItemData> equippedItems = new();
     public int playerLevel;
     public float powerAmount;
+    public float requiredPowerToNextLevel;
+    public float requiredPowerToNextLevelMin;
+
     void Awake()
     {
         if (instance == null)
@@ -37,5 +40,7 @@ public class PlayerItemData : MonoBehaviour
         equippedItems.Clear();
         playerLevel = 0;
         powerAmount = 0;
+        requiredPowerToNextLevel = 0;
+        requiredPowerToNextLevelMin = 0;
     }
 }

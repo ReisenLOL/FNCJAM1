@@ -46,11 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Kusanagi
-  itemImage: {fileID: 8247329723496179466, guid: e61f0bff68d37b749bda03544c8d9bc6, type: 3}
+  itemImage: {fileID: 1237351157367083153, guid: af169944cfc0be74cb5219131109aad9, type: 3}
   itemDescription: The sharpest solution to any problem. The things that cannot be
     cut by your sword, forged by you, are close to many!\nLarge sword sweep that
     damages all enemies in its path.
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: bc00055ebcd0ad446bece613431141c1, type: 2}
@@ -60,6 +63,7 @@ MonoBehaviour:
   canFire: 1
   attack: {fileID: 1498429162516210856, guid: 672ccdfdca5c42148bd45af2c0dd4ec1, type: 3}
   attackSound: {fileID: 11400000, guid: 05f90c57daf020a4cbc9a50fec790581, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

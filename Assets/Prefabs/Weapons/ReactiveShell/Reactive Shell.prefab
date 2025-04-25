@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Reactive Shell
-  itemImage: {fileID: -8899689620235115674, guid: 1f127e98e5dcac24e82f2dbf8f1f78d3, type: 3}
+  itemImage: {fileID: 2233729898708067230, guid: c45b9197c2d2cc04d89374f922194640, type: 3}
   itemDescription: The more, the merrier. It's quite flashy, in a literal sense.\nGain
     a prism that orbits the player and periodically shoot beams at a random enemy.
   refreshWeaponList: 0

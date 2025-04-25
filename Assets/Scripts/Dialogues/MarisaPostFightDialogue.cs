@@ -3,49 +3,55 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class YoumuPostFightDialogue : Dialogue
+public class MarisaPostFightDialogue : Dialogue
 {
     protected override IEnumerator DialogueContents(int progress = 0)
     {
         Progress = 0;
         CharacterSelect(1);
-        DrawDialogue("Hah... you weren't lying after all. That wasn't just a fluke");
+        DrawDialogue("Alright, alright! You pack a mean punch. Or... sword. Or whatever strange weapons ya got.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(0);
-        DrawDialogue("Ya see? I don't start fights, I want to end 'em!");
+        DrawDialogue("You really just wanted to fight for fun, huh?");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(1);
-        DrawDialogue("Well... You’re rough around the edges, but… there's resolve in your strikes. I can respect that.");
+        DrawDialogue("Well, yeah! But you're serious about the village thing. Guess I got caught up in it.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(0);
-        DrawDialogue("Hm? I guess I'll just take that as a compliment. So… can I keep going?");
+        DrawDialogue("You wanted to take some of my weapons right? Lets turn this around on you. Let me have a look at that little furnace on ya");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(1);
-        DrawDialogue("I won’t stop you. But, whatever’s causing this isn’t something ordinary. Even spirits are uneasy.");
+        DrawDialogue("Hey, thats my schtick y'know! And this thing powers the flashy stuff I know best!");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(0);
-        DrawDialogue("Yeah, no kidding! Fairies acting rowdier than the usual, villagers coughing up sparkles… It’s quite the mess.");
+        DrawDialogue("I just wanna see how it works, I'll give it back to ya when I'm done with it.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(1);
-        DrawDialogue("Good luck, Kurogane Hozuki. If we meet again, I hope it’s not with swords drawn.");
+        DrawDialogue("Fine, fine. Well, you've earned it after all. Besides, I’m quite curious what you’ll do with it.");
+        SetButton(0, "->").ContinueWhenPressed();
+
+        yield return WaitForProgressAbove(NextContinueProgress);
+
+        CharacterSelect(1);
+        DrawDialogue("Anyway, good luck on your journey, Kurogane. Whatever's behind this mess, it's probably gonna get much more strange.");
         SetButton(0, "->", SwitchScene).SetForceEndWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
@@ -70,7 +76,7 @@ public class YoumuPostFightDialogue : Dialogue
         PlayerItemData.instance.powerAmount = levelManager.currentPower;
         PlayerItemData.instance.requiredPowerToNextLevel = levelManager.requiredPowerToNextLevel;
         PlayerItemData.instance.requiredPowerToNextLevelMin = levelManager.requiredPowerToNextLevelMin;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     /*private void BeansButton()
     {
