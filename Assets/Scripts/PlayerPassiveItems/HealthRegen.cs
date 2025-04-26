@@ -15,7 +15,7 @@ public class HealthRegen : Passive
         regenTime += Time.deltaTime;
         if (regenTime > specialValueA)
         {
-            if (player.CurrentHealth > player.MaxHealth)
+            if (player.CurrentHealth < player.MaxHealth)
             {
                 ApplyModifierToPlayer();
             }

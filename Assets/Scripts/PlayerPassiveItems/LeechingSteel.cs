@@ -24,6 +24,9 @@ public class LeechingSteel : Passive
     }
     public void ApplyModifierToPlayer()
     {
-        player.ChangeHealth(modifierValue);
+        if (player.CurrentHealth < player.MaxHealth)
+        {
+            player.ChangeHealth(modifierValue);
+        }
     }
 }

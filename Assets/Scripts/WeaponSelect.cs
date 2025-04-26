@@ -61,18 +61,38 @@ public class WeaponSelect : MonoBehaviour
         Item weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
         if (!wasCreated || (fromSave && SceneManager.GetActiveScene().buildIndex == 2))
         {
-            if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
+            if (SceneManager.GetActiveScene().buildIndex == 4 && fromSave)
             {
-                for (int i = 0; i < targetLevel; i++)
+                if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack4))
                 {
-                    isWeaponAttack.LevelUp();
+                    for (int i = 0; i < targetLevel - 1; i++)
+                    {
+                        isWeaponAttack4.LevelUp();
+                    }
+                }
+                else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem4))
+                {
+                    for (int i = 0; i < targetLevel - 1; i++)
+                    {
+                        isPassiveItem4.LevelUp();
+                    }
                 }
             }
-            else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem))
+            else
             {
-                for (int i = 0; i < targetLevel; i++)
+                if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
                 {
-                    isPassiveItem.LevelUp();
+                    for (int i = 0; i < targetLevel; i++)
+                    {
+                        isWeaponAttack.LevelUp();
+                    }
+                }
+                else if (weapon.gameObject.TryGetComponent(out Passive isPassiveItem))
+                {
+                    for (int i = 0; i < targetLevel; i++)
+                    {
+                        isPassiveItem.LevelUp();
+                    }
                 }
             }
         }
