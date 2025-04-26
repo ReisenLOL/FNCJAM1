@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackName: somethingsomethingfunnynamestartlaughing
   musicClip: {fileID: 8300000, guid: f9a387426496812448e7d331cde5bd11, type: 3}
-  clipVolume: 0.8
+  clipVolume: 0.7
   <dontReplaceSelf>k__BackingField: 1

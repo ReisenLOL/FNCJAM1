@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
-  damage: 40
+  damage: 30
   speed: 4
   attackRate: 1
   acceleration: 150
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defenseModifier: 1
-  startingHealth: 300
-  MaxHealth: 300
+  startingHealth: 250
+  MaxHealth: 250
   centerPositionOverride: {fileID: 6022167792110622834}
   funnyexplosion: 0
