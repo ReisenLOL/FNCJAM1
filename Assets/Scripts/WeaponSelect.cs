@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WeaponSelect : MonoBehaviour
@@ -58,7 +59,7 @@ public class WeaponSelect : MonoBehaviour
     private void SelectWeapon(Item w, int targetLevel = 1, bool fromSave = false)
     {
         Item weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
-        if (!wasCreated || fromSave)
+        if (!wasCreated || (fromSave && SceneManager.GetActiveScene().buildIndex == 2))
         {
             if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
             {

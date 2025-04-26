@@ -3891,7 +3891,7 @@ MonoBehaviour:
     - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
     - {fileID: 2262917533461444525, guid: 33d1d7a39c6e53848b0df072502117f2, type: 3}
     - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
-  - startTime: 361
+  - startTime: 360
     spawnRate: 0.1
     isBossPhase: 1
     enemyUnits:
