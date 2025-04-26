@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneMusicPlayer : MonoBehaviour
 {
     [SerializeField] MusicWrapper toPlay;
-    private void Start()
+    private void Play()
     {
         if (toPlay == null)
             return;

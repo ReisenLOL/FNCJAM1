@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5985915428523644946, guid: d1f3d9a8461958946a9241fb027d1a42, type: 3}
+      propertyPath: testStartingMusic
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3338,19 +3342,30 @@ MonoBehaviour:
   MainMenuUI: {fileID: 1846839527}
   audioSource: {fileID: 1330373299}
   songList:
-  - sound: {fileID: 8300000, guid: 2a0663a23a9faf746aadd9731f789d47, type: 3}
-    description: no actual music yet
-  - sound: {fileID: 8300000, guid: 83e75352d2ab4f741a4c763ce309c378, type: 3}
+  - sound: {fileID: 8300000, guid: 6cc1ac59752198d40afb88d09eb1d70e, type: 3}
+    description: The main menu song, you know, the first song you hear, do you have
+      a garden? pretty nice but I wonder how you could ever take care of a big one
+      by yourself
+  - sound: {fileID: 8300000, guid: b294ff16847eb0649a50675aac9205e3, type: 3}
+    description: the clock is ticking, or something, i dont know im not a clock professional
+  - sound: {fileID: 8300000, guid: 771e2912175e62f4e84d5655da4cd397, type: 3}
+    description: thank you random word generator, very cool
+  - sound: {fileID: 8300000, guid: 9a532f7727f0c68499e7c0ed3524d2a4, type: 3}
+    description: You know kurogane sure is a SHARP girl, get it? because, swords
+      are sharp, hahaha...ha
+  - sound: {fileID: 8300000, guid: d91782ac0480ce040967fa03207726b2, type: 3}
     description: qhar
-  - sound: {fileID: 8300000, guid: f9a387426496812448e7d331cde5bd11, type: 3}
+  - sound: {fileID: 8300000, guid: e7c729b16e5eb924b8039a4d8b9a6193, type: 3}
     description: qhar
-  - sound: {fileID: 8300000, guid: 91780cd433ac88040a98a59d77657214, type: 3}
+  - sound: {fileID: 8300000, guid: 51fe67656f2dc974fbdf3a2f71c2fbf4, type: 3}
+    description: qhar
+  - sound: {fileID: 8300000, guid: f7f1342c7c91a77479a776524d7c2f8a, type: 3}
     description: qhar
   songListUI: {fileID: 1187033166}
   songTitleUI: {fileID: 27161245}
   songDescriptionUI: {fileID: 1164253856}
   MusicButton: {fileID: 112334328}
-  currentlyPlaying: {fileID: 0}
+  currentlyPlaying: {fileID: 8300000, guid: 6cc1ac59752198d40afb88d09eb1d70e, type: 3}
 --- !u!82 &1330373299
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3360,9 +3375,9 @@ AudioSource:
   m_GameObject: {fileID: 1330373293}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ec81624eb858e504aadf6f717709524e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6cc1ac59752198d40afb88d09eb1d70e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6cc1ac59752198d40afb88d09eb1d70e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
