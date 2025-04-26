@@ -47,8 +47,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Faith Seeker
   itemImage: {fileID: -2156038909900676472, guid: 437d29a5f1dfa3b4caa2f9bbd4780060, type: 3}
-  itemDescription: The classical approach to danmaku. Thrown with style, and guided
-    by spite,\nShoots ofuda that will lock onto enemies
+  itemDescription: This will hurt.
   refreshWeaponList: 0
   hasLeeching: 0
   leechingItem: {fileID: 0}
@@ -60,7 +59,7 @@ MonoBehaviour:
   shootDuration: 0.25
   willRegenerate: 1
   canFire: 1
-  attack: {fileID: 4396981918136323015, guid: f177e0a55ac95c3448ab47a66cbef825, type: 3}
+  attack: {fileID: 0}
   attackSound: {fileID: 11400000, guid: 7aa0d7845138a5643a7beb0bc2a19532, type: 2}
   attackCountModifier: 1
   attackRateModifier: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307d317518e553d4e88fa23904ed6798, type: 3}
   m_Name: Clockwork
   m_EditorClassIdentifier: 
-  TrackName: Headhunter, Leather Belt
+  TrackName: Clockwork
   musicClip: {fileID: 8300000, guid: b294ff16847eb0649a50675aac9205e3, type: 3}
   clipVolume: 0.9
   <dontReplaceSelf>k__BackingField: 1

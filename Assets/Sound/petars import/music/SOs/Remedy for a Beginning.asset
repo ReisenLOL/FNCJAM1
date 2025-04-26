@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307d317518e553d4e88fa23904ed6798, type: 3}
   m_Name: Remedy for a Beginning
   m_EditorClassIdentifier: 
-  TrackName: Headhunter, Leather Belt
+  TrackName: Remedy for a Beginning
   musicClip: {fileID: 8300000, guid: f7f1342c7c91a77479a776524d7c2f8a, type: 3}
   clipVolume: 0.7
   <dontReplaceSelf>k__BackingField: 1

@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defenseModifier: 1
-  startingHealth: 125
-  MaxHealth: 125
+  startingHealth: 100
+  MaxHealth: 100
   centerPositionOverride: {fileID: 6022167792110622834}
   funnyexplosion: 0
 --- !u!1 &8356787171506069802

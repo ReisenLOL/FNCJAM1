@@ -3529,7 +3529,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1694723946}
-  - component: {fileID: 1694723949}
   - component: {fileID: 1694723948}
   - component: {fileID: 1694723947}
   m_Layer: 5
@@ -3657,19 +3656,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694723945}
   m_CullTransparentMesh: 1
---- !u!114 &1694723949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694723945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a20999afdc4687448da926a6470206e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameStartTime: 0
 --- !u!1 &1699940313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,7 +3889,7 @@ MonoBehaviour:
   bossDialogue: {fileID: 206220340}
   postFightDialogue: {fileID: 998871768}
   healthModifier: 1
-  healthScalingValue: 0.1
+  healthScalingValue: 0.25
 --- !u!4 &1818214239
 Transform:
   m_ObjectHideFlags: 0
@@ -4477,7 +4463,7 @@ PrefabInstance:
     - target: {fileID: 5279454479026563187, guid: b84866817d97ede489994b074c0649df, type: 3}
       propertyPath: toPlay
       value: 
-      objectReference: {fileID: 11400000, guid: 6873edf56bc878f479677d05d0bce445, type: 2}
+      objectReference: {fileID: 11400000, guid: b5e602961290a8a439907da685801502, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4535,10 +4521,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5985915428523644946, guid: d1f3d9a8461958946a9241fb027d1a42, type: 3}
-      propertyPath: testStartingMusic
-      value: 
-      objectReference: {fileID: 11400000, guid: b5e602961290a8a439907da685801502, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

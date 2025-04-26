@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60442807ef3fe594aafd1de19b6f6c57, type: 3}
   m_Name: Leech Level 4
   m_EditorClassIdentifier: 
-  upgradeDescription: You are really close to being a leech
-  modifierValue: 1.8
+  upgradeDescription: Almost like a leech
+  modifierValue: 0.4
   specialValueA: 0

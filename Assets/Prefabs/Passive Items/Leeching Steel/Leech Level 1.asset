@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Leech Level 1
   m_EditorClassIdentifier: 
   upgradeDescription: You are more like a leech now
-  modifierValue: 1.2
+  modifierValue: 0.1
   specialValueA: 0

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Rocket Level 2
   m_EditorClassIdentifier: 
-  upgradeDescription: 
+  upgradeDescription: Increased damage and blast radius
   movementSpeed: 12
   attackCount: 1
   damage: 30
-  attackRate: 4.5
+  attackRate: 5
   range: 25
   dissipationDelay: 8
   specialPropertyA: 3.5

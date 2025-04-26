@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Homing Talisman Level 4
   m_EditorClassIdentifier: 
-  upgradeDescription: 
+  upgradeDescription: Firerate and damage increased
   movementSpeed: 8
   attackCount: 1
   damage: 45

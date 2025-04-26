@@ -89,8 +89,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af606d50dbaf0c74f969954b51386b64, type: 2}
   - {fileID: 11400000, guid: 2fe1d411e8ff82641aeb2684334aacb0, type: 2}
   - {fileID: 11400000, guid: e727881f440cddb4e8574d24ddc9785e, type: 2}
-  - {fileID: 11400000, guid: 895e20882014ed44088b8eb15ab60529, type: 2}
-  - {fileID: 11400000, guid: b0498c46e32ecd64b92531d1182568d0, type: 2}
+  - {fileID: 11400000, guid: 0d6615f30b78bd64aa74869c68df08d7, type: 2}
+  - {fileID: 11400000, guid: c4cc53c307a847d45ad7fe834ce41cf8, type: 2}
   player: {fileID: 0}
   regenTime: 0
 --- !u!1 &1623549349369429720

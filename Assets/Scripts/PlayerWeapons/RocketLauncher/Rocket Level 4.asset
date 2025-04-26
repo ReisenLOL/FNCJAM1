@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Rocket Level 4
   m_EditorClassIdentifier: 
-  upgradeDescription: 
+  upgradeDescription: Increased damage and blast radius
   movementSpeed: 12
   attackCount: 1
   damage: 40

@@ -54,12 +54,7 @@ MonoBehaviour:
   canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
-  - {fileID: 11400000, guid: 5a666712b4c57cf438b4f35c2ebb65f1, type: 2}
-  - {fileID: 11400000, guid: af20539b953ca02449313bcd87c3e51c, type: 2}
-  - {fileID: 11400000, guid: 24126f28f3fcf6a4b8d7e031619fec4a, type: 2}
-  - {fileID: 11400000, guid: ee46bf70f482c264f8d9313384ba5be7, type: 2}
-  - {fileID: 11400000, guid: c5d82c87a0c605c4ab81b6bcb5aecd13, type: 2}
-  - {fileID: 11400000, guid: 082aa74552337504ba20b5b66dafb3ca, type: 2}
+  - {fileID: 11400000, guid: fad2c562ee39447409413806b622c4e2, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 0

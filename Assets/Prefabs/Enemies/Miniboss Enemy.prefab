@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
-  powerObject: {fileID: 6212211480034386404, guid: 1080458e60957b64caf0cf1d662bd62e, type: 3}
+  powerObject: {fileID: 6212211480034386404, guid: a37e796b7e9274149af6b3fdf9ba7531, type: 3}
 --- !u!114 &5187138856504406741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baff388b100c33b4d90627d4928d6388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 1200
-  MaxHealth: 1200
+  defenseModifier: 1
+  startingHealth: 800
+  MaxHealth: 800
   centerPositionOverride: {fileID: 6022167792110622834}
   funnyexplosion: 0

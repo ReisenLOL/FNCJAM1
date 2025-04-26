@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defenseModifier: 1
-  startingHealth: 80
-  MaxHealth: 80
+  startingHealth: 65
+  MaxHealth: 65
   centerPositionOverride: {fileID: 6022167792110622834}
   funnyexplosion: 0

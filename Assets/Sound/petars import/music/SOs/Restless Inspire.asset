@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307d317518e553d4e88fa23904ed6798, type: 3}
   m_Name: Restless Inspire
   m_EditorClassIdentifier: 
-  TrackName: Headhunter, Leather Belt
+  TrackName: Restless Inspire
   musicClip: {fileID: 8300000, guid: d91782ac0480ce040967fa03207726b2, type: 3}
   clipVolume: 0.7
   <dontReplaceSelf>k__BackingField: 1

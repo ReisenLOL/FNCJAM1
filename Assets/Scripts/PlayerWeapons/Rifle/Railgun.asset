@@ -19,6 +19,6 @@ MonoBehaviour:
   attackRate: 2.25
   range: 50
   dissipationDelay: 8
-  specialPropertyA: 5
+  specialPropertyA: 10
   specialPropertyB: 0
   specialPropertyC: 0

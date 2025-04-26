@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Reaction Level 6
   m_EditorClassIdentifier: 
-  movementSpeed: 8
-  attackCount: 4
-  damage: 105
-  attackRate: 0.8
+  upgradeDescription: Damage increased
+  movementSpeed: 19
+  attackCount: 1
+  damage: 120
+  attackRate: 2.5
   range: 50
   dissipationDelay: 8
-  specialPropertyA: 0
+  specialPropertyA: 5
   specialPropertyB: 0
   specialPropertyC: 0

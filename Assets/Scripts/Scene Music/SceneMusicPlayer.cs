@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class SceneMusicPlayer : MonoBehaviour
 {
-    [SerializeField] MusicWrapper toPlay;
+    public MusicWrapper toPlay;
+    private void Start()
+    {
+        Play();
+    }
     private void Play()
     {
         if (toPlay == null)

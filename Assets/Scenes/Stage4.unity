@@ -2005,7 +2005,7 @@ MonoBehaviour:
   - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
   - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
   - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
-  miniBossToSpawn: {fileID: 2262917533461444525, guid: 7b6d2852a3df95146b1306ee8b201a3b, type: 3}
+  miniBossToSpawn: {fileID: 2262917533461444525, guid: da8ca1b8fd500a84da1461a339c9aaa7, type: 3}
   enemyFolder: {fileID: 943318251}
   spawnPoints: []
   hasStartedDialogue: 0
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   bossDialogue: {fileID: 455330880}
   postFightDialogue: {fileID: 1439406223}
   healthModifier: 1
-  healthScalingValue: 0.1
+  healthScalingValue: 0.25
 --- !u!4 &764695081
 Transform:
   m_ObjectHideFlags: 0
@@ -4541,7 +4541,7 @@ PrefabInstance:
     - target: {fileID: 5279454479026563187, guid: b84866817d97ede489994b074c0649df, type: 3}
       propertyPath: toPlay
       value: 
-      objectReference: {fileID: 11400000, guid: bd15abf1573d1214fa251ec822d86110, type: 2}
+      objectReference: {fileID: 11400000, guid: 235ccd6302f5cf44188a2a506af2f7fa, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4602,7 +4602,7 @@ PrefabInstance:
     - target: {fileID: 5985915428523644946, guid: d1f3d9a8461958946a9241fb027d1a42, type: 3}
       propertyPath: testStartingMusic
       value: 
-      objectReference: {fileID: 11400000, guid: 471747237dff07c4194a78e2fdd1e653, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

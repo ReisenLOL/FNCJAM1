@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Trap Level 5
   m_EditorClassIdentifier: 
-  upgradeDescription: 
+  upgradeDescription: Maximum hits increased, damage increased
   movementSpeed: 0
-  attackCount: 2
+  attackCount: 1
   damage: 120
   attackRate: 4
   range: 45
