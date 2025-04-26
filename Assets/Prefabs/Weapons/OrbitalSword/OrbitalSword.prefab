@@ -82,6 +82,9 @@ MonoBehaviour:
   itemDescription: Give those sword wings on your back an actual purpose.\nGain a
     sword that orbits the player and damages all nearby enemies
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 9e07454c449363343b3f84d806664685, type: 2}
@@ -89,12 +92,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12f41d6ebfd2e54408e384cf53e57143, type: 2}
   - {fileID: 11400000, guid: c87273fbdcdd250409f01f57d5dbed91, type: 2}
   - {fileID: 11400000, guid: 84ef056c4f686ff43b0949288b288492, type: 2}
+  - {fileID: 11400000, guid: f15e9fc6fe7682a4fa5c76955da0fafd, type: 2}
   nextAttackTime: 0
   shootDuration: 0
   willRegenerate: 1
   canFire: 1
   attack: {fileID: 7715866026326152917, guid: 05c5ddc8674598d4baf13740438ba512, type: 3}
   attackSound: {fileID: 0}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

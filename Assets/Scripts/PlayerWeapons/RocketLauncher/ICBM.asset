@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: ICBM
   m_EditorClassIdentifier: 
+  upgradeDescription: 
   movementSpeed: 12
   attackCount: 1
-  damage: 25
-  attackRate: 2
+  damage: 150
+  attackRate: 3.5
   range: 25
   dissipationDelay: 8
-  specialPropertyA: 3
+  specialPropertyA: 5
   specialPropertyB: 0
   specialPropertyC: 0

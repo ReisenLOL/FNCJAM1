@@ -50,6 +50,9 @@ MonoBehaviour:
   itemDescription: For what you're doing with these, it'd be better to call it a
     "Fairy Trap"\nLays a bear trap on your position periodically
   refreshWeaponList: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  canDuplicateProjectiles: 0
   level: 0
   WeaponLevels:
   - {fileID: 11400000, guid: 47a10d12da353d64194618e0baf9f403, type: 2}
@@ -57,12 +60,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db0d13ae09278dc4496a46dde8e70e6e, type: 2}
   - {fileID: 11400000, guid: 8579dea1f47b8c6419ae6cbd8bc9a4f9, type: 2}
   - {fileID: 11400000, guid: 6dbe20d215b2f914eae4efae6e2375cf, type: 2}
+  - {fileID: 11400000, guid: f6fa3bee0ed3a2640b8d80f27e88e743, type: 2}
   nextAttackTime: 0
   shootDuration: 0.25
   willRegenerate: 1
   canFire: 1
   attack: {fileID: 3255813774938795988, guid: ddd3488b54f973a46bfcda126bc1f80f, type: 3}
   attackSound: {fileID: 11400000, guid: 9488c4b5d937d4d439320fd7a2383f16, type: 2}
+  attackCountModifier: 1
   attackRateModifier: 1
   speedModifier: 1
   damageModifier: 1

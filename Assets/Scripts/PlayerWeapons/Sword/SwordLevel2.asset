@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: SwordLevel2
   m_EditorClassIdentifier: 
+  upgradeDescription: 
   movementSpeed: 0
   attackCount: 1
-  damage: 75
-  attackRate: 1
+  damage: 60
+  attackRate: 1.15
   range: 6
   dissipationDelay: 0.2
   specialPropertyA: 0

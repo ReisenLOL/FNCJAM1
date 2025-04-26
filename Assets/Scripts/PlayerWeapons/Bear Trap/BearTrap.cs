@@ -7,6 +7,7 @@ public class BearTrap : Weapon
     private void Start()
     {
         SetWeaponProperties();
+        maxHits = (int)weaponLevelData.specialPropertyA;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

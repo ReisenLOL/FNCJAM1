@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Owner>k__BackingField: {fileID: 8846915252871540021}
-  damage: 10
-  speed: 8
+  damage: 5
+  speed: 7
   attackRate: 1
   acceleration: 150
 --- !u!114 &8846915252871540021

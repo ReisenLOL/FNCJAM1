@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f9c21b9f4cd843bc6f8d7331e8056, type: 3}
   m_Name: Prism Level 4
   m_EditorClassIdentifier: 
+  upgradeDescription: 
   movementSpeed: 8
-  attackCount: 2
-  damage: 80
-  attackRate: 0.8
+  attackCount: 4
+  damage: 60
+  attackRate: 3
   range: 40
   dissipationDelay: 8
   specialPropertyA: 0

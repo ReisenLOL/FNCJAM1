@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Bloodshard Shuriken
   m_EditorClassIdentifier: 
   upgradeDescription: 
-  movementSpeed: 12
+  movementSpeed: 18
   attackCount: 1
-  damage: 50
-  attackRate: 1
+  damage: 90
+  attackRate: 1.25
   range: 25
   dissipationDelay: 0.1
   specialPropertyA: 8

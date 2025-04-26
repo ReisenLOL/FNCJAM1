@@ -47,8 +47,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   <ItemName>k__BackingField: Reactive Shield
   itemImage: {fileID: 2233729898708067230, guid: c45b9197c2d2cc04d89374f922194640, type: 3}
-  itemDescription: The more, the merrier. It's quite flashy, in a literal sense.\nGain
-    a prism that orbits the player and periodically shoot beams at a random enemy.
+  itemDescription: 
   refreshWeaponList: 0
   hasLeeching: 0
   leechingItem: {fileID: 0}

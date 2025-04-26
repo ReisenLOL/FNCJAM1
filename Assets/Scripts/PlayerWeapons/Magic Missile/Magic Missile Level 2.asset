@@ -15,8 +15,8 @@ MonoBehaviour:
   upgradeDescription: 
   movementSpeed: 16
   attackCount: 1
-  damage: 60
-  attackRate: 0.9
+  damage: 55
+  attackRate: 1.5
   range: 25
   dissipationDelay: 8
   specialPropertyA: 140

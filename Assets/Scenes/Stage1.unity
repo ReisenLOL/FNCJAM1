@@ -339,7 +339,7 @@ MonoBehaviour:
   basePowerToNextLevel: 5
   currentPower: 0
   powerModifier: 1
-  exponentIncrease: 1.4
+  exponentIncrease: 2
   levelUpUI: {fileID: 2080347106}
   spawnManager: {fileID: 1818214238}
   levelText: {fileID: 576346979}

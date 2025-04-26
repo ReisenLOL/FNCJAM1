@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeDescription: 
   movementSpeed: 0
   attackCount: 6
-  damage: 90
+  damage: 80
   attackRate: 1
   range: 14
   dissipationDelay: 2

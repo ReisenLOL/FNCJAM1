@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Railgun
   m_EditorClassIdentifier: 
   upgradeDescription: 
-  movementSpeed: 40
+  movementSpeed: 50
   attackCount: 1
-  damage: 75
-  attackRate: 0.2
+  damage: 140
+  attackRate: 2.25
   range: 50
   dissipationDelay: 8
   specialPropertyA: 5
