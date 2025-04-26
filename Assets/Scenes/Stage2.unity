@@ -339,7 +339,7 @@ MonoBehaviour:
   basePowerToNextLevel: 5
   currentPower: 0
   powerModifier: 1
-  exponentIncrease: 1.4
+  exponentIncrease: 1.65
   levelUpUI: {fileID: 2080347106}
   spawnManager: {fileID: 1818214238}
   levelText: {fileID: 576346979}
@@ -1148,7 +1148,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b1025b0ed2ece494f8c9f7deefc751ce, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31435642, g: 0.67295593, b: 0.29415363, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -3788,46 +3788,59 @@ MonoBehaviour:
   spawnTime: 0
   enemyPhases:
   - startTime: 0
-    spawnRate: 1
+    spawnRate: 0.9
     isBossPhase: 0
     enemyUnits:
     - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
-  - startTime: 60
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+  - startTime: 45
     spawnRate: 0.8
     isBossPhase: 0
     enemyUnits:
-    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
     - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
-  - startTime: 120
-    spawnRate: 0.6
+  - startTime: 90
+    spawnRate: 0.8
     isBossPhase: 0
     enemyUnits:
     - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
-    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
-  - startTime: 180
-    spawnRate: 0.6
-    isBossPhase: 0
-    enemyUnits:
-    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
-    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
-    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
-  - startTime: 240
-    spawnRate: 0.4
-    isBossPhase: 0
-    enemyUnits:
-    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
-    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
-    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
     - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
-  - startTime: 300
-    spawnRate: 0.4
+  - startTime: 150
+    spawnRate: 0.6
+    isBossPhase: 0
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+  - startTime: 210
+    spawnRate: 0.7
+    isBossPhase: 0
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
+  - startTime: 270
+    spawnRate: 0.5
+    isBossPhase: 0
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
+  - startTime: 330
+    spawnRate: 0.1
     isBossPhase: 1
     enemyUnits:
-    - {fileID: 5916187915891423065, guid: 501d9fc48cf8f4b4bb51100a9b1e57ad, type: 3}
+    - {fileID: 5916187915891423065, guid: c465a302b678add4aa2d80eb89069ae5, type: 3}
+  - startTime: 331
+    spawnRate: 0.6
+    isBossPhase: 0
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
   bossDialogue: {fileID: 206220340}
   postFightDialogue: {fileID: 998871770}
   healthModifier: 1
-  healthScalingValue: 0
+  healthScalingValue: 0.1
 --- !u!4 &1818214239
 Transform:
   m_ObjectHideFlags: 0

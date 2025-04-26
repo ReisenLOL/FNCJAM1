@@ -339,7 +339,7 @@ MonoBehaviour:
   basePowerToNextLevel: 5
   currentPower: 0
   powerModifier: 1
-  exponentIncrease: 2
+  exponentIncrease: 1.65
   levelUpUI: {fileID: 2080347106}
   spawnManager: {fileID: 1818214238}
   levelText: {fileID: 576346979}
@@ -1421,6 +1421,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f652531f974dc42418689ed207a9dd6f, type: 3}
+--- !u!1 &559038049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559038051}
+  - component: {fileID: 559038050}
+  m_Layer: 0
+  m_Name: PlayerItemData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559038050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559038049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31bf8ed261ea7a949bbfe8cb0904a92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equippedItems: []
+  playerLevel: 0
+  powerAmount: 0
+  requiredPowerToNextLevel: 0
+  requiredPowerToNextLevelMin: 0
+--- !u!4 &559038051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559038049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 90.67403, y: 51.122417, z: 7.785516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576346977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,55 +3792,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699940313}
   m_CullTransparentMesh: 1
---- !u!1 &1784106288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1784106290}
-  - component: {fileID: 1784106289}
-  m_Layer: 0
-  m_Name: PlayerItemData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1784106289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784106288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31bf8ed261ea7a949bbfe8cb0904a92c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equippedItems: []
-  playerLevel: 0
-  powerAmount: 0
-  requiredPowerToNextLevel: 0
-  requiredPowerToNextLevelMin: 0
---- !u!4 &1784106290
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784106288}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 551.33563, y: 348.93207, z: 2.3923993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1818214237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,41 +3842,54 @@ MonoBehaviour:
     enemyUnits:
     - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
   - startTime: 60
-    spawnRate: 0.8
+    spawnRate: 0.9
     isBossPhase: 0
     enemyUnits:
     - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
     - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
   - startTime: 120
-    spawnRate: 0.6
+    spawnRate: 0.9
     isBossPhase: 0
     enemyUnits:
     - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
-    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
   - startTime: 180
-    spawnRate: 0.6
+    spawnRate: 0.8
     isBossPhase: 0
     enemyUnits:
     - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
     - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
     - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
   - startTime: 240
-    spawnRate: 0.4
+    spawnRate: 0.7
     isBossPhase: 0
     enemyUnits:
     - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
     - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
-    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
-    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
   - startTime: 300
-    spawnRate: 0.4
+    spawnRate: 0.8
+    isBossPhase: 0
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+  - startTime: 360
+    spawnRate: 0.1
     isBossPhase: 1
     enemyUnits:
     - {fileID: 5916187915891423065, guid: 501d9fc48cf8f4b4bb51100a9b1e57ad, type: 3}
+  - startTime: 362
+    spawnRate: 0.7
+    isBossPhase: 0
+    enemyUnits:
+    - {fileID: 2262917533461444525, guid: bb82afbed2184d948979355d94d61932, type: 3}
+    - {fileID: 2262917533461444525, guid: 8d3c9a3ce0d68334ab80805034a91962, type: 3}
+    - {fileID: 2262917533461444525, guid: a2ff5a04125ac6d4a844d1cc60f7c1c2, type: 3}
+    - {fileID: 2262917533461444525, guid: 9d2ca37c37cabc74e915ad187f76c97e, type: 3}
   bossDialogue: {fileID: 206220340}
   postFightDialogue: {fileID: 998871768}
   healthModifier: 1
-  healthScalingValue: 0
+  healthScalingValue: 0.1
 --- !u!4 &1818214239
 Transform:
   m_ObjectHideFlags: 0
@@ -4785,4 +4798,4 @@ SceneRoots:
   - {fileID: 1291966695}
   - {fileID: 697667349}
   - {fileID: 689167128}
-  - {fileID: 1784106290}
+  - {fileID: 559038051}

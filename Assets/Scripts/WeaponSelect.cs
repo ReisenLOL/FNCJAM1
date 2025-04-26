@@ -36,7 +36,7 @@ public class WeaponSelect : MonoBehaviour
             Item itemToRestore = AllItems.Find(w => w.ItemName.Trim().ToLower() == equippedItemData.itemID.Trim().ToLower());
             if (itemToRestore != null)
             {
-                SelectWeapon(itemToRestore, equippedItemData.level);
+                SelectWeapon(itemToRestore, equippedItemData.level, true);
             }
             else
             {
@@ -55,10 +55,10 @@ public class WeaponSelect : MonoBehaviour
         IsSelecting = false;
         selectionPanel.gameObject.SetActive(false);
     }
-    private void SelectWeapon(Item w, int targetLevel = 1)
+    private void SelectWeapon(Item w, int targetLevel = 1, bool fromSave = false)
     {
         Item weapon = PlayerWeaponHandler.FindWeaponReference(w, out bool wasCreated);
-        if (!wasCreated)
+        if (!wasCreated || fromSave)
         {
             if (weapon.gameObject.TryGetComponent(out WeaponAttack isWeaponAttack))
             {
