@@ -341,7 +341,7 @@ MonoBehaviour:
   powerModifier: 1
   exponentIncrease: 1.65
   levelUpUI: {fileID: 2080347106}
-  spawnManager: {fileID: 0}
+  spawnManager: {fileID: 764695080}
   levelText: {fileID: 576346979}
 --- !u!1 &100294680
 GameObject:
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: {fileID: 11400000, guid: 5419ad65841463a45ae012e2aa717db8, type: 2}
   nextStage: {fileID: 0}
-  spawnManager: {fileID: 0}
+  spawnManager: {fileID: 764695080}
   playerUnit: {fileID: 1199046290}
 --- !u!4 &140036644
 Transform:
