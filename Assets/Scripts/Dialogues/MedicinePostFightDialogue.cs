@@ -3,49 +3,49 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class AyaPostFightDialogue : Dialogue
+public class MedicinePostFightDialogue : Dialogue
 {
     protected override IEnumerator DialogueContents(int progress = 0)
     {
         Progress = 0;
         CharacterSelect(1);
-        DrawDialogue("Ayaya... You’re definitely not faking that determination... and your weapons are too flashy for a fraud.");
+        DrawDialogue("Ah… the steel you craft… it cuts deeper than I imagined. Perhaps my remedy was too potent.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(0);
-        DrawDialogue("What made 'ya think I was the culprit in the first place?!");
+        DrawDialogue("I didn’t come here to fight for glory. I'm here to stop people from getting hurt.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(1);
-        DrawDialogue("Well, you’ve certainly earned yourself a bold headline. 'Lone Weaponsmith Battles Blight - Is She the Key to the Cure?'");
+        DrawDialogue("Hurt? No… awakened. Without melancholy, one cannot appreciate joy. But I see now your strength outweighs my… experiment.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(0);
-        DrawDialogue("...So you're still just gonna publish this?");
+        DrawDialogue("Y'know ya don’t have to spread misery to teach people appreciation.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(1);
-        DrawDialogue("Of course! But don’t worry, you'll sound very cool after all of this. Probably.");
+        DrawDialogue("Well, perhaps you’re right. And perhaps even a demon of medicine can learn compassion. Very well, I will lift the affliction.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(0);
-        DrawDialogue("Sigh... Well I guess it's not that bad, if you'll truely make me sound cool.");
+        DrawDialogue("Great. Now go back to whatever corner of Gensokyo you came from, leave the healing to those who care.");
         SetButton(0, "->").ContinueWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
 
         CharacterSelect(1);
-        DrawDialogue("Indeed! But don’t think this is over. I’m keeping my lens on you, Kurogane Hozuki. Wherever the story goes, I’ll be there!");
+        DrawDialogue("I shall... but remember, dear weaponsmith: sometimes the greatest wounds leave the deepest lessons.");
         SetButton(0, "->", SwitchScene).SetForceEndWhenPressed();
 
         yield return WaitForProgressAbove(NextContinueProgress);
@@ -70,7 +70,7 @@ public class AyaPostFightDialogue : Dialogue
         PlayerItemData.instance.powerAmount = levelManager.currentPower;
         PlayerItemData.instance.requiredPowerToNextLevel = levelManager.requiredPowerToNextLevel;
         PlayerItemData.instance.requiredPowerToNextLevelMin = levelManager.requiredPowerToNextLevelMin;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
     /*private void BeansButton()
     {
