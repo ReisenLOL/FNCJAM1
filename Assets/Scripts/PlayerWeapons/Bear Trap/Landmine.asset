@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeDescription: 
   movementSpeed: 0
-  attackCount: 2
+  attackCount: 1
   damage: 200
-  attackRate: 1
+  attackRate: 3.5
   range: 45
   dissipationDelay: 0
   specialPropertyA: 4.5
