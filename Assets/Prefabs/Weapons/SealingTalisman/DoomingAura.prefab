@@ -147,9 +147,11 @@ MonoBehaviour:
   weaponLevelData: {fileID: 0}
   speedModifier: 0
   damageModifier: 0
-  damageRate: 0
+  hasLeeching: 0
+  leechingItem: {fileID: 0}
+  damageRate: 0.2
   damageTime: 0
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  knockbackForce: 40
+  knockbackForce: 30
