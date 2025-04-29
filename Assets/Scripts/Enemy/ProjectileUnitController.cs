@@ -46,19 +46,21 @@ public class ProjectileUnitController : MonoBehaviour
             projectileFireTime += Time.deltaTime;
             if (projectileFireTime >= projectileFireRate)
             {
-                Weapon spawnedAttack = Instantiate(projectile, transform.position, projectile.transform.rotation); // this is stupid WOW THAT WORKED?!
-                spawnedAttack.weaponLevelData = weaponStats;
-                spawnedAttack.SetOwner(Owner);
-                spawnedAttack.firedFrom = gameObject;
-                spawnedAttack.damage = weaponStats.damage;
-                spawnedAttack.damageModifier = 1;
-                spawnedAttack.speedModifier = 1;
-                Vector3 mousePos = Input.mousePosition;
-                mousePos.z = Camera.main.nearClipPlane + 10;
-                Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-                spawnedAttack.RotateToTarget(worldPos);
-                spawnedAttack.weaponNumber = 0;
-                attackSound.Play(transform.position);
+                projectileFireTime = 0;
+                Collider2D playerDetected = DetectPlayer(detectionRadius);
+                if (playerDetected != null)
+                {
+                    Weapon spawnedAttack = Instantiate(projectile, transform.position, projectile.transform.rotation); // this is stupid WOW THAT WORKED?!
+                    spawnedAttack.weaponLevelData = weaponStats;
+                    spawnedAttack.SetOwner(Owner);
+                    spawnedAttack.firedFrom = gameObject;
+                    spawnedAttack.damage = weaponStats.damage;
+                    spawnedAttack.damageModifier = 1;
+                    spawnedAttack.speedModifier = 1;
+                    spawnedAttack.RotateToTarget(playerDetected.transform.position);
+                    spawnedAttack.weaponNumber = 0;
+                    attackSound.Play(transform.position);
+                }
             }
         }
     }

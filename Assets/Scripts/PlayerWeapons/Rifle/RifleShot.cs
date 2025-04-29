@@ -8,6 +8,7 @@ public class RifleShot : Weapon
     public int amountPierced;
     private void Start()
     {
+        Debug.Log(Owner.Faction);
         SetWeaponProperties();
         pierceAmount = (int)weaponLevelData.specialPropertyA;
     }
